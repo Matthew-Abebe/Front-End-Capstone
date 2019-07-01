@@ -57,7 +57,11 @@ class ApplicationViews extends Component {
                 }))
 
     addPurchase = (purchase) => {
+        
+        let userId = sessionStorage.getItem("userId")
+        
         const purchaseObj = {
+            userId: parseInt(userId),
             productId: purchase.product.id,
             productName: purchase.product.product_name,
             productPrice: purchase.product.sale_price,
@@ -66,7 +70,7 @@ class ApplicationViews extends Component {
         }
         console.log(purchaseObj)
         DbCalls.postNewPurchase(purchaseObj)
-            .then(() => DbCalls.getAllPurchases())
+            .then(() => DbCalls.getUserPurchases())
             .then(purchases =>
                 this.setState({
                     purchases: purchases
@@ -87,7 +91,7 @@ class ApplicationViews extends Component {
 
     putPurchase = (editedPurchaseObject) => {
         return DbCalls.putPurchase(editedPurchaseObject)
-            .then(() => DbCalls.getAllPurchases())
+            .then(() => DbCalls.getUserPurchases())
             .then(purchases => {
                 this.setState({
                     purchases: purchases
@@ -110,7 +114,7 @@ class ApplicationViews extends Component {
         const newState = {};
         DbCalls.deletePurchase(purchase)
             .then(() =>
-                DbCalls.getAllPurchases()
+                DbCalls.getUserPurchases()
             )
             .then(purchases => { newState.purchases = purchases })
             .then(() => this.setState(newState))
@@ -121,7 +125,7 @@ class ApplicationViews extends Component {
         this.setState({
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getAllProducts(),
-            purchases: await DbCalls.getAllPurchases(),
+            purchases: await DbCalls.getUserPurchases(),
         })
         console.log(this.state.users)
         console.log(this.state.products)
@@ -132,10 +136,11 @@ class ApplicationViews extends Component {
         this.fetchAll();
     }
 
-    isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+    isAuthenticated = () => sessionStorage.getItem("userId") !== null
 
 
     render() {
+        console.log(this.state.purchases)
         return (
             //  <>
 

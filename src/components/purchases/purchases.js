@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Card, CardText,
+    CardTitle,
 } from 'reactstrap';
-import { ButtonGroup, ButtonToolbar } from 'reactstrap';
-
-import DbCalls from '../../modules/dbCalls'
-
-import { Line } from "react-chartjs";
-
+import { ButtonGroup, } from 'reactstrap';
 
 export default class Purchases extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
-        
+
     }
 
     getSpending() {

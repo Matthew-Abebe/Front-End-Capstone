@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 import { Link } from 'react-router-dom'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Card, CardText, CardBody,
+    CardTitle,
 } from 'reactstrap';
-import { ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { ButtonGroup } from 'reactstrap';
 
 import './productDetails.css'
 

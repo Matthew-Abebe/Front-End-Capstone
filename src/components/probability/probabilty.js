@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Spinner } from 'reactstrap';
 import { Button } from 'reactstrap';
-import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 import { Jumbotron, Container } from 'reactstrap';
 
 import './probability.css'
