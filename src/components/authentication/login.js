@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 import './login.css'
 
@@ -10,6 +10,7 @@ import './login.css'
 export default class Login extends Component {
 
     state = {
+
         email: "",
         password: ""
 
@@ -39,8 +40,8 @@ export default class Login extends Component {
             window.alert("User not found.")
         } else {
             sessionStorage.setItem(
-                "credentials",
-                matchUser.name
+                "userId",
+                matchUser.id
             )
         } if (matchUser) {
             this.props.history.push("/")

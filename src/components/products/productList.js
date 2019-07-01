@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-// import { Table } from 'reactstrap';
-import { ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
-import { ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { Card, Button, CardTitle } from 'reactstrap';
 
 import './product.css'
 
@@ -15,6 +12,8 @@ export default class ProductList extends Component {
         e.preventDefault()
         console.log("clicked link")
     }
+
+    
 
     render() {
         console.log(this.props.products)
@@ -35,7 +34,7 @@ export default class ProductList extends Component {
                                         <h2>{product.product_name}</h2>
                                         <h4>${product.sale_price}</h4>
                                         <br></br>
-                        
+
                         <Link to="/products">
                         <Button className="buyProductBtn" color="success" size="lg" block onClick={() =>
                         this.props.addPurchase({product})} className="sellProductBtn">
@@ -44,7 +43,7 @@ export default class ProductList extends Component {
                             </Link>
                                     </CardTitle>
                                 </Card>
-                                
+
                             </div>
 
                         )}

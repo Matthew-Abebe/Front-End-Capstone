@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, NavItem, NavLink } from 'reactstrap';
-import { ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { ButtonGroup } from 'reactstrap';
 import { Jumbotron, Button } from 'reactstrap';
 
 import './home.css'
 
-export default class Home extends React.Component {
+export default class Home extends Component {
 
     render() {
         return(
@@ -25,7 +24,7 @@ export default class Home extends React.Component {
                 <Button outline color="primary" className="loginBtn">Login</Button> &nbsp;&nbsp;&nbsp;
                 </Link>
 
-                <Button outline color="danger" onClick={() => sessionStorage.clear()}>Logout</Button>
+                <Button outline color="danger" onClick={() => sessionStorage.clear("userId")}>Logout</Button>
                 </ButtonGroup>
               </p>
             </Jumbotron>

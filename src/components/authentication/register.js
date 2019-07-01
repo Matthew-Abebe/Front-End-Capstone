@@ -22,9 +22,9 @@ export default class Register extends Component {
     handleRegister = evt => {
 
         const newUser = {
-            user_name: this.state.user_name,
-            user_email: this.state.user_email,
-            user_password: this.state.user_password,
+            name: this.state.user_name,
+            email: this.state.user_email,
+            password: this.state.user_password,
         }
 
         console.log(newUser)

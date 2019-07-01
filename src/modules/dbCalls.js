@@ -24,8 +24,14 @@ export default {
         return fetch(`${remoteURL}/products`).then(e => e.json())
     },
 
+
     getAllPurchases() {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
+    },
+
+    getUserPurchases() {
+        let sessionId = sessionStorage.getItem("userId")
+        return fetch(`${remoteURL}/purchases?userId=${sessionId}`).then(e => e.json())
     },
 
     ///...///

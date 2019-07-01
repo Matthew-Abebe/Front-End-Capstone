@@ -18,10 +18,13 @@ export default class ProductNewForm extends Component {
 
     constructNewProduct = evt => {
 
+        let userId = sessionStorage.getItem("userId")
+
         const newProduct = {
             product_name: this.state.product_name,
             sale_price: this.state.sale_price,
-            description: this.state.description
+            description: this.state.description,
+            userId: parseInt(userId)
         }
 
         console.log(newProduct)
