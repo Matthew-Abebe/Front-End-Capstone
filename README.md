@@ -1,3 +1,7 @@
+## Hitchhiker's Spot
+
+This application is a simple store site themed after the movie Hitchhiker's Guide to the Galaxy. As a user you may login in or register. The navigation bar will direct the user to either search through products for buying or view past purchases. There is also an improbability drive feature that when selected simulates the outcomes from the movie. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
