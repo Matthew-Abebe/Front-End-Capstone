@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Star Enterprise",
+      "email": "alien@getsome.com",
+      "password": "killallhumans"
+    },
+    {
+      "user_name": "Toys R Us",
+      "user_email": "toys@email.com",
+      "user_password": "lovetoys",
+      "id": 2
+    },
+    {
+      "user_name": "Toys R Us",
+      "user_email": "toys@email.com",
+      "user_password": "lovetoys",
+      "id": 3
+    },
+    {
+      "user_name": "Toys R Us",
+      "user_email": "toys@email.com",
+      "user_password": "lovetoys",
+      "id": 4
+    },
+    {
+      "user_name": "Daniel Abebe",
+      "user_email": "coolguy@email.com",
+      "user_password": "ps4",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Towel",
+      "sale_price": "10",
+      "description": "Hand made somewhere in the vicinity of Betelgeuse, our towels are good for hygiene and making a quick escape. Never leave home without it!"
+    },
+    {
+      "product_name": "Vogon Poetry",
+      "sale_price": "10",
+      "description": "Useful if you have lost the will to live. Don't bother trying to re-sell.",
+      "id": 2
+    },
+    {
+      "product_name": "Mouse Trap",
+      "sale_price": "10",
+      "description": "Save the galaxy! Buy mouse traps!",
+      "id": 3
+    },
+    {
+      "id": 6,
+      "product_name": "Pan Galactic Gargle Blaster",
+      "sale_price": "20",
+      "description": "The finest, most violent beverage in the galaxy. Don't drink more than two champ."
+    },
+    {
+      "product_name": "Robot",
+      "sale_price": "1000",
+      "description": "Trusty sidekick.",
+      "id": 7
+    }
+  ],
+  "purchases": [
+    {
+      "productId": 1,
+      "productName": "Towel",
+      "productPrice": "10",
+      "description": "Hand made somewhere in the vicinity of Betelgeuse, our towels are good for hygiene and making a quick escape. Never leave home without it!",
+      "dateTime": "6/29/2019 0:57:37",
+      "id": 1
+    },
+    {
+      "productId": 2,
+      "productName": "Vogon Poetry",
+      "productPrice": "10",
+      "description": "Useful if you have lost the will to live. Don't bother trying to re-sell.",
+      "dateTime": "6/29/2019 0:57:46",
+      "id": 2
+    },
+    {
+      "productId": 3,
+      "productName": "Mouse Trap",
+      "productPrice": "10",
+      "description": "Save the galaxy! Buy mouse traps!",
+      "dateTime": "6/29/2019 0:57:50",
+      "id": 3
+    },
+    {
+      "productId": 6,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "20",
+      "description": "The finest, most violent beverage in the galaxy. Don't drink more than one champ.",
+      "dateTime": "6/29/2019 0:58:05",
+      "id": 5
+    }
+  ]
+}

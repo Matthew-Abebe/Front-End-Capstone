@@ -1,0 +1,11 @@
+body {
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/potw1805a.jpg")
+}
+
+.navbar {
+    background:darkgoldenrod;
+}
+
+a.nav-link {
+    color:black
+}
