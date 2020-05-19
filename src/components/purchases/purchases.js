@@ -61,9 +61,9 @@ export default class Purchases extends Component {
 
                                 <ButtonGroup sz="large">
 
-                                    <Link to={`/purchases/${purchase.id}/edit`}>
+                                    {/* <Link to={`/purchases/${purchase.id}/edit`}>
                                         <button>Edit</button>
-                                    </Link>
+                                    </Link> */}
 
 
                                     <button onClick={() =>

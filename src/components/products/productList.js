@@ -54,7 +54,7 @@ export default class ProductList extends Component {
             <div>
                 <Card body inverse color="danger">
                     <CardTitle>
-                <p><i>Create Custom Product</i></p>
+                <p><i>Order Custom Product</i></p>
                 </CardTitle>
                 <Link to="/products/new">
                     <button>Start</button>

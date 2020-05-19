@@ -53,35 +53,35 @@
       "email": "dek",
       "password": "dek",
       "id": 9
+    },
+    {
+      "name": "dudeguy",
+      "email": "dudeguy@mail.com",
+      "password": "dudeguy",
+      "id": 10
     }
   ],
   "products": [
     {
-      "product_name": "hgf",
-      "sale_price": "",
-      "description": "",
-      "userId": 9,
-      "id": 1
-    }
-  ],
-  "purchases": [
-    {
-      "userId": 7,
-      "productId": 9,
-      "productName": "table",
-      "productPrice": "100",
-      "description": "put stuff",
-      "dateTime": "7/1/2019 10:28:36",
-      "id": 6
+      "id": 3,
+      "product_name": "Towel",
+      "sale_price": "5.99",
+      "description": "You're gonna need this!"
     },
     {
-      "userId": 9,
-      "productId": 1,
-      "productName": "hgf",
-      "productPrice": "",
-      "description": "",
-      "dateTime": "7/1/2019 11:00:37",
-      "id": 7
+      "product_name": "Hover craft",
+      "sale_price": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "userId": 7,
+      "id": 4
+    },
+    {
+      "product_name": "Vogon poetry",
+      "sale_price": "Free",
+      "description": "Please take it.",
+      "userId": 7,
+      "id": 5
     }
-  ]
+  ],
+  "purchases": []
 }
