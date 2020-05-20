@@ -59,15 +59,15 @@
       "email": "dudeguy@mail.com",
       "password": "dudeguy",
       "id": 10
+    },
+    {
+      "name": "spongebob",
+      "email": "spongebob@mail.com",
+      "password": "spongebob",
+      "id": 11
     }
   ],
   "products": [
-    {
-      "id": 3,
-      "product_name": "Towel",
-      "sale_price": "5.99",
-      "description": "You're gonna need this!"
-    },
     {
       "product_name": "Hover craft",
       "sale_price": "100,000,000.00",
@@ -76,12 +76,97 @@
       "id": 4
     },
     {
-      "product_name": "Vogon poetry",
-      "sale_price": "Free",
-      "description": "Please take it.",
-      "userId": 7,
-      "id": 5
+      "id": 7,
+      "product_name": "Towel",
+      "sale_price": "5.99",
+      "description": "You'll need this."
+    },
+    {
+      "product_name": "Pan Galactic Gargle Blaster",
+      "sale_price": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "product_name": "Pan Galactic Gargle Blaster 2",
+      "sale_price": "17.99",
+      "description": "Best drink in the galaxy but it will smash your brains even worser.",
+      "userId": 1,
+      "id": 9
     }
   ],
-  "purchases": []
+  "userProducts": [
+    {
+      "id": 1,
+      "user_product_name": "Pan Galactic Gargle Blaster",
+      "user_product_sale_price": "7.99",
+      "user_product_description": "Best drink in the galaxy but it will smash your brains."
+    }
+  ],
+  "purchases": [
+    {
+      "userId": 8,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/18/2020 23:24:54",
+      "id": 3
+    },
+    {
+      "userId": 7,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/19/2020 21:19:43",
+      "id": 4
+    },
+    {
+      "userId": 7,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/19/2020 21:19:45",
+      "id": 5
+    },
+    {
+      "userId": 7,
+      "productId": 8,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "dateTime": "5/19/2020 21:19:49",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/19/2020 21:20:13",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "productId": 8,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "dateTime": "5/19/2020 21:20:18",
+      "id": 9
+    },
+    {
+      "userId": 11,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/19/2020 22:54:31",
+      "id": 10
+    }
+  ]
 }

@@ -24,6 +24,9 @@ export default {
         return fetch(`${remoteURL}/products`).then(e => e.json())
     },
 
+    getUserProducts() {
+        return fetch(`${remoteURL}/userProducts`).then(e => e.json())
+    },
 
     getAllPurchases() {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
@@ -94,6 +97,15 @@ export default {
 
     deleteProduct(id) {
         return fetch(`${remoteURL}/products/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(e => e.json(0))
+    },
+
+    deleteUserProduct(id) {
+        return fetch(`${remoteURL}/userProducts/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

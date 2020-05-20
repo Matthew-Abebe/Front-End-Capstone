@@ -12,6 +12,7 @@ import ProductEditForm from './products/productEditForm'
 import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
 import ProbabilityDrive from './probability/probabilty';
+import ProbabilityDriveTicket from './probability/probabilityDriveTicket';
 
 class ApplicationViews extends Component {
 
@@ -252,6 +253,20 @@ class ApplicationViews extends Component {
                     render={(props) => {
                         if (this.isAuthenticated()) {
                             return <ProbabilityDrive {
+                                ...props
+                            }
+
+                            />
+                        } else {
+                            return <Redirect to="/login" />
+                        }
+
+                    }} />
+                    
+                    <Route exact path="/probabilityDriveTicket"
+                    render={(props) => {
+                        if (this.isAuthenticated()) {
+                            return <ProbabilityDriveTicket {
                                 ...props
                             }
 
