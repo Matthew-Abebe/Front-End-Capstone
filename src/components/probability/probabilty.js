@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Spinner } from 'reactstrap';
-import { Button } from 'reactstrap';
+import { Card, Button, CardTitle } from 'reactstrap';
 import { Jumbotron, Container } from 'reactstrap';
+import { Link } from 'react-router-dom'
+
 
 import './probability.css'
 
@@ -39,6 +41,29 @@ export default class ProbabilityDrive extends Component {
         alert(`${outcome}`);
     }
 
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+
+    constructNewProduct = evt => {
+
+        let userId = sessionStorage.getItem("userId")
+
+        const newProduct = {
+            product_name: this.state.product_name,
+            sale_price: this.state.sale_price,
+            description: this.state.description,
+            userId: parseInt(userId)
+        }
+
+        console.log(newProduct)
+
+        this.props.addProducts(newProduct)
+            .then(() => this.props.history.push("/products"))
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -65,11 +90,61 @@ export default class ProbabilityDrive extends Component {
 
                 <br></br>
 
+                <form className="productForm">
+                    <div className="form-group">
+                        <label htmlFor="productName">Product Name</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="product_name"
+                            placeholder="Product Name"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="salePrice">Sale Price</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="sale_price"
+                            placeholder="Sale Price"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="description">Description</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="description"
+                            placeholder="Description"
+                        />
+                    </div>
+
                 <div>
                     <Button className="driveBtn" color="success" sz="lg"
                         onClick={this.handleProbabilityDrive}
                     >Engage Infinite Probability Drive!</Button>
                 </div>
+
+                <div>
+                <Card body inverse color="danger">
+                    <CardTitle>
+                <p><i>Generate Drive Ticket</i></p>
+                </CardTitle>
+                <Link to="/probabilityDriveTicket">
+                    <button className="driveTicketBtn"
+                    onClick={this.constructNewProduct}>Start</button>
+                </Link>
+                </Card>
+            </div>
+            </form>
 
             </React.Fragment>
         )

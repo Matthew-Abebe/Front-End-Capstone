@@ -14,9 +14,12 @@ export default class ProductDetails extends Component {
 
     state = {
         productName: "",
+        userProductName: "",
         salePrice: "",
-        description: ""
-    }
+        userProductSalePrice: "",
+        description: "",
+        userProductDescription: ""
+    };
 
     componentDidMount() {
         DbCalls.getProduct(this.props.match.params.productId)
@@ -31,6 +34,18 @@ export default class ProductDetails extends Component {
                 console.log(this.state.productId)
             }
             )
+
+        DbCalls.getUserProducts(this.props.match.params.userProductId)
+            .then(userProduct => {
+                console.log(userProduct)
+                this.setState({
+                    userProductId: userProduct.id,
+                    userProductName: userProduct.user_product_name,
+                    userProductSalePrice: userProduct.user_product_sales_price,
+                    userProductDescription: userProduct.user_product_description
+                })
+                console.log(this.state.userProductId)
+            })
     }
 
     render() {
@@ -49,12 +64,12 @@ export default class ProductDetails extends Component {
                         </CardText>
 
                         <ButtonGroup>
-                        <Link to={`/products/${this.state.productId}/edit`}>
+                        <Link to={`/userProducts/${this.state.userProductId}/edit`}>
                             <button>Edit</button>
                         </Link>
-                        <Link to="/products">
+                        <Link to={`/userProducts/${this.state.userProductId}`}>
                         <button onClick={() =>
-                            this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
+                            this.props.deleteUserProduct(this.state.userProductId)} className="deleteProductBtn">
                             Delete
                             </button>
                             </Link>

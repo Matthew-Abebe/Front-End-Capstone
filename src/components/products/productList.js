@@ -51,16 +51,16 @@ export default class ProductList extends Component {
             </div>
 
 
-            <div>
+            {/* <div>
                 <Card body inverse color="danger">
                     <CardTitle>
-                <p><i>Order Custom Product</i></p>
+                <p><i>Generate Drive Ticket</i></p>
                 </CardTitle>
-                <Link to="/products/new">
+                <Link to="/probabilityDrive">
                     <button>Start</button>
                 </Link>
                 </Card>
-            </div>
+            </div> */}
 
         </React.Fragment>
     )

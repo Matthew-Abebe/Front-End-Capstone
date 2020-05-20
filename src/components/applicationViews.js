@@ -11,9 +11,7 @@ import ProductDetails from './products/productDetails'
 import ProductEditForm from './products/productEditForm'
 import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
-// import Spending from './purchases/spending'
 import ProbabilityDrive from './probability/probabilty';
-
 
 class ApplicationViews extends Component {
 
@@ -23,22 +21,12 @@ class ApplicationViews extends Component {
         purchases: []
     };
 
-
-
     getTimeStamp() {
         var now = new Date();
         return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear() + " " + now.getHours() + ":"
             + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ":" + ((now.getSeconds() < 10) ? ("0" + now
                 .getSeconds()) : (now.getSeconds())));
     }
-
-
-    // getSpending = () => {
-    //     DbCalls.getAllPurchases()
-    //     .then(() => purchases)
-    //     .then(purchases => {
-    //         console.log(purchases)
-    //     })}
 
     addUser = (user) =>
         DbCalls.postNewUser(user)
@@ -107,6 +95,16 @@ class ApplicationViews extends Component {
                 DbCalls.getAllProducts()
             )
             .then(products => { newState.products = products })
+            .then(() => this.setState(newState))
+    }
+
+    deleteUserProduct = (userProduct) => {
+        const newState = {};
+        DbCalls.deleteUserProduct(userProduct)
+            .then(() =>
+                DbCalls.getUserProducts()
+            )
+            .then(userProducts => { newState.userProducts = userProducts })
             .then(() => this.setState(newState))
     }
 
@@ -202,12 +200,14 @@ class ApplicationViews extends Component {
                     return <ProductDetails {
                         ...props
                     }
-                        deleteProduct={this.deleteProduct}
-                        products={this.state.products}
+                        // deleteProduct={this.deleteProduct}
+                        // products={this.state.products}
+                        deleteUserProduct={this.deleteUserProduct}
+                        userProducts={this.state.userProducts}
+                        
                     />
 
                 }} />
-
 
                 <Route path="/products/:productId(\d+)/edit"
                     render={props => {
@@ -261,12 +261,6 @@ class ApplicationViews extends Component {
                         }
 
                     }} />
-
-
-
-
-
-
 
             </React.Fragment>
         )

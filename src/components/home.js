@@ -24,7 +24,9 @@ export default class Home extends Component {
                 <Button outline color="primary" className="loginBtn">Login</Button> &nbsp;&nbsp;&nbsp;
                 </Link>
 
-                <Button outline color="danger" onClick={() => sessionStorage.clear("userId")}>Logout</Button>
+                <Button outline color="danger" className="logoutBtn" onClick={() => sessionStorage.clear("userId")
+                // ,window.alert("logged out")
+              }>Logout</Button>
                 </ButtonGroup>
               </p>
             </Jumbotron>
