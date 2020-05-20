@@ -63,7 +63,7 @@ export default class ProductDetails extends Component {
                             <p>Description: {this.state.description}</p>
                         </CardText>
 
-                        <ButtonGroup>
+                        {/* <ButtonGroup>
                         <Link to={`/userProducts/${this.state.userProductId}/edit`}>
                             <button>Edit</button>
                         </Link>
@@ -73,7 +73,7 @@ export default class ProductDetails extends Component {
                             Delete
                             </button>
                             </Link>
-                            </ButtonGroup>
+                            </ButtonGroup> */}
                         {/* <Button>Hi</Button> */}
                     </CardBody>
                 </Card>

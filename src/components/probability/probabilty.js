@@ -47,22 +47,22 @@ export default class ProbabilityDrive extends Component {
         this.setState(stateToChange)
     }
 
-    constructNewProduct = evt => {
+    // constructNewProduct = evt => {
 
-        let userId = sessionStorage.getItem("userId")
+    //     let userId = sessionStorage.getItem("userId")
 
-        const newProduct = {
-            product_name: this.state.product_name,
-            sale_price: this.state.sale_price,
-            description: this.state.description,
-            userId: parseInt(userId)
-        }
+    //     const newProduct = {
+    //         product_name: this.state.product_name,
+    //         sale_price: this.state.sale_price,
+    //         description: this.state.description,
+    //         userId: parseInt(userId)
+    //     }
 
-        console.log(newProduct)
+    //     console.log(newProduct)
 
-        this.props.addProducts(newProduct)
-            .then(() => this.props.history.push("/products"))
-    }
+    //     this.props.addProducts(newProduct)
+    //         .then(() => this.props.history.push("/products"))
+    // }
 
     render() {
         return (
@@ -89,7 +89,7 @@ export default class ProbabilityDrive extends Component {
                 </div>
 
                 <br></br>
-
+{/* 
                 <form className="productForm">
                     <div className="form-group">
                         <label htmlFor="productName">Product Name</label>
@@ -126,6 +126,7 @@ export default class ProbabilityDrive extends Component {
                             placeholder="Description"
                         />
                     </div>
+                      </form> */}
 
                 <div>
                     <Button className="driveBtn" color="success" sz="lg"
@@ -144,7 +145,7 @@ export default class ProbabilityDrive extends Component {
                 </Link>
                 </Card>
             </div>
-            </form>
+          
 
             </React.Fragment>
         )
