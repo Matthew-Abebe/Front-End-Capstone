@@ -10,6 +10,21 @@ import './probabilityDriveTicket.css'
 
 export default class ProbabilityDriveTicket extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+    
+        this.handleFieldChange = this.handleFieldChange.bind(this);
+        this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
+      }
+
+      handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
+    
+
     handleProbabilityDrive = (evt) => {
 
         let randomNumber = Math.floor(Math.random() * 7)
@@ -40,12 +55,6 @@ export default class ProbabilityDriveTicket extends Component {
         }
         alert(`${outcome}`);
     }
-
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value
-        this.setState(stateToChange)
-    }
     
     render() {
         return (
@@ -62,42 +71,46 @@ export default class ProbabilityDriveTicket extends Component {
                     <Spinner type="grow" color="dark" />
                 </div>
 
-                <form className="productForm">
+                <form className="locationForm">
                     <div className="form-group">
-                        <label htmlFor="productName">Product Name</label>
+                        <label htmlFor="locationName">Location</label>
                         <input
                             type="text"
+                            value={this.state.value}
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_name"
-                            placeholder="Product Name"
+                            id="location_name"
+                            placeholder="Location"
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="salePrice">Sale Price</label>
+                        <label htmlFor="description">Confirm Drive User</label>
                         <input
                             type="text"
+                            value={this.state.value}
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="sale_price"
-                            placeholder="Sale Price"
+                            id="confirmDriver"
+                            placeholder="Username"
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="description">Description</label>
+                        <label htmlFor="Drive Pass">Drive Pass</label>
                         <input
                             type="text"
+                            value={this.state.value}
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="description"
-                            placeholder="Description"
+                            id="drivePass"
+                            placeholder="Drive Password"
                         />
                     </div>
+
                       </form> 
 
                       
@@ -106,6 +119,19 @@ export default class ProbabilityDriveTicket extends Component {
                         onClick={this.handleProbabilityDrive}
                     >Engage Infinite Probability Drive!</Button>
                 </div> }
+
+                <div className="form-group">
+                        <label htmlFor="salePrice">Sale Price</label>
+                        <input
+                            type="text"
+                            value={this.state.value}
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="sale_price"
+                            placeholder="Sale Price"
+                        />
+                    </div>
 
             </React.Fragment>
         )
