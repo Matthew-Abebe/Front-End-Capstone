@@ -10,17 +10,26 @@ import './probabilityDriveTicket.css'
 
 export default class ProbabilityDriveTicket extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {value: ''};
     
-        this.handleFieldChange = this.handleFieldChange.bind(this);
-        this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
-      }
+        // this.handleFieldChange = this.handleFieldChange.bind(this);
+        // this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
+    //   }
+
+    state = {
+
+        location_name: "",
+        drive_user_name: "",
+        drive_pass: ""
+
+    }
 
       handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
+        console.log(stateToChange)
         this.setState(stateToChange)
     }
     
@@ -71,9 +80,9 @@ export default class ProbabilityDriveTicket extends Component {
                     <Spinner type="grow" color="dark" />
                 </div>
 
-                <form className="locationForm">
+                <form className="form-group">
                     <div className="form-group">
-                        <label htmlFor="locationName">Location</label>
+                        <label htmlFor="Location Name">Location</label>
                         <input
                             type="text"
                             value={this.state.value}
@@ -86,14 +95,14 @@ export default class ProbabilityDriveTicket extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="description">Confirm Drive User</label>
+                        <label htmlFor="Confirm Drive User">Confirm Drive User</label>
                         <input
                             type="text"
                             value={this.state.value}
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="confirmDriver"
+                            id="drive_user_name"
                             placeholder="Username"
                         />
                     </div>
@@ -106,7 +115,7 @@ export default class ProbabilityDriveTicket extends Component {
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="drivePass"
+                            id="drive_pass"
                             placeholder="Drive Password"
                         />
                     </div>
@@ -118,6 +127,9 @@ export default class ProbabilityDriveTicket extends Component {
                     <Button className="driveBtn" color="success" sz="lg"
                         onClick={this.handleProbabilityDrive}
                     >Engage Infinite Probability Drive!</Button>
+
+                   {/* Make drive ticket */}
+
                 </div> }
 
                 <div className="form-group">

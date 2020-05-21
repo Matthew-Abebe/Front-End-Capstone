@@ -125,15 +125,6 @@
     },
     {
       "userId": 7,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/19/2020 21:19:45",
-      "id": 5
-    },
-    {
-      "userId": 7,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
       "productPrice": "7.99",
@@ -167,6 +158,15 @@
       "description": "You'll need this.",
       "dateTime": "5/19/2020 22:54:31",
       "id": 10
+    },
+    {
+      "userId": 7,
+      "productId": 9,
+      "productName": "Pan Galactic Gargle Blaster 2",
+      "productPrice": "17.99",
+      "description": "Best drink in the galaxy but it will smash your brains even worser.",
+      "dateTime": "5/21/2020 13:26:57",
+      "id": 11
     }
   ]
 }
