@@ -80,17 +80,17 @@ class ApplicationViews extends Component {
 
     addDriveTicket = (driveTicket) => {
         
-        let driveTicketUserId = sessionStorage.getItem("driveTicketUserId")
+        let userId = sessionStorage.getItem("userId")
 
         const driveTicketObj = {
-            driveTicketUserId: parseInt(driveTicketUserId),
+            userId: parseInt(userId),
             driveTicketId: driveTicket.id,
-            driveTicketName: driveTicket.driver_name,
+            driveTicketName: driveTicket.drive_name,
             driveTicketLocation: driveTicket.location_name
         }
         console.log(driveTicketObj)
         DbCalls.postNewDriveTicket(driveTicketObj)
-            .then(() => DbCalls.getAllDriveTickets())
+            .then(() => DbCalls.getUserDriveTickets())
             .then(driveTickets =>
                 this.setState({
                     driveTickets: driveTickets
@@ -140,6 +140,16 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState))
     }
 
+    deleteDriveTicket = (driveTicket) => {
+        const newState = {};
+        DbCalls.deleteDriveTicket(driveTicket)
+            .then(() =>
+                DbCalls.getUserDriveTickets()
+            )
+            .then(driveTickets => { newState.driveTickets = driveTickets })
+            .then(() => this.setState(newState))
+    }
+
     deletePurchase = (purchase) => {
         const newState = {};
         DbCalls.deletePurchase(purchase)
@@ -156,7 +166,7 @@ class ApplicationViews extends Component {
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getAllProducts(),
             purchases: await DbCalls.getUserPurchases(),
-            driveTickets: await DbCalls.getAllDriveTickets()
+            driveTickets: await DbCalls.getUserDriveTickets()
         })
         console.log(this.state.users)
         console.log(this.state.products)
@@ -228,6 +238,7 @@ class ApplicationViews extends Component {
                         return <ProbabilityTicketList {...props}
                             
                         addDriveTicket={this.addDriveTicket}
+                        deleteDriveTicket={this.deleteDriveTicket}
                         driveTickets={this.state.driveTickets}
                         />
                     } else {

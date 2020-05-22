@@ -106,15 +106,6 @@
   ],
   "purchases": [
     {
-      "userId": 8,
-      "productId": 4,
-      "productName": "Hover craft",
-      "productPrice": "100,000,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/18/2020 23:24:54",
-      "id": 3
-    },
-    {
       "userId": 7,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
@@ -203,51 +194,143 @@
       "description": "Wiz through the galaxy in a brand new hovercraft!",
       "dateTime": "5/22/2020 16:02:11",
       "id": 18
+    },
+    {
+      "userId": 8,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/22/2020 16:28:54",
+      "id": 19
+    },
+    {
+      "userId": 11,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/22/2020 18:01:05",
+      "id": 20
+    },
+    {
+      "userId": 10,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/22/2020 18:38:35",
+      "id": 21
     }
   ],
   "probabilityDriveTickets": [
     {
+      "location_name": "sdf",
+      "drive_name": "sdf",
       "userId": 8,
-      "driver_name": "Groot",
-      "location_name": "Magrothea",
-      "dateTime": "5/18/2020 23:24:54",
-      "id": 1
-    },
-    {
-      "location_name": "magrothea",
-      "drive_name": "matt",
-      "userId": 7,
-      "id": 2
-    },
-    {
-      "location_name": "magrothea",
-      "drive_name": "matt",
-      "userId": 7,
-      "id": 3
+      "id": 12
     },
     {
       "location_name": "sdf",
+      "drive_name": "matt",
+      "userId": 8,
+      "id": 13
+    },
+    {
+      "location_name": "magrothea",
       "drive_name": "lklk",
-      "userId": 7,
-      "id": 4
+      "userId": 8,
+      "id": 14
     },
     {
-      "location_name": "sdf",
-      "drive_name": "matt",
-      "userId": 7,
-      "id": 5
+      "location_name": "magrothea",
+      "drive_name": "sponge",
+      "userId": 11,
+      "id": 15
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "lklk",
+      "userId": 11,
+      "id": 16
     },
     {
       "location_name": "magrothea",
       "drive_name": "matt",
-      "userId": 7,
-      "id": 6
+      "userId": 11,
+      "id": 17
     },
     {
       "location_name": "magrothea",
-      "drive_name": "star enterprise",
-      "userId": 1,
-      "id": 7
+      "drive_name": "lklk",
+      "userId": 11,
+      "id": 18
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "matt",
+      "userId": 11,
+      "id": 19
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "magrothea",
+      "id": 20
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "",
+      "id": 21
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "magrothea",
+      "id": 22
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "magrothea",
+      "id": 23
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "magrothea",
+      "id": 24
+    },
+    {
+      "userId": 10,
+      "driveTicketName": "matt",
+      "driveTicketLocation": "magrothea",
+      "id": 25
+    },
+    {
+      "userId": 10,
+      "driveTicketLocation": "magrothea",
+      "id": 26
+    },
+    {
+      "userId": 10,
+      "driveTicketName": "lklk",
+      "driveTicketLocation": "magrothea",
+      "id": 27
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "matt",
+      "userId": 10,
+      "id": 28
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "lklk",
+      "userId": 10,
+      "id": 29
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "matt",
+      "userId": 10,
+      "id": 30
     }
   ]
 }

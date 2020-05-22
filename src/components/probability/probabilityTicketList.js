@@ -7,6 +7,7 @@ import './probability.css'
 
 
 export default class ProbabilityTicketList extends Component {
+    
 
     handleClick = (e) => {
         e.preventDefault()
@@ -30,9 +31,16 @@ export default class ProbabilityTicketList extends Component {
                             <div key={driveTicket.id}>
 
                                 <Card body inverse color="secondary">
-                                    <CardTitle  tag="a" href={`/probabilityDriveTickets/${driveTicket.id}`}>
+                                    <CardTitle  tag="a" 
+                                    href={`/probabilityDriveTickets`}
+                                    >
                                         <h2>Name: {driveTicket.drive_name}</h2>
                                         <h4>Location: {driveTicket.location_name}</h4>
+
+                                        <button onClick={() =>
+                                        this.props.deleteDriveTicket(driveTicket.id)} className="deleteUserDriveTicketBtn">
+                                        Delete
+                                </button>
                                         <br></br>
 
                                     

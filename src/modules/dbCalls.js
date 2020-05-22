@@ -28,13 +28,18 @@ export default {
         return fetch(`${remoteURL}/userProducts`).then(e => e.json())
     },
 
-    getAllPurchases() {
-        return fetch(`${remoteURL}/purchases`).then(e => e.json())
+    getUserDriveTickets() {
+        return fetch(`${remoteURL}/probabilityDriveTickets`).then(e => e.json())
     },
 
     getAllDriveTickets() {
         return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
     },
+
+    getAllPurchases() {
+        return fetch(`${remoteURL}/purchases`).then(e => e.json())
+    },
+
 
     getUserPurchases() {
         let sessionId = sessionStorage.getItem("userId")
@@ -127,6 +132,15 @@ export default {
                 "Content-Type": "application/json",
             },
         }).then(e => e.json(0))
+    },
+
+    deleteDriveTicket(id) {
+        return fetch(`${remoteURL}/probabilityDriveTickets/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(e => e.json(0))    
     },
 
     deletePurchase(id) {

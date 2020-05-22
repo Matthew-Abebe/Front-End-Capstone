@@ -37,10 +37,15 @@ export default class ProbabilityDrive extends Component {
         userId: parseInt(userId)
     }
 
-    console.log(newDriveTicket)
+    
 
+    
     this.props.addDriveTickets(newDriveTicket)
-        .then(() => this.props.history.push("/probabilityDriveTickets"))
+    .then(() => this.props.history.push("/probabilityDriveTickets"))
+    
+    console.log(newDriveTicket)
+    console.log(`Hi ${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
+    
 }
 
    
@@ -118,18 +123,19 @@ export default class ProbabilityDrive extends Component {
       <Button className="driveBtn" color="success" sz="lg"
             onClick={() => {
                 this.handleProbabilityDrive()
-                this.constructNewDriveTicket()
+                // this.constructNewDriveTicket()
             }
                 }>
             Engage Infinite Probability Drive!</Button>
+            
 
-            {/* <Button className="driveTicketBtn" color="success" sz="lg"
+            <Button className="driveTicketBtn" color="success" sz="lg"
             onClick={() => {
                 this.constructNewDriveTicket()
                 // this.props.addDriveTicket({driveTicket})
             }
                 }>
-            Generate Drive Ticket!</Button> */}
+            Generate Drive Ticket!</Button>
 
 
 
