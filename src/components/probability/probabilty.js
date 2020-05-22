@@ -12,6 +12,44 @@ import './probability.css'
 
 export default class ProbabilityDrive extends Component {
 
+    state = {
+
+        location_name: "",
+        drive_name: "",
+        userId: ""
+    }
+
+    handleFieldChange = evt => {
+       const stateToChange = {};
+       stateToChange[evt.target.id] = evt.target.value
+       console.log(stateToChange)
+       this.setState(stateToChange)
+   }
+   
+    handleProbabilityDrive = (evt) => {
+
+        let randomNumber = Math.floor(Math.random() * 4)
+        let outcome = ''
+
+        switch (randomNumber) {
+            case 0:
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sperm whale! ...Awaiting normalization.`;
+                break;
+            case 1:
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a bowl of petunias! ...Awaiting normalization.`;
+                break;
+            case 2:
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} made out of yarn! ...Awaiting normalization.`;
+                break;
+            case 3:
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sofa! ...Awaiting normalization.`;
+                break;
+        }
+
+        alert(`${outcome}`);
+    }
+
+
     render() {
         return (
             <React.Fragment>
@@ -34,17 +72,45 @@ export default class ProbabilityDrive extends Component {
                             <p className="lead">A faster-than-light drive used on spacecraft.</p>
                         </Container>
 
-                        <Form>
+    <Form>
       
       <FormGroup>
+        
         <Label for="driveName">Drive Name</Label>
-        <Input type="text" name="driveName" id="driveName" placeholder="Enter Name" />
+        <Input type="text" 
+         value={this.state.value}
+         required
+         name="driveName" 
+         onChange={this.handleFieldChange}
+         id="drive_name" 
+         placeholder="Enter Name" />
+
         <Label for="location">Location</Label>
-        <Input type="text" name="location" id="location" placeholder="Enter Destination" />
+        <Input type="text"
+         value={this.state.value}
+         required
+         name="location"
+         onChange={this.handleFieldChange}
+         id="location_name" 
+         placeholder="Enter Destination" />
+      
       </FormGroup>
-      </Form>
+      <Button className="driveBtn" color="success" sz="lg"
+            onClick={this.handleProbabilityDrive}
+            >Engage Infinite Probability Drive!</Button>
+      
+    </Form>
+
+      
+
+                    
+
+
+
                     </Jumbotron>
                 </div>
+
+                
 
                 
 

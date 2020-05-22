@@ -21,12 +21,12 @@ export default class ProbabilityDriveTicket extends Component {
     //     // this.handleClick = this.handleClick.bind(this);
     //   }
 
-    state = {
+    // state = {
 
-        location_name: "",
-        drive_name: "",
-        userId: ""
-    }
+    //     location_name: "",
+    //     drive_name: "",
+    //     userId: ""
+    // }
 
       constructNewDriveTicket = evt => {
 
@@ -47,7 +47,7 @@ export default class ProbabilityDriveTicket extends Component {
       handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
-        // console.log(stateToChange)
+        console.log(stateToChange)
         this.setState(stateToChange)
     }
 
@@ -83,87 +83,9 @@ export default class ProbabilityDriveTicket extends Component {
         alert(`${outcome}`);
     }
 
-    // updateDriveTicket = evt => {
-    //     evt.preventDefault()
-
-    //     const editedTicket = {
-    //         id: this.props.match.params.productId,
-    //         product_name: this.state.product_name,
-    //         sale_price: this.state.sale_price,
-    //         description: this.state.description
-    //     }
-
-    //     console.log(editedTicket)
-    //     this.props.putProduct(editedProduct)
-    //         .then(() => this.props.history.push("/products"))
-    // }
-    
     render() {
         return (
             <React.Fragment>
-
-
-
-                <div>
-                    <Spinner type="grow" color="primary" />
-                    <Spinner type="grow" color="secondary" />
-                    <Spinner type="grow" color="success" />
-                    <Spinner type="grow" color="danger" />
-                    <Spinner type="grow" color="warning" />
-                    <Spinner type="grow" color="info" />
-                    <Spinner type="grow" color="light" />
-                    <Spinner type="grow" color="dark" />
-                </div>
-
-                    <div className="form-group">
-                        <label htmlFor="Name">Name</label>
-                        <input
-                            type="text"
-                            value={this.state.value}
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="drive_name"
-                            placeholder="Name"
-                        />
-                    </div>
-
-                <form className="form-group">
-                    <div className="form-group">
-                        <label htmlFor="Location">Location</label>
-                        <input
-                            type="text"
-                            value={this.state.value}
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="location_name"
-                            placeholder="Location"
-                        />
-                    </div>
- 
-
-                    {/* <div className="form-group">
-                        <label htmlFor="Passengers">Drive Pass</label>
-                        <input
-                            type="text"
-                            value={this.state.value}
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="passenger_names"
-                            placeholder="Enter passenger names"
-                        />
-                    </div> */}
-
-        
-
-                    <Button className="driveBtn" color="success" sz="lg"
-            onClick={this.handleProbabilityDrive}
-            >Engage Infinite Probability Drive!</Button>
-                    
-
-            <br></br>
 
 <div>
             <Card body inverse style ={{ backgroundColor: '#333', borderColor: '#333' }}>
@@ -179,7 +101,7 @@ export default class ProbabilityDriveTicket extends Component {
                 <h2>Drive Details
                     </h2></CardText>
 
-            <CardSubtitle>
+            {/* <CardSubtitle>
             <p>Name: {this.state.drive_name}</p>
                 </CardSubtitle>
             <CardSubtitle>
@@ -187,7 +109,7 @@ export default class ProbabilityDriveTicket extends Component {
                 </CardSubtitle>
             <CardSubtitle>
             {/* <p>Timestamp: {dateTim}</p> */}
-                </CardSubtitle>
+                {/* </CardSubtitle> */} */}
 
                 <br></br>
                
@@ -200,7 +122,6 @@ export default class ProbabilityDriveTicket extends Component {
             >Generate Your Drive Ticket!</Button> */}
 
 
-                      </form> 
 
   );
 };
