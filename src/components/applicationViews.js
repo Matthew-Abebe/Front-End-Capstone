@@ -19,7 +19,8 @@ class ApplicationViews extends Component {
     state = {
         users: [],
         products: [],
-        purchases: []
+        purchases: [],
+        driveTickets: []
     };
 
     getTimeStamp() {
@@ -44,6 +45,15 @@ class ApplicationViews extends Component {
                 this.setState({
                     products: products
                 }))
+
+    addDriveTickets = (driveTicket) =>
+        DbCalls.postNewDriveTicket(driveTicket)
+            .then(() => DbCalls.getAllUserDriveTickets())
+            .then(driveTickets =>
+                this.setState({
+                    driveTickets: driveTickets
+                }))
+
 
     addPurchase = (purchase) => {
         
@@ -139,7 +149,7 @@ class ApplicationViews extends Component {
 
 
     render() {
-        console.log(this.state.purchases)
+        // console.log(this.state.purchases)
         return (
             //  <>
 

@@ -9,36 +9,55 @@ import './probabilityDriveTicket.css'
 
 export default class ProbabilityDriveTicket extends Component {
 
+
+
     // constructor(props) {
     //     super(props);
     //     this.state = {value: ''};
     
-        // this.handleFieldChange = this.handleFieldChange.bind(this);
-        // this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
-        // this.state = { counter: 0 };
-    //     this.handleClick = this.handleClick.bind(this);
+    //     this.constructNewDriveTicket = this.constructNewDriveTicket.bind(this);
+    //     // this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
+    //     // this.state = { counter: 0 };
+    //     // this.handleClick = this.handleClick.bind(this);
     //   }
 
     state = {
 
         location_name: "",
-        drive_name: ""
+        drive_name: "",
+        userId: ""
+    }
+
+      constructNewDriveTicket = evt => {
+
+        let userId = sessionStorage.getItem("userId")
+
+        const newDriveTicket = {
+            location_name: this.state.location_name,
+            drive_name: this.state.drive_name,
+            userId: parseInt(userId)
+        }
+
+        console.log(newDriveTicket)
+
+        this.props.addDriveTickets(newDriveTicket)
+            .then(() => this.props.history.push("/probabilityDriveTickets"))
     }
 
       handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
-        console.log(stateToChange)
+        // console.log(stateToChange)
         this.setState(stateToChange)
     }
 
-    handleDriveTicketClick = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value
-        console.log(stateToChange)
-        this.setState(stateToChange)
+    // handleDriveTicketClick = evt => {
+    //     const stateToChange = {};
+    //     stateToChange[evt.target.id] = evt.target.value
+    //     console.log(stateToChange)
+    //     this.setState(stateToChange)
 
-    }
+    // }
     
 
     handleProbabilityDrive = (evt) => {
@@ -82,6 +101,8 @@ export default class ProbabilityDriveTicket extends Component {
     render() {
         return (
             <React.Fragment>
+
+
 
                 <div>
                     <Spinner type="grow" color="primary" />
@@ -149,11 +170,11 @@ export default class ProbabilityDriveTicket extends Component {
         {/* <CardImg className="probDriveGif" top width="100%" src="https://i.gifer.com/DUR5.gif" alt="Card image cap" /> */}
         <CardBody>
           <CardTitle>
-              <h2>Generate Your Drive Ticket</h2></CardTitle>
-          <Link to="/probabilityDriveTicket">
+              <h2>Your Drive Tickets</h2></CardTitle>
+          {/* <Link to="/probabilityDriveTicket">
           <Button color="danger"
-          onClick={this.handleDriveTicketClick}>Start</Button>
-          </Link>
+          onClick={this.props.addDriveTickets}>Start</Button>
+          </Link> */}
           <CardText>
                 <h2>Drive Details
                     </h2></CardText>
@@ -189,6 +210,3 @@ export default class ProbabilityDriveTicket extends Component {
         )
     }}
 
-
-        
-    

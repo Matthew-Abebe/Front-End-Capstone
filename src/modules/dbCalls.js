@@ -32,10 +32,16 @@ export default {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
 
+    getAllUserDriveTickets() {
+        return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
+    },
+
     getUserPurchases() {
         let sessionId = sessionStorage.getItem("userId")
         return fetch(`${remoteURL}/purchases?userId=${sessionId}`).then(e => e.json())
     },
+
+    
 
     ///...///
 
@@ -66,6 +72,16 @@ export default {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newPurchase)
+        }).then(e => e.json())
+    },
+
+    postNewDriveTicket(newDriveTicket) {
+        return fetch(`${remoteURL}/probabilityDriveTickets`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newDriveTicket)
         }).then(e => e.json())
     },
 
