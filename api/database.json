@@ -116,15 +116,6 @@
     },
     {
       "userId": 7,
-      "productId": 4,
-      "productName": "Hover craft",
-      "productPrice": "100,000,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/19/2020 21:19:43",
-      "id": 4
-    },
-    {
-      "userId": 7,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
       "productPrice": "7.99",
@@ -167,6 +158,15 @@
       "description": "Best drink in the galaxy but it will smash your brains even worser.",
       "dateTime": "5/21/2020 13:26:57",
       "id": 11
+    },
+    {
+      "userId": 7,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/21/2020 14:28:06",
+      "id": 12
     }
   ]
 }

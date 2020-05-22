@@ -50,18 +50,6 @@ export default class ProductList extends Component {
                 </section>
             </div>
 
-
-            {/* <div>
-                <Card body inverse color="danger">
-                    <CardTitle>
-                <p><i>Generate Drive Ticket</i></p>
-                </CardTitle>
-                <Link to="/probabilityDrive">
-                    <button>Start</button>
-                </Link>
-                </Card>
-            </div> */}
-
         </React.Fragment>
     )
 }

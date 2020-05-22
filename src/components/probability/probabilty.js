@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Spinner } from 'reactstrap';
-import { Card, Button, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button} from 'reactstrap';
 import { Jumbotron, Container } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
@@ -9,55 +10,6 @@ import './probability.css'
 
 
 export default class ProbabilityDrive extends Component {
-
-    // handleProbabilityDrive = (evt) => {
-
-    //     let randomNumber = Math.floor(Math.random() * 7)
-    //     let outcome = ''
-
-    //     switch (randomNumber) {
-    //         case 0:
-    //             outcome = 'Congratulations, you are a sperm whale! ...Awaiting normalization.';
-    //             break;
-    //         case 1:
-    //             outcome = 'Congratulations, you are a bowl of petunias! ...Awaiting normalization.';
-    //             break;
-    //         case 2:
-    //             outcome = 'Congratulations, you are made of yarn! ...Awaiting normalization';
-    //             break;
-    //         case 3:
-    //             outcome = 'Congratulations, you are a rubber duck! ...Awaiting normalization';
-    //             break;
-    //         case 4:
-    //             outcome = 'Congratulations, you are a sofa! ...Awaiting normalization'
-    //             break;
-    //         case 5:
-    //             outcome = 'Congratulations, you are an anvil! ...Awaiting normalization';
-    //             break;
-    //         case 6:
-    //             outcome = 'Congratulations, you are a wooden log! ...Awaiting normalization';
-    //             break;
-    //     }
-    //     alert(`${outcome}`);
-    // }
-
-  
-    // constructNewProduct = evt => {
-
-    //     let userId = sessionStorage.getItem("userId")
-
-    //     const newProduct = {
-    //         product_name: this.state.product_name,
-    //         sale_price: this.state.sale_price,
-    //         description: this.state.description,
-    //         userId: parseInt(userId)
-    //     }
-
-    //     console.log(newProduct)
-
-    //     this.props.addProducts(newProduct)
-    //         .then(() => this.props.history.push("/products"))
-    // }
 
     render() {
         return (
@@ -84,59 +36,32 @@ export default class ProbabilityDrive extends Component {
                 </div>
 
                 <br></br>
-{/* 
-                <form className="productForm">
-                    <div className="form-group">
-                        <label htmlFor="productName">Product Name</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="product_name"
-                            placeholder="Product Name"
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="salePrice">Sale Price</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="sale_price"
-                            placeholder="Sale Price"
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="description">Description</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="description"
-                            placeholder="Description"
-                        />
-                    </div>
-                      </form> */}
-
 
                 <div>
-                <Card body inverse color="danger">
-                    <CardTitle>
-                <p><i>Generate Drive Ticket</i></p>
-                </CardTitle>
-                <Link to="/probabilityDriveTicket">
-                    <button className="driveTicketBtn"
-                    onClick={this.constructNewProduct}>Start</button>
-                </Link>
-                </Card>
+
+                <div>
+      <Card body inverse style ={{ backgroundColor: '#333', borderColor: '#333' }}>
+        {/* <CardImg className="probDriveGif" top width="100%" src="https://i.gifer.com/DUR5.gif" alt="Card image cap" /> */}
+        <CardBody>
+          <CardTitle>
+              <h2>The Infinite Probablity Drive</h2></CardTitle>
+          <Link to="/probabilityDriveTicket">
+          <Button color="danger">Start</Button>
+          </Link>
+               
+        </CardBody>
+      </Card>
+    </div>
+                
+            
+                {/* <Link to="/probabilityDriveTicket">
+                    <Button className="driveTicketBtn" color="link"
+                    onClick={this.constructNewProduct}>
+                    Start</Button>
+                </Link> */}
+               
             </div>
           
-
             </React.Fragment>
         )
     }

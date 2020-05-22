@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Spinner } from 'reactstrap';
-// import { Card, Button, CardTitle } from 'reactstrap';
-import { Button} from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button} from 'reactstrap';
 // import { Jumbotron, Container } from 'reactstrap';
 import { Link } from 'react-router-dom'
 
@@ -16,14 +15,14 @@ export default class ProbabilityDriveTicket extends Component {
     
         // this.handleFieldChange = this.handleFieldChange.bind(this);
         // this.handleProbabilityDrive = this.handleProbabilityDrive.bind(this);
+        // this.state = { counter: 0 };
+    //     this.handleClick = this.handleClick.bind(this);
     //   }
 
     state = {
 
         location_name: "",
-        drive_user_name: "",
-        drive_pass: ""
-
+        drive_name: ""
     }
 
       handleFieldChange = evt => {
@@ -32,38 +31,53 @@ export default class ProbabilityDriveTicket extends Component {
         console.log(stateToChange)
         this.setState(stateToChange)
     }
+
+    handleDriveTicketClick = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value
+        console.log(stateToChange)
+        this.setState(stateToChange)
+
+    }
     
 
     handleProbabilityDrive = (evt) => {
 
-        let randomNumber = Math.floor(Math.random() * 7)
+        let randomNumber = Math.floor(Math.random() * 4)
         let outcome = ''
 
         switch (randomNumber) {
             case 0:
-                outcome = 'Congratulations, you are a sperm whale! ...Awaiting normalization.';
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sperm whale! ...Awaiting normalization.`;
                 break;
             case 1:
-                outcome = 'Congratulations, you are a bowl of petunias! ...Awaiting normalization.';
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a bowl of petunias! ...Awaiting normalization.`;
                 break;
             case 2:
-                outcome = 'Congratulations, you are made of yarn! ...Awaiting normalization';
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} made out of yarn! ...Awaiting normalization.`;
                 break;
             case 3:
-                outcome = 'Congratulations, you are a rubber duck! ...Awaiting normalization';
-                break;
-            case 4:
-                outcome = 'Congratulations, you are a sofa! ...Awaiting normalization'
-                break;
-            case 5:
-                outcome = 'Congratulations, you are an anvil! ...Awaiting normalization';
-                break;
-            case 6:
-                outcome = 'Congratulations, you are a wooden log! ...Awaiting normalization';
+                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sofa! ...Awaiting normalization.`;
                 break;
         }
+
         alert(`${outcome}`);
     }
+
+    // updateDriveTicket = evt => {
+    //     evt.preventDefault()
+
+    //     const editedTicket = {
+    //         id: this.props.match.params.productId,
+    //         product_name: this.state.product_name,
+    //         sale_price: this.state.sale_price,
+    //         description: this.state.description
+    //     }
+
+    //     console.log(editedTicket)
+    //     this.props.putProduct(editedProduct)
+    //         .then(() => this.props.history.push("/products"))
+    // }
     
     render() {
         return (
@@ -80,9 +94,22 @@ export default class ProbabilityDriveTicket extends Component {
                     <Spinner type="grow" color="dark" />
                 </div>
 
+                    <div className="form-group">
+                        <label htmlFor="Name">Name</label>
+                        <input
+                            type="text"
+                            value={this.state.value}
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="drive_name"
+                            placeholder="Name"
+                        />
+                    </div>
+
                 <form className="form-group">
                     <div className="form-group">
-                        <label htmlFor="Location Name">Location</label>
+                        <label htmlFor="Location">Location</label>
                         <input
                             type="text"
                             value={this.state.value}
@@ -93,57 +120,70 @@ export default class ProbabilityDriveTicket extends Component {
                             placeholder="Location"
                         />
                     </div>
+ 
 
-                    <div className="form-group">
-                        <label htmlFor="Confirm Drive User">Confirm Drive User</label>
+                    {/* <div className="form-group">
+                        <label htmlFor="Passengers">Drive Pass</label>
                         <input
                             type="text"
                             value={this.state.value}
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="drive_user_name"
-                            placeholder="Username"
+                            id="passenger_names"
+                            placeholder="Enter passenger names"
                         />
-                    </div>
+                    </div> */}
 
-                    <div className="form-group">
-                        <label htmlFor="Drive Pass">Drive Pass</label>
-                        <input
-                            type="text"
-                            value={this.state.value}
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="drive_pass"
-                            placeholder="Drive Password"
-                        />
-                    </div>
+        
+
+                    <Button className="driveBtn" color="success" sz="lg"
+            onClick={this.handleProbabilityDrive}
+            >Engage Infinite Probability Drive!</Button>
+                    
+
+            <br></br>
+
+<div>
+            <Card body inverse style ={{ backgroundColor: '#333', borderColor: '#333' }}>
+        {/* <CardImg className="probDriveGif" top width="100%" src="https://i.gifer.com/DUR5.gif" alt="Card image cap" /> */}
+        <CardBody>
+          <CardTitle>
+              <h2>Generate Your Drive Ticket</h2></CardTitle>
+          <Link to="/probabilityDriveTicket">
+          <Button color="danger"
+          onClick={this.handleDriveTicketClick}>Start</Button>
+          </Link>
+          <CardText>
+                <h2>Drive Details
+                    </h2></CardText>
+
+            <CardSubtitle>
+            <p>Name: {this.state.drive_name}</p>
+                </CardSubtitle>
+            <CardSubtitle>
+            <p>Location: {this.state.location_name}</p>
+                </CardSubtitle>
+            <CardSubtitle>
+            {/* <p>Timestamp: {dateTim}</p> */}
+                </CardSubtitle>
+
+                <br></br>
+               
+        </CardBody>
+      </Card>
+      </div>
+
+{/* <Button className="driveBtn" color="primary" sz="lg"
+            onClick={this.handleClick}
+            >Generate Your Drive Ticket!</Button> */}
+
 
                       </form> 
 
-                      
-                {<div>
-                    <Button className="driveBtn" color="success" sz="lg"
-                        onClick={this.handleProbabilityDrive}
-                    >Engage Infinite Probability Drive!</Button>
+  );
+};
 
-                   {/* Make drive ticket */}
-
-                </div> }
-
-                <div className="form-group">
-                        <label htmlFor="salePrice">Sale Price</label>
-                        <input
-                            type="text"
-                            value={this.state.value}
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="sale_price"
-                            placeholder="Sale Price"
-                        />
-                    </div>
 
             </React.Fragment>
         )
