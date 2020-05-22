@@ -28,21 +28,21 @@ export default class ProbabilityDriveTicket extends Component {
     //     userId: ""
     // }
 
-      constructNewDriveTicket = evt => {
+    //   constructNewDriveTicket = evt => {
 
-        let userId = sessionStorage.getItem("userId")
+    //     let userId = sessionStorage.getItem("userId")
 
-        const newDriveTicket = {
-            location_name: this.state.location_name,
-            drive_name: this.state.drive_name,
-            userId: parseInt(userId)
-        }
+    //     const newDriveTicket = {
+    //         location_name: this.state.location_name,
+    //         drive_name: this.state.drive_name,
+    //         userId: parseInt(userId)
+    //     }
 
-        console.log(newDriveTicket)
+    //     console.log(newDriveTicket)
 
-        this.props.addDriveTickets(newDriveTicket)
-            .then(() => this.props.history.push("/probabilityDriveTickets"))
-    }
+    //     this.props.addDriveTickets(newDriveTicket)
+    //         .then(() => this.props.history.push("/probabilityDriveTickets"))
+    // }
 
       handleFieldChange = evt => {
         const stateToChange = {};
@@ -60,28 +60,7 @@ export default class ProbabilityDriveTicket extends Component {
     // }
     
 
-    handleProbabilityDrive = (evt) => {
-
-        let randomNumber = Math.floor(Math.random() * 4)
-        let outcome = ''
-
-        switch (randomNumber) {
-            case 0:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sperm whale! ...Awaiting normalization.`;
-                break;
-            case 1:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a bowl of petunias! ...Awaiting normalization.`;
-                break;
-            case 2:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} made out of yarn! ...Awaiting normalization.`;
-                break;
-            case 3:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sofa! ...Awaiting normalization.`;
-                break;
-        }
-
-        alert(`${outcome}`);
-    }
+    
 
     render() {
         return (

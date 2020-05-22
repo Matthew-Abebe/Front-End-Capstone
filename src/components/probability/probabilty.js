@@ -18,6 +18,7 @@ export default class ProbabilityDrive extends Component {
         drive_name: "",
         userId: ""
     }
+    
 
     handleFieldChange = evt => {
        const stateToChange = {};
@@ -25,6 +26,23 @@ export default class ProbabilityDrive extends Component {
        console.log(stateToChange)
        this.setState(stateToChange)
    }
+
+   constructNewDriveTicket = evt => {
+
+    let userId = sessionStorage.getItem("userId")
+
+    const newDriveTicket = {
+        location_name: this.state.location_name,
+        drive_name: this.state.drive_name,
+        userId: parseInt(userId)
+    }
+
+    console.log(newDriveTicket)
+
+    this.props.addDriveTickets(newDriveTicket)
+        .then(() => this.props.history.push("/probabilityDriveTickets"))
+}
+
    
     handleProbabilityDrive = (evt) => {
 
@@ -51,6 +69,7 @@ export default class ProbabilityDrive extends Component {
 
 
     render() {
+        
         return (
             <React.Fragment>
 
@@ -95,9 +114,25 @@ export default class ProbabilityDrive extends Component {
          placeholder="Enter Destination" />
       
       </FormGroup>
+
       <Button className="driveBtn" color="success" sz="lg"
-            onClick={this.handleProbabilityDrive}
-            >Engage Infinite Probability Drive!</Button>
+            onClick={() => {
+                this.handleProbabilityDrive()
+                this.constructNewDriveTicket()
+            }
+                }>
+            Engage Infinite Probability Drive!</Button>
+
+            {/* <Button className="driveTicketBtn" color="success" sz="lg"
+            onClick={() => {
+                this.constructNewDriveTicket()
+                // this.props.addDriveTicket({driveTicket})
+            }
+                }>
+            Generate Drive Ticket!</Button> */}
+
+
+
       
     </Form>
 

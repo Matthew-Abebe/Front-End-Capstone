@@ -32,7 +32,7 @@ export default {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
 
-    getAllUserDriveTickets() {
+    getAllDriveTickets() {
         return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
     },
 

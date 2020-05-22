@@ -13,6 +13,7 @@ import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
 import ProbabilityDrive from './probability/probabilty';
 import ProbabilityDriveTicket from './probability/probabilityDriveTicket';
+import ProbabilityTicketList from './probability/probabilityTicketList'
 
 class ApplicationViews extends Component {
 
@@ -48,7 +49,7 @@ class ApplicationViews extends Component {
 
     addDriveTickets = (driveTicket) =>
         DbCalls.postNewDriveTicket(driveTicket)
-            .then(() => DbCalls.getAllUserDriveTickets())
+            .then(() => DbCalls.getAllDriveTickets())
             .then(driveTickets =>
                 this.setState({
                     driveTickets: driveTickets
@@ -75,6 +76,26 @@ class ApplicationViews extends Component {
                     purchases: purchases
                 }))
                 alert(`You purchased: ${purchaseObj.productName}. Thank you!`)
+    }
+
+    addDriveTicket = (driveTicket) => {
+        
+        let driveTicketUserId = sessionStorage.getItem("driveTicketUserId")
+
+        const driveTicketObj = {
+            driveTicketUserId: parseInt(driveTicketUserId),
+            driveTicketId: driveTicket.id,
+            driveTicketName: driveTicket.driver_name,
+            driveTicketLocation: driveTicket.location_name
+        }
+        console.log(driveTicketObj)
+        DbCalls.postNewDriveTicket(driveTicketObj)
+            .then(() => DbCalls.getAllDriveTickets())
+            .then(driveTickets =>
+                this.setState({
+                    driveTickets: driveTickets
+                }))
+                alert(`Hi ${driveTicketObj.driveTicketName}. You have a new drive ticket for your trip to ${driveTicketObj.driveTicketLocation}!`)
     }
 
     putProduct = (editedProductObject) => {
@@ -135,10 +156,12 @@ class ApplicationViews extends Component {
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getAllProducts(),
             purchases: await DbCalls.getUserPurchases(),
+            driveTickets: await DbCalls.getAllDriveTickets()
         })
         console.log(this.state.users)
         console.log(this.state.products)
         console.log(this.state.purchases)
+        console.log(this.state.driveTickets)
     }
 
     componentDidMount = () => {
@@ -199,6 +222,19 @@ class ApplicationViews extends Component {
                     }
                 }
                 } />
+
+                <Route exact path="/probabilityDriveTickets" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <ProbabilityTicketList {...props}
+                            
+                        addDriveTicket={this.addDriveTicket}
+                        driveTickets={this.state.driveTickets}
+                        />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }
+            } />
 
                 <Route path="/products/new" render={(props) => {
                     return <ProductNewForm {...props}
@@ -262,10 +298,11 @@ class ApplicationViews extends Component {
                 <Route exact path="/probabilityDrive"
                     render={(props) => {
                         if (this.isAuthenticated()) {
-                            return <ProbabilityDrive {
-                                ...props
-                            }
+                            return <ProbabilityDrive {...props}
 
+                            addDriveTicket={this.addDriveTicket}
+                            addDriveTickets={this.addDriveTickets}
+                            driveTickets={this.state.driveTickets}
                             />
                         } else {
                             return <Redirect to="/login" />
