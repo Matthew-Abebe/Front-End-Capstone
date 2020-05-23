@@ -115,6 +115,17 @@ export default {
         }).then(e => e.json())
     },
 
+    putDriveTicket(editedDriveTicket) {
+
+        return fetch(`${remoteURL}/probabilityDriveTickets/${editedDriveTicket.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedDriveTicket)
+        }).then(e => e.json())
+    },
+
     ///...///
 
     deleteProduct(id) {

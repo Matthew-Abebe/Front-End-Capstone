@@ -13,7 +13,8 @@ import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
 import ProbabilityDrive from './probability/probabilty';
 import ProbabilityDriveTicket from './probability/probabilityDriveTicket';
-import ProbabilityTicketList from './probability/probabilityTicketList'
+import ProbabilityTicketList from './probability/probabilityTicketList';
+import ProbabilityDriveTicketEditForm from './probability/probabilityDriveTicketEditForm';
 
 class ApplicationViews extends Component {
 
@@ -118,6 +119,16 @@ class ApplicationViews extends Component {
                 })
             })
 
+    }
+
+    putDriveTicket = (editedDriveTicketObject) => {
+        return DbCalls.putDriveTicket(editedDriveTicketObject)
+            .then(() => DbCalls.getUserDriveTickets())
+            .then(driveTickets => {
+                this.setState({
+                    driveTickets: driveTickets
+                })
+            })
     }
 
     deleteProduct = (product) => {
@@ -277,6 +288,18 @@ class ApplicationViews extends Component {
                         />
 
                     }} />
+
+<               Route path="/probabilityDriveTickets/:driveTicketId(\d+)/edit"
+                    render={props => {
+                        return <ProbabilityDriveTicketEditForm {
+                            ...props
+                        }
+                            driveTickets={this.state.driveTickets}
+                            putDriveTicket={this.putDriveTicket}
+                        />
+
+                    }} />
+
 
 
                 <Route exact path="/purchases" render={(props) => {

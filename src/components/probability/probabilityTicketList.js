@@ -47,11 +47,14 @@ export default class ProbabilityTicketList extends Component {
                                         Delete
                                 </button>
 
-                                <button onClick={() =>
+                                <Link to={`/probabilityDriveTickets/${driveTicket.id}/edit`}>
+                                <button
+                                 onClick={() =>
                                 console.log("for edit ticket")}
                                 className="deleteUserDriveTicketBtn">
                                         Edit
                                 </button>
+                                </Link>
                                         <br></br>
 
                                     
