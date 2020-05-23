@@ -7,6 +7,10 @@ import './probability.css'
 
 
 export default class ProbabilityTicketList extends Component {
+
+    state = {
+
+    }
     
 
     handleClick = (e) => {
@@ -17,7 +21,8 @@ export default class ProbabilityTicketList extends Component {
     
 
     render() {
-        console.log(this.props.driveTickets)
+
+        console.log(this.props.driveTickets) 
         return (
 
 
@@ -32,7 +37,7 @@ export default class ProbabilityTicketList extends Component {
 
                                 <Card body inverse color="secondary">
                                     <CardTitle  tag="a" 
-                                    href={`/probabilityDriveTickets`}
+                                    // href={`/probabilityDriveTickets`}
                                     >
                                         <h2>Name: {driveTicket.drive_name}</h2>
                                         <h4>Location: {driveTicket.location_name}</h4>
@@ -40,6 +45,12 @@ export default class ProbabilityTicketList extends Component {
                                         <button onClick={() =>
                                         this.props.deleteDriveTicket(driveTicket.id)} className="deleteUserDriveTicketBtn">
                                         Delete
+                                </button>
+
+                                <button onClick={() =>
+                                console.log("for edit ticket")}
+                                className="deleteUserDriveTicketBtn">
+                                        Edit
                                 </button>
                                         <br></br>
 

@@ -28,24 +28,25 @@ export default {
         return fetch(`${remoteURL}/userProducts`).then(e => e.json())
     },
 
-    getUserDriveTickets() {
-        return fetch(`${remoteURL}/probabilityDriveTickets`).then(e => e.json())
-    },
-
+    
     getAllDriveTickets() {
         return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
     },
-
+    
     getAllPurchases() {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
-
-
+    
+    
     getUserPurchases() {
         let sessionId = sessionStorage.getItem("userId")
         return fetch(`${remoteURL}/purchases?userId=${sessionId}`).then(e => e.json())
     },
-
+    
+    getUserDriveTickets() {
+        let sessionId = sessionStorage.getItem("userId")
+        return fetch(`${remoteURL}/probabilityDriveTickets?userId=${sessionId}`).then(e => e.json())
+    },
     
 
     ///...///

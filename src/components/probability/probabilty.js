@@ -39,12 +39,12 @@ export default class ProbabilityDrive extends Component {
 
     
 
+    console.log(newDriveTicket)
     
     this.props.addDriveTickets(newDriveTicket)
     .then(() => this.props.history.push("/probabilityDriveTickets"))
     
-    console.log(newDriveTicket)
-    console.log(`Hi ${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
+    // console.log(`Hi ${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
     
 }
 

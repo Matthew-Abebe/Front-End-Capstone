@@ -237,9 +237,9 @@ class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <ProbabilityTicketList {...props}
                             
+                        driveTickets={this.state.driveTickets}
                         addDriveTicket={this.addDriveTicket}
                         deleteDriveTicket={this.deleteDriveTicket}
-                        driveTickets={this.state.driveTickets}
                         />
                     } else {
                         return <Redirect to="/login" />
