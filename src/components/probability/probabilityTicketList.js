@@ -7,10 +7,6 @@ import './probability.css'
 
 
 export default class ProbabilityTicketList extends Component {
-
-    state = {
-
-    }
     
 
     handleClick = (e) => {

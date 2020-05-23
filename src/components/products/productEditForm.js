@@ -7,7 +7,8 @@ export default class ProductEditForm extends Component {
         product_name: "",
         sale_price: "",
         manufacture_cost: "",
-        description: ""
+        description: "",
+        productId: ""
 
     }
 

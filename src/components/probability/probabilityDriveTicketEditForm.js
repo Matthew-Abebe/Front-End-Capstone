@@ -4,9 +4,9 @@ import DbCalls from '../../modules/dbCalls'
 export default class ProbabilityDriveTicketEditForm extends Component {
 
     state = {
-        drive_name: "",
-        location_name: "",
-        id: ""
+        driveName: "",
+        locationName: "",
+        // driveTicketId: ""
 
     }
 
@@ -21,12 +21,12 @@ export default class ProbabilityDriveTicketEditForm extends Component {
         evt.preventDefault()
 
         const editedDriveTicket = {
-            id: this.props.match.params.id,
-            drive_name: this.state.drive_name,
-            location_name: this.state.location_name,
+            id: this.props.match.params.id, //Undefined issue here!//
+            driveName: this.state.drive_name,
+            locationName: this.state.location_name,
         }
 
-        // console.log(editedProduct)
+        console.log(editedDriveTicket)
         this.props.putDriveTicket(editedDriveTicket)
             .then(() => this.props.history.push("/probabilityDriveTickets"))
     }
@@ -35,11 +35,11 @@ export default class ProbabilityDriveTicketEditForm extends Component {
     componentDidMount() {
         DbCalls.getProduct(this.props.match.params.id)
             .then(driveTicket => {
-                console.log(driveTicket)
                 this.setState({
-                    drive_name: driveTicket.drive_name,
-                    location_name: driveTicket.location_name,
+                    driveName: driveTicket.drive_name,
+                    locationName: driveTicket.location_name,
                 })
+                console.log(driveTicket)
             })
     }
 
@@ -56,19 +56,19 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="drive_name"
-                            value={this.state.drive_name}
+                            value={this.state.driveName}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="locationName">Product Price</label>
+                        <label htmlFor="locationName">Location</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="drive_location"
-                            value={this.state.location_name}
+                            id="location_name"
+                            value={this.state.locationName}
                         />
                     </div>
 
