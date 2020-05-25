@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button, CardTitle } from 'reactstrap';
 
-import './probability.css'
+import './probabilityDrive.css'
 
 
 
@@ -32,15 +32,15 @@ export default class ProbabilityTicketList extends Component {
 
                                 <Card body inverse color="secondary">
                                     <CardTitle  tag="a" 
-                                    href={`/probabilityDriveTickets`}
+                                    href={`/probabilityDriveTickets/${driveTicket.id}/details`}
                                     >
                                         <h2>Name: {driveTicket.drive_name}</h2>
-                                        <h4>Location: {driveTicket.location_name}</h4>
+                                        <h2>Location: {driveTicket.location_name}</h2>
 
-                                        <button onClick={() =>
+                                        {/* <button onClick={() =>
                                         this.props.deleteDriveTicket(driveTicket.id)} className="deleteUserDriveTicketBtn">
                                         Delete
-                                </button>
+                                </button> */}
                                         <br></br>
 
                                     
