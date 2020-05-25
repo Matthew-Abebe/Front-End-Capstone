@@ -13,7 +13,6 @@ import './probabilityDrive.css'
 export default class ProbabilityDriveTicketDetails extends Component {
 
     state = {
-        driveTicketId: "",
         driverName: "",
         driveLocation: "",
         // description: ""
@@ -24,7 +23,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
             .then(driveTicket => {
                 console.log(driveTicket)
                 this.setState({
-                    driveTicketId: driveTicket.id, //maybe wrong
+                    driveTicketId: driveTicket.id,
                     driverName: driveTicket.drive_name,
                     driveLocation: driveTicket.location_name,
                     // description: product.description
@@ -33,15 +32,15 @@ export default class ProbabilityDriveTicketDetails extends Component {
             }
             )
 
-            DbCalls.getUserDriveTickets(this.props.match.params.userDriveTicketId)
-            .then(userDriveTicket => {
-                console.log(userDriveTicket)
+            DbCalls.getUserDriveTickets(this.props.match.params.driveTicketId)
+            .then(driveTicket => {
+                console.log(driveTicket)
                 this.setState({
-                    userDriveTicketId: userDriveTicket.id,
-                    userDriverTicketName: userDriveTicket.drive_name,
-                    userDriveTicketLocation: userDriveTicket.location_name
+                    driveTicketId: driveTicket.id,
+                    driverTicketName: driveTicket.drive_name,
+                    driveTicketLocation: driveTicket.location_name
                 })
-                console.log(this.state.userDriveTicketId)
+                console.log(this.state.driveTicketId)
             })
     }
 
@@ -76,16 +75,12 @@ export default class ProbabilityDriveTicketDetails extends Component {
                             </ButtonGroup> */}
                         {/* <Button>Hi</Button> */}
 
-                        <Link to={`/probabilityDriveTickets/${this.state.driveTicketId}/edit`}>
-                            <button>Edit</button>
-                        </Link>
-                        
-                        <Link to="/probabilityDriveTickets">
-                        <button onClick={() =>
-                                        this.props.deleteDriveTicket(this.state.driveTicketId)} className="deleteUserDriveTicketBtn">
+                        <button 
+                        // onClick={() =>
+                                        // this.props.deleteDriveTicket(driveTicket.id)} 
+                                        className="deleteUserDriveTicketBtn">
                                         Delete
                                 </button>
-                                </Link>
                     </CardBody>
                 </Card>
             </div>

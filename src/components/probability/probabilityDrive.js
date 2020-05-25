@@ -14,6 +14,7 @@ state = {
 
     location_name: "",
     drive_name: "",
+<<<<<<< HEAD
     // userId: ""
 }
 
@@ -21,6 +22,15 @@ state = {
 //     e.preventDefault()
 //     console.log("clicked link")
 // }
+=======
+    userId: ""
+}
+
+handleClick = (e) => {
+    e.preventDefault()
+    console.log("clicked link")
+}
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
 
 handleFieldChange = evt => {
     const stateToChange = {};
@@ -29,30 +39,54 @@ handleFieldChange = evt => {
     this.setState(stateToChange)
 }
 
+<<<<<<< HEAD
 //Construct new drive ticket function
 
+=======
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
 constructNewDriveTicket = (evt) => {
 
     let userId = sessionStorage.getItem("userId")
 
     const newDriveTicket = {
+<<<<<<< HEAD
         id: this.props.match.params.driveTicketId,
+=======
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
         location_name: this.state.location_name,
         drive_name: this.state.drive_name,
         userId: parseInt(userId)
     }
+<<<<<<< HEAD
     
     console.log(newDriveTicket) //newDriveTicket is missing its id
+=======
+
+    
+
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
     
     this.props.addDriveTickets(newDriveTicket)
     .then(() => this.props.history.push("/probabilityDriveTickets"))
     
+<<<<<<< HEAD
+=======
+    console.log(newDriveTicket)
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
     console.log(`Hi ${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
     
 }
 
+<<<<<<< HEAD
 handleProbabilityDrive = (evt) => {
     
+=======
+//Construct new drive ticket function
+
+handleProbabilityDrive = (evt) => {
+    
+
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
     let randomNumber = Math.floor(Math.random() * 4)
     let outcome = ''
 

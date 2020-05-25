@@ -32,10 +32,22 @@ export default class ProbabilityTicketList extends Component {
 
                                 <Card body inverse color="secondary">
                                     <CardTitle  tag="a" 
+<<<<<<< HEAD
                                     href={`/probabilityDriveTickets/${driveTicket.id}/details`}>
                                         <h2>Name: {driveTicket.drive_name}</h2>
                                         <h2>Location: {driveTicket.location_name}</h2>
 
+=======
+                                    href={`/probabilityDriveTickets/${driveTicket.id}/details`}
+                                    >
+                                        <h2>Name: {driveTicket.drive_name}</h2>
+                                        <h2>Location: {driveTicket.location_name}</h2>
+
+                                        {/* <button onClick={() =>
+                                        this.props.deleteDriveTicket(driveTicket.id)} className="deleteUserDriveTicketBtn">
+                                        Delete
+                                </button> */}
+>>>>>>> deb389a2b1c683ec2349f048aef10e047bc73875
                                         <br></br>
                                     </CardTitle>
                                 </Card>
