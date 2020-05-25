@@ -344,7 +344,7 @@ class ApplicationViews extends Component {
 
                     }} />
                     
-                    {/* <Route exact path="/probabilityDriveTicket"
+                    <Route exact path="/probabilityDriveTicket"
                     render={(props) => {
                         if (this.isAuthenticated()) {
                             return <ProbabilityDriveTicket {
@@ -356,7 +356,7 @@ class ApplicationViews extends Component {
                             return <Redirect to="/login" />
                         }
 
-                    }} /> */}
+                    }} />
 
             </React.Fragment>
         )

@@ -2,29 +2,28 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button, CardTitle } from 'reactstrap';
 
-import './probability.css'
+import './probabilityDrive.css'
 
 
 
 export default class ProbabilityTicketList extends Component {
-    
+
+    // state = {
+
+    // } 
 
     handleClick = (e) => {
         e.preventDefault()
         console.log("clicked link")
     }
 
-    
-
     render() {
-
-        console.log(this.props.driveTickets) 
+        // console.log(this.props.driveTickets)
         return (
-
 
             <React.Fragment>
 
-<div>
+            <div>
                 <section className="driveTickets">
                     <h2>Drive Tickets</h2>
                     {
@@ -33,37 +32,21 @@ export default class ProbabilityTicketList extends Component {
 
                                 <Card body inverse color="secondary">
                                     <CardTitle  tag="a" 
-                                    // href={`/probabilityDriveTickets`}
-                                    >
+                                    href={`/probabilityDriveTickets/${driveTicket.id}/details`}>
                                         <h2>Name: {driveTicket.drive_name}</h2>
-                                        <h4>Location: {driveTicket.location_name}</h4>
+                                        <h2>Location: {driveTicket.location_name}</h2>
 
-                                        <button onClick={() =>
-                                        this.props.deleteDriveTicket(driveTicket.id)} className="deleteUserDriveTicketBtn">
-                                        Delete
-                                </button>
-
-                                <Link to={`/probabilityDriveTickets/${driveTicket.id}/edit`}>
-                                <button
-                                 onClick={() =>
-                                console.log("for edit ticket")}
-                                className="deleteUserDriveTicketBtn">
-                                        Edit
-                                </button>
-                                </Link>
                                         <br></br>
-
-                                    
                                     </CardTitle>
                                 </Card>
 
-                            </div>
+                                </div>
 
                         )}
-                </section>
-            </div>
+                    </section>
+                </div>
 
-        </React.Fragment>
-    )
-}
+            </React.Fragment>
+        )
+    }
 }

@@ -4,9 +4,9 @@ import DbCalls from '../../modules/dbCalls'
 export default class ProbabilityDriveTicketEditForm extends Component {
 
     state = {
-        driveName: "",
-        locationName: "",
-        // driveTicketId: ""
+        // driveTicketId: "",
+        drive_name: "",
+        location_name: ""
 
     }
 
@@ -20,26 +20,30 @@ export default class ProbabilityDriveTicketEditForm extends Component {
     updateExistingDriveTicket = evt => {
         evt.preventDefault()
 
+        let userId = sessionStorage.getItem("userId")
+
         const editedDriveTicket = {
-            id: this.props.match.params.id, //Undefined issue here!//
-            driveName: this.state.drive_name,
-            locationName: this.state.location_name,
+            id: this.props.match.params.driveTicketId, //Undefined issue here! Resolved I think//
+            drive_name: this.state.drive_name,
+            location_name: this.state.location_name,
+            userId: parseInt(userId)
         }
 
-        console.log(editedDriveTicket)
+        // console.log(editedDriveTicket)
         this.props.putDriveTicket(editedDriveTicket)
             .then(() => this.props.history.push("/probabilityDriveTickets"))
     }
 
 
     componentDidMount() {
-        DbCalls.getProduct(this.props.match.params.id)
+        DbCalls.getProduct(this.props.match.params.driveTicketId)
             .then(driveTicket => {
                 this.setState({
-                    driveName: driveTicket.drive_name,
-                    locationName: driveTicket.location_name,
+                    // driveTicketId: driveTicket.id,
+                    drive_name: driveTicket.drive_name,
+                    location_name: driveTicket.location_name,
                 })
-                console.log(driveTicket)
+                // console.log(driveTicket)
             })
     }
 
@@ -56,7 +60,7 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="drive_name"
-                            value={this.state.driveName}
+                            value={this.state.drive_name}
                         />
                     </div>
 
@@ -68,7 +72,7 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="location_name"
-                            value={this.state.locationName}
+                            value={this.state.location_name}
                         />
                     </div>
 
