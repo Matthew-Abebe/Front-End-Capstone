@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-export default class ProductNewForm extends Component {
+// export default class ProductNewForm extends Component {
 
-    state = {
-        product_name: "",
-        sale_price: "",
-        manufacture_cost: "",
-        description: ""
+    // state = {
+    //     product_name: "",
+    //     sale_price: "",
+    //     manufacture_cost: "",
+    //     description: ""
 
-    }
+    // }
 
     // handleFieldChange = evt => {
     //     const stateToChange = {};
@@ -33,10 +33,10 @@ export default class ProductNewForm extends Component {
     //         .then(() => this.props.history.push("/products"))
     // }
 
-    render() {
+    // render() {
 
-        return (
-            <React.Fragment>
+    //     return (
+    //         <React.Fragment>
 
                 {/* <form className="productForm">
                     <div className="form-group">
@@ -84,7 +84,7 @@ export default class ProductNewForm extends Component {
 
 
 
-            </React.Fragment>
-        )
-    }
-}
+//             </React.Fragment>
+//         )
+//     }
+// }

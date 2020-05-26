@@ -6,15 +6,15 @@ import Register from './authentication/register'
 import Login from './authentication/login'
 import DbCalls from '../modules/dbCalls'
 import ProductList from './products/productList'
-import ProductNewForm from './products/productNew'
+// import ProductNewForm from './products/productNew'
 import ProductDetails from './products/productDetails'
 import ProductEditForm from './products/productEditForm'
 import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
-import ProbabilityDrive from './probability/probabilty';
-import ProbabilityDriveTicket from './probability/probabilityDriveTicket';
-import ProbabilityTicketList from './probability/probabilityTicketList';
-import ProbabilityDriveTicketEditForm from './probability/probabilityDriveTicketEditForm';
+import ProbabilityDrive from './probability/probabilityDrive';
+import ProbabilityTicketList from './probability/probabilityTicketList'
+import ProbabilityDriveTicketDetails from './probability/probabilityDriveTicketDetails';
+import ProbabilityDriveEditForm from './probability/probabilityDriveTicketEditForm';
 
 class ApplicationViews extends Component {
 
@@ -99,27 +99,27 @@ class ApplicationViews extends Component {
                 alert(`Hi ${driveTicketObj.driveTicketName}. You have a new drive ticket for your trip to ${driveTicketObj.driveTicketLocation}!`)
     }
 
-    putProduct = (editedProductObject) => {
-        return DbCalls.putProduct(editedProductObject)
-            .then(() => DbCalls.getAllProducts())
-            .then(products => {
-                this.setState({
-                    products: products
-                })
-            })
+    // putProduct = (editedProductObject) => {
+    //     return DbCalls.putProduct(editedProductObject)
+    //         .then(() => DbCalls.getAllProducts())
+    //         .then(products => {
+    //             this.setState({
+    //                 products: products
+    //             })
+    //         })
 
-    }
+    // }
 
-    putPurchase = (editedPurchaseObject) => {
-        return DbCalls.putPurchase(editedPurchaseObject)
-            .then(() => DbCalls.getUserPurchases())
-            .then(purchases => {
-                this.setState({
-                    purchases: purchases
-                })
-            })
+    // putPurchase = (editedPurchaseObject) => {
+    //     return DbCalls.putPurchase(editedPurchaseObject)
+    //         .then(() => DbCalls.getUserPurchases())
+    //         .then(purchases => {
+    //             this.setState({
+    //                 purchases: purchases
+    //             })
+    //         })
 
-    }
+    // }
 
     putDriveTicket = (editedDriveTicketObject) => {
         return DbCalls.putDriveTicket(editedDriveTicketObject)
@@ -131,15 +131,15 @@ class ApplicationViews extends Component {
             })
     }
 
-    deleteProduct = (product) => {
-        const newState = {};
-        DbCalls.deleteProduct(product)
-            .then(() =>
-                DbCalls.getAllProducts()
-            )
-            .then(products => { newState.products = products })
-            .then(() => this.setState(newState))
-    }
+    // deleteProduct = (product) => {
+    //     const newState = {};
+    //     DbCalls.deleteProduct(product)
+    //         .then(() =>
+    //             DbCalls.getAllProducts()
+    //         )
+    //         .then(products => { newState.products = products })
+    //         .then(() => this.setState(newState))
+    // }
 
     deleteUserProduct = (userProduct) => {
         const newState = {};
@@ -182,7 +182,7 @@ class ApplicationViews extends Component {
         console.log(this.state.users)
         console.log(this.state.products)
         console.log(this.state.purchases)
-        console.log(this.state.driveTickets)
+        console.log(this.state.driveTickets) //should only return tickets for user that is logged in
     }
 
     componentDidMount = () => {
@@ -193,12 +193,9 @@ class ApplicationViews extends Component {
 
 
     render() {
-        // console.log(this.state.purchases)
         return (
-            //  <>
 
             <React.Fragment>
-
 
                 <Route exact path="/"
                     render={(props) => {
@@ -230,13 +227,12 @@ class ApplicationViews extends Component {
                     }}
                 />
 
-
                 <Route exact path="/products" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <ProductList
                             products={this.state.products}
-                            deleteProduct={this.deleteProduct}
                             addPurchase={this.addPurchase}
+                            // deleteProduct={this.deleteProduct}
                         />
                     } else {
                         return <Redirect to="/login" />
@@ -248,22 +244,23 @@ class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <ProbabilityTicketList {...props}
                             
+                        // addDriveTicket={this.addDriveTicket}
+                        // putDriveTicket={this.putDriveTicket}
+                        // deleteDriveTicket={this.deleteDriveTicket}
                         driveTickets={this.state.driveTickets}
-                        addDriveTicket={this.addDriveTicket}
-                        deleteDriveTicket={this.deleteDriveTicket}
                         />
                     } else {
                         return <Redirect to="/login" />
                     }
                 }
-            } />
+                } />
 
-                <Route path="/products/new" render={(props) => {
+                {/* <Route path="/products/new" render={(props) => {
                     return <ProductNewForm {...props}
                         addProducts={this.addProducts}
                         products={this.state.products}
                     />
-                }} />
+                }} /> */}
 
                 <Route exact path="/products/:productId(\d+)/details" render={(props) => {
                     return <ProductDetails {
@@ -275,7 +272,15 @@ class ApplicationViews extends Component {
                         userProducts={this.state.userProducts}
                         
                     />
+                }} />
 
+                    <Route exact path="/probabilityDriveTickets/:driveTicketId(\d+)/details" render={(props) => {
+                    return <ProbabilityDriveTicketDetails {
+                        ...props
+                    }
+                        deleteDriveTicket={this.deleteDriveTicket}
+                        driveTickets={this.state.driveTickets}   
+                    />
                 }} />
 
                 <Route path="/products/:productId(\d+)/edit"
@@ -286,21 +291,17 @@ class ApplicationViews extends Component {
                             products={this.state.products}
                             putProduct={this.putProduct}
                         />
-
                     }} />
 
-<               Route path="/probabilityDriveTickets/:id(\d+)/edit"
+                <Route path="/probabilityDriveTickets/:driveTicketId(\d+)/edit"
                     render={props => {
-                        return <ProbabilityDriveTicketEditForm {
+                        return <ProbabilityDriveEditForm {
                             ...props
                         }
                             driveTickets={this.state.driveTickets}
                             putDriveTicket={this.putDriveTicket}
                         />
-
                     }} />
-
-
 
                 <Route exact path="/purchases" render={(props) => {
                     if (this.isAuthenticated()) {
@@ -316,7 +317,7 @@ class ApplicationViews extends Component {
                     } else {
                         return <Redirect to="/login" />
                     }
-                }} />
+                    }} />
 
                 <Route exact path="/purchases/:purchasesId(\d+)/edit"
                     render={(props) => {
@@ -326,7 +327,6 @@ class ApplicationViews extends Component {
                             purchases={this.state.purchases}
                             putPurchase={this.putPurchase}
                         />
-
                     }} />
 
                 <Route exact path="/probabilityDrive"
@@ -341,21 +341,6 @@ class ApplicationViews extends Component {
                         } else {
                             return <Redirect to="/login" />
                         }
-
-                    }} />
-                    
-                    <Route exact path="/probabilityDriveTicket"
-                    render={(props) => {
-                        if (this.isAuthenticated()) {
-                            return <ProbabilityDriveTicket {
-                                ...props
-                            }
-
-                            />
-                        } else {
-                            return <Redirect to="/login" />
-                        }
-
                     }} />
 
             </React.Fragment>

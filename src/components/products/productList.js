@@ -13,8 +13,6 @@ export default class ProductList extends Component {
         console.log("clicked link")
     }
 
-    
-
     render() {
         console.log(this.props.products)
         return (
@@ -30,6 +28,7 @@ export default class ProductList extends Component {
                             <div key={product.id}>
 
                                 <Card body inverse color="secondary">
+                                    {/* when click send to product details */}
                                     <CardTitle  tag="a" href={`/products/${product.id}/details`}>
                                         <h2>{product.product_name}</h2>
                                         <h4>${product.sale_price}</h4>

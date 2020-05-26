@@ -8,37 +8,35 @@ import { ButtonGroup, } from 'reactstrap';
 
 export default class Purchases extends Component {
 
-    state = {
+    // state = {
 
-    }
+    // }
 
-    getSpending() {
+    // getSpending() {
+    //     console.log(this.props.purchases)
 
+    //     let spendingArray = []
 
-        console.log(this.props.purchases)
+    //     let spendingSum = 0;
 
-        let spendingArray = []
+    //     this.props.purchases.map(purchases => {
 
-        // let spendingSum = 0;
+    //         spendingArray.push(purchases.productPrice)
 
-        this.props.purchases.map(purchases => {
+    //         console.log(spendingArray)
 
-            spendingArray.push(purchases.productPrice)
+    //         for (let i = 0; i < spendingArray.length; i++) {
 
-            console.log(spendingArray)
+    //             spendingSum += spendingArray
+    //         }
 
-            // for (let i = 0; i < spendingArray.length; i++) {
-
-            //     spendingSum += spendingArray
-            // }
-
-            console.log(spendingArray.reduce(function (a, b) {
-                return parseFloat(a) + parseFloat(b);
-            }, 0)
-            )
-            console.log(spendingArray)
-        })
-    }
+    //         console.log(spendingArray.reduce(function (a, b) {
+    //             return parseFloat(a) + parseFloat(b);
+    //         }, 0)
+    //         )
+    //         console.log(spendingArray)
+    //     })
+    // }
 
     render() {
         return (
@@ -53,28 +51,15 @@ export default class Purchases extends Component {
                                     <CardTitle>
                                         <h2>{purchase.productName}</h2>
                                     </CardTitle>
-
-                                    {/* <h3>{purchase.productId}</h3> */}
                                     <CardText>
                                         <p>Purchased: {purchase.dateTime}</p>
                                     </CardText>
-
                                 <ButtonGroup sz="large">
-
-                                    {/* <Link to={`/purchases/${purchase.id}/edit`}>
-                                        <button>Edit</button>
-                                    </Link> */}
-
-
                                     <button onClick={() =>
                                         this.props.deletePurchase(purchase.id)} className="deleteSaleBtn">
                                         Delete
-                                </button>
-
+                                        </button>
                                 </ButtonGroup>
-
-
-
                                 </Card>
                             </div>
                         )
