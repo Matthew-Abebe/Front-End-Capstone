@@ -197,15 +197,6 @@
       "id": 39
     },
     {
-      "userId": 11,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/25/2020 22:35:49",
-      "id": 40
-    },
-    {
       "userId": 10,
       "productId": 4,
       "productName": "Hover craft",
@@ -258,6 +249,15 @@
       "description": "Wiz through the galaxy in a brand new hovercraft!",
       "dateTime": "5/26/2020 9:55:47",
       "id": 46
+    },
+    {
+      "userId": 11,
+      "productId": 9,
+      "productName": "Pan Galactic Gargle Blaster 2",
+      "productPrice": "17.99",
+      "description": "Best drink in the galaxy but it will smash your brains even worser.",
+      "dateTime": "5/26/2020 12:16:25",
+      "id": 47
     }
   ],
   "probabilityDriveTickets": [
@@ -266,12 +266,6 @@
       "drive_name": "alien",
       "location_name": "blackhole",
       "userId": 1
-    },
-    {
-      "id": 2,
-      "drive_name": "spongebob",
-      "location_name": "pluto",
-      "userId": 11
     },
     {
       "id": 3,
@@ -287,7 +281,7 @@
     {
       "id": 5,
       "drive_name": "spongebob",
-      "location_name": "mars",
+      "location_name": "mercury",
       "userId": 11
     },
     {
@@ -375,12 +369,6 @@
       "userId": 7
     },
     {
-      "location_name": "alpha centauri",
-      "drive_name": "spongebob",
-      "userId": 11,
-      "id": 25
-    },
-    {
       "location_name": "pluto",
       "drive_name": "dudeguy",
       "userId": 10,
@@ -415,6 +403,18 @@
       "drive_name": "matt",
       "userId": 8,
       "id": 31
+    },
+    {
+      "location_name": "alpha centauri",
+      "drive_name": "matt",
+      "userId": 8,
+      "id": 32
+    },
+    {
+      "location_name": "magrothea",
+      "drive_name": "spongebob",
+      "userId": 11,
+      "id": 33
     }
   ]
 }
