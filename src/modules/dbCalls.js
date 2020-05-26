@@ -14,6 +14,10 @@ export default {
         return fetch(`${remoteURL}/purchases/${id}`).then(e => e.json())
     },
 
+    getDriveTicket(id) {
+        return fetch(`${remoteURL}/probabilityDriveTickets/${id}`).then (e => e.json())
+    },
+
     ///...///
 
     getAllUsers: () => {
@@ -28,15 +32,13 @@ export default {
         return fetch(`${remoteURL}/userProducts`).then(e => e.json())
     },
 
-    
-    getAllDriveTickets() {
-        return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
-    },
-    
     getAllPurchases() {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
     
+    getAllDriveTickets() {
+        return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
+    },
     
     getUserPurchases() {
         let sessionId = sessionStorage.getItem("userId")
@@ -48,7 +50,6 @@ export default {
         return fetch(`${remoteURL}/probabilityDriveTickets?userId=${sessionId}`).then(e => e.json())
     },
     
-
     ///...///
 
     postNewUser(newUser) {
@@ -61,15 +62,15 @@ export default {
         }).then(e => e.json())
     },
 
-    postNewProduct(newProduct) {
-        return fetch(`${remoteURL}/products`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newProduct)
-        }).then(e => e.json())
-    },
+    // postNewProduct(newProduct) {
+    //     return fetch(`${remoteURL}/products`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(newProduct)
+    //     }).then(e => e.json())
+    // },
 
     postNewPurchase(newPurchase) {
         return fetch(`${remoteURL}/purchases`, {
@@ -93,27 +94,26 @@ export default {
 
     ///...///
 
+    // putProduct(editedProduct) {
+    //     return fetch(`${remoteURL}/products/${editedProduct.id}`, {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(editedProduct)
+    //     }).then(e => e.json())
+    // },
 
-    putProduct(editedProduct) {
-        return fetch(`${remoteURL}/products/${editedProduct.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(editedProduct)
-        }).then(e => e.json())
-    },
+    // putPurchase(editedPurchase) {
 
-    putPurchase(editedPurchase) {
-
-        return fetch(`${remoteURL}/purchases/${editedPurchase.id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(editedPurchase)
-        }).then(e => e.json())
-    },
+    //     return fetch(`${remoteURL}/purchases/${editedPurchase.id}`, {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(editedPurchase)
+    //     }).then(e => e.json())
+    // },
 
     putDriveTicket(editedDriveTicket) {
 
@@ -128,23 +128,23 @@ export default {
 
     ///...///
 
-    deleteProduct(id) {
-        return fetch(`${remoteURL}/products/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        }).then(e => e.json(0))
-    },
+    // deleteProduct(id) {
+    //     return fetch(`${remoteURL}/products/${id}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     }).then(e => e.json(0))
+    // },
 
-    deleteUserProduct(id) {
-        return fetch(`${remoteURL}/userProducts/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        }).then(e => e.json(0))
-    },
+    // deleteUserProduct(id) {
+    //     return fetch(`${remoteURL}/userProducts/${id}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     }).then(e => e.json(0))
+    // },
 
     deleteDriveTicket(id) {
         return fetch(`${remoteURL}/probabilityDriveTickets/${id}`, {
