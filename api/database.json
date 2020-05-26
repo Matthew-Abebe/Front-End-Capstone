@@ -104,24 +104,6 @@
   ],
   "purchases": [
     {
-      "userId": 11,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/19/2020 22:54:31",
-      "id": 10
-    },
-    {
-      "userId": 11,
-      "productId": 4,
-      "productName": "Hover craft",
-      "productPrice": "100,000,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/22/2020 18:01:05",
-      "id": 20
-    },
-    {
       "userId": 10,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
@@ -201,6 +183,24 @@
       "description": "You'll need this.",
       "dateTime": "5/25/2020 20:57:51",
       "id": 38
+    },
+    {
+      "userId": 11,
+      "productId": 4,
+      "productName": "Hover craft",
+      "productPrice": "100,000,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/25/2020 22:35:46",
+      "id": 39
+    },
+    {
+      "userId": 11,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/25/2020 22:35:49",
+      "id": 40
     }
   ],
   "probabilityDriveTickets": [
@@ -322,6 +322,12 @@
       "drive_name": "matt",
       "location_name": "pluto",
       "userId": 8
+    },
+    {
+      "location_name": "alpha centauri",
+      "drive_name": "spongebob",
+      "userId": 11,
+      "id": 25
     }
   ]
 }
