@@ -1,10 +1,12 @@
 body {
     background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/potw1805a.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .navbar {
-    background:darkgoldenrod;
+    background: gold;
 }
 
 a.nav-link {

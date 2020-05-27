@@ -5,3 +5,9 @@ h2 {
 h4 {
     color: red
 }
+
+.productListCard{
+    width: 600px;
+    margin-left: 20px;
+    margin-top: 10px;
+}

@@ -22,22 +22,25 @@ export default class ProductList extends Component {
 
             <div>
                 <section className="products">
-                    <h2>Products</h2>
+                    <h1>Products</h1>
+
+                    <br></br>
+                    
                     {
                         this.props.products.map(product =>
                             <div key={product.id}>
 
-                                <Card body inverse color="secondary">
-                                    {/* when click send to product details */}
+                                <Card body inverse className="productListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                                    {/* put card title detail link into a button*/}
                                     <CardTitle  tag="a" href={`/products/${product.id}/details`}>
-                                        <h2>{product.product_name}</h2>
-                                        <h4>${product.sale_price}</h4>
+                                        <h4>{product.product_name}</h4>
+                                        <p>Price ~ ${product.sale_price}</p>
                                         <br></br>
 
                         <Link to="/products">
-                        <Button className="buyProductBtn" color="success" size="lg" block onClick={() =>
+                        <Button className="buyProductBtn" color="success" size="sm" onClick={() =>
                         this.props.addPurchase({product})} className="sellProductBtn">
-                            Buy
+                            Purchase
                             </Button>
                             </Link>
                                     </CardTitle>
