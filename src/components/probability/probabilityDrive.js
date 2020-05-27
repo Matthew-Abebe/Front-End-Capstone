@@ -78,7 +78,6 @@ render() {
         
     return (
         <React.Fragment>
-
             <div>
                 <Spinner type="grow" color="primary" />
                 <Spinner type="grow" color="secondary" />
@@ -96,12 +95,10 @@ render() {
                         <h1 className="display-3">Drive Through The Galaxy </h1>
                         <p className="lead">A faster-than-light drive used on spacecraft.</p>
                     </Container>
+                    </Jumbotron>
 
-                    <Form>
-      
+    <Form>
       <FormGroup>
-        
-        <Label for="driveName">Drive Name</Label>
         <Input type="text" 
          value={this.state.value}
          required
@@ -110,7 +107,6 @@ render() {
          id="drive_name" 
          placeholder="Enter Name" />
 
-        <Label for="location">Location</Label>
         <Input type="text"
          value={this.state.value}
          required
@@ -121,40 +117,24 @@ render() {
       
       </FormGroup>
       
-      <div>
-
-      <Button className="driveBtn" color="success" sz="lg"
+      <Button type="submit" color="success" className="driveBtn"
             onClick={() => {
 
                 this.handleProbabilityDrive()
                 this.constructNewDriveTicket() 
-            }
-                }>
-            Engage Infinite Probability Drive!
-            </Button>
-
-            </div>
+            }}>Start Journey
+        </Button>
             
-            <div>
-            <Link to="/probabilityDriveTickets">
-            <Button className="driveTicketBtn" color="danger" sz="lg"
-            onClick={() => {
-                // this.constructNewDriveTicket()
-                // this.props.addDriveTicket({driveTicket})
+        <Link to="/probabilityDriveTickets">
+            <Button type="submit" color="danger" className="previousDriveTicketsBtn"
+                onClick={() => {
                 console.log("this will take user to prob drive list")
-            }
-                }>
-            See previous trips!</Button>
+            }}>See Previous Trips
+                </Button>
             </Link>
-            </div>
-
-
-
       
     </Form>
-
-    </Jumbotron>
-                </div>
+            </div>
           
             </React.Fragment>
         )

@@ -21,7 +21,7 @@ export default class Navigation extends React.Component {
               <NavLink href="/purchases">Purchases</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/probabilityDrive">Probability-Drive</NavLink>
+              <NavLink href="/ProbabilityDrive">Infinite Probability-Drive</NavLink>
             </NavItem>
           </Nav>
 

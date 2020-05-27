@@ -1,7 +1,33 @@
 .driveName {
-    width: 300px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-bottom: 15px;
 }
 
 .location {
-    width: 300px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-bottom: 15px;
+}
+
+.driveBtn {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+.previousDriveTicketsBtn {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-bottom: 15px;
+
 }
