@@ -5,8 +5,6 @@ import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 import './login.css'
 
-
-
 export default class Login extends Component {
 
     state = {
@@ -18,7 +16,7 @@ export default class Login extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value //[evt.target.id] 'id' matches the props in state.
+        stateToChange[evt.target.id] = evt.target.value
         console.log(stateToChange)
         this.setState(stateToChange)
     }
@@ -47,20 +45,10 @@ export default class Login extends Component {
             this.props.history.push("/")
             window.alert(`Welcome back ${matchUser.name}!`)
         }
-
-        // sessionStorage.setItem(
-        //     "credentials",
-        //     JSON.stringify({
-        //         email: this.state.email,
-        //         // password: this.state.password
-        //     })
-        // )
     }
 
     render() {
         return (
-
-
             <React.Fragment>
 
                 <div className="registerWelcome">
@@ -69,65 +57,21 @@ export default class Login extends Component {
                     <br></br>
                 </div>
 
-                {/* <form
-                    className="LoginFrom">
-                    <h1 className="">Please Sign In</h1>
-                    <label htmlFor="inputEmail">
-                        Email Address:
-                </label>
-
-                    <input onChange={this.handleFieldChange} type="email"
-                        id="email"
-                        placeholder=""
-                        required="" autoFocus="" />
-                    <br></br>
-
-                    <label htmlFor="inputPassword">
-                        Password:
-                </label>
-
-                    <input onChange={this.handleFieldChange} type="password"
-                        id="password"
-                        placeholder=""
-                        required="" autoFocus="" />
-                    <br></br>
-
-                    <button type="submit"
-                        className="LoginSubmit"
-                        onClick={this.handleLogin} >
-                        Login
-                    <br></br>
-                    </button>
-
-
-                    <p>Don't Have an Account?</p>
-                    <br></br>
-                    <Link to="/register">
-                        <button className="Register">
-                            Register Here</button>
-                    </Link>
-                </form> */}
-
-                <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          {/* <InputGroupText>Enter Email Address</InputGroupText> */}
-        </InputGroupAddon>
-        <Input placeholder="Email Address" onChange={this.handleFieldChange} type="email" id="email" />
+        <InputGroup>
+            <InputGroupAddon addonType="prepend"></InputGroupAddon>
+            <Input placeholder="Email Address" onChange={this.handleFieldChange} type="email" id="email" />
       </InputGroup>
 
       <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          {/* <InputGroupText>Password</InputGroupText> */}
-        </InputGroupAddon>
-        <Input placeholder="Password" onChange={this.handleFieldChange} type="password" id="password" />
-      </InputGroup>
+            <InputGroupAddon addonType="prepend">
+            </InputGroupAddon>
+            <Input placeholder="Password" onChange={this.handleFieldChange} type="password" id="password" />
+        </InputGroup>
 
       <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success">Login</Button>
 
-      <br></br>
-
-<Link to="/register">
-    <h3>Don't Have An Account?</h3>
+    <Link to="/register">
+        <h3>Don't Have An Account?</h3>
       <Button className="registerButton" color="danger">Register Here</Button>
       </Link>
 

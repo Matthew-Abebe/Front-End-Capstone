@@ -11,5 +11,20 @@ p {
 }
 
 .vogon {
-    color: green
+    color: lightgreen
+}
+
+.loginBtn {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.logoutBtn {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    margin-bottom: 15px;
 }

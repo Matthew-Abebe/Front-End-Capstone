@@ -105,7 +105,7 @@ render() {
         <Input type="text" 
          value={this.state.value}
          required
-         name="driveName" 
+         className="driveName" 
          onChange={this.handleFieldChange}
          id="drive_name" 
          placeholder="Enter Name" />
@@ -114,7 +114,7 @@ render() {
         <Input type="text"
          value={this.state.value}
          required
-         name="location"
+         className="location"
          onChange={this.handleFieldChange}
          id="location_name" 
          placeholder="Enter Destination" />

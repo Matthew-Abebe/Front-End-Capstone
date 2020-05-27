@@ -83,6 +83,18 @@
       "email": "david@mail.com",
       "password": "david",
       "id": 14
+    },
+    {
+      "name": "clutch",
+      "email": "clutch@mail.com",
+      "password": "clutch",
+      "id": 15
+    },
+    {
+      "name": "spiderman",
+      "email": "spiderman@mail.com",
+      "password": "spiderman",
+      "id": 16
     }
   ],
   "products": [

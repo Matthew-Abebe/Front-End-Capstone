@@ -3,7 +3,6 @@ import { Button } from 'reactstrap';
 
 import './register.css'
 
-
 export default class Register extends Component {
 
     state = {
@@ -27,7 +26,7 @@ export default class Register extends Component {
             password: this.state.user_password,
         }
 
-        console.log(newUser)
+        // console.log(newUser)
 
         this.props.addUser(newUser)
             .then(() => this.props.history.push("/"))
@@ -43,7 +42,6 @@ export default class Register extends Component {
 
             <form className="registerUserForm">
                 <div className="form-group">
-                    {/* <label htmlFor="registerUserName">User Name</label> */}
                     <input
                         type="text"
                         required
@@ -55,7 +53,6 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                    {/* <label htmlFor="registerUserEmail">User Email</label> */}
                     <input
                         type="text"
                         required
@@ -67,7 +64,6 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                    {/* <label htmlFor="registerUserPassword">New User Password</label> */}
                     <input
                         type="text"
                         required
@@ -80,12 +76,7 @@ export default class Register extends Component {
 
                 <Button type="button" onClick={this.handleRegister} className="addNewUserBtn" color="success">Register</Button>
 
-
-
-
             </form>
-
-
 
         </React.Fragment>
         )

@@ -9,6 +9,7 @@ export default class Home extends Component {
 
     render() {
         return(
+          
             <div>
             <Jumbotron className="jumbotron">
               <h1 className="display-3">Don't Panic!</h1>
@@ -17,19 +18,19 @@ export default class Home extends Component {
               <p>A one stop shop for all intergalactic, hitchiking needs.</p>
               <br></br>
               <p className="vogon">So, Keep Calm and Vogon.</p>
-              <p className="lead">
-
-                <ButtonGroup>
+        
                 <Link to="/login">
-                <Button outline color="primary" className="loginBtn">Login</Button> &nbsp;&nbsp;&nbsp;
-                </Link>
-
-                <Button outline color="danger" className="logoutBtn" onClick={() => sessionStorage.clear("userId")
-                // ,window.alert("logged out")
-              }>Logout</Button>
-                </ButtonGroup>
-              </p>
-            </Jumbotron>
+                <Button color="primary" size="lg" className="loginBtn">
+                  Login
+                  </Button> 
+                  {/* &nbsp;&nbsp;&nbsp; */}
+                  </Link>
+               
+                <Button color="danger" size="lg" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
+                  Logout
+                  </Button>
+            
+            </Jumbotron>      
           </div>
         )
     }
