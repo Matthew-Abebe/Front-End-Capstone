@@ -60,7 +60,7 @@ export default class ProductDetails extends Component {
                         </CardTitle>
                         
                         <CardText>
-                            <p>Description: {this.state.description}</p>
+                            <p>{this.state.description}</p>
                         </CardText>
 
                         {/* <ButtonGroup>

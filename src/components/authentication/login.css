@@ -1,7 +1,46 @@
-h2 {
-    color: silver
+h1 {
+    color: white
 }
 
 h3 {
-    color: silver
+    color: white
+}
+
+.loginEmailForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.loginPasswordForm {
+        width: 500px;
+        display: inline-block;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+}
+
+.loginSubmit {
+    margin-left: 10px;
+}
+
+.registerButton {
+    /* margin-left: 10px; */
+    margin-top: 5px;
+}
+
+.registerWelcome {
+    margin-left: 10px
+}
+
+.toRegister {
+    margin-left: 10px;
+}
+
+.pleaseLogin {
+    margin-left: 10px;
 }

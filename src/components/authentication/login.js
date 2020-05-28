@@ -53,27 +53,59 @@ export default class Login extends Component {
 
                 <div className="registerWelcome">
                     <h1>Welcome to Hitchiker's Shop!</h1>
-                    <h3>Please Login</h3>
-                    <br></br>
                 </div>
 
-        <InputGroup>
+                    <br></br>
+        {/* <InputGroup>
             <InputGroupAddon addonType="prepend"></InputGroupAddon>
-            <Input placeholder="Email Address" onChange={this.handleFieldChange} type="email" id="email" />
+            <Input placeholder="Email Address" onChange={this.handleFieldChange} type="email" id="email" className="loginEmailForm"/>
       </InputGroup>
 
       <InputGroup>
             <InputGroupAddon addonType="prepend">
             </InputGroupAddon>
-            <Input placeholder="Password" onChange={this.handleFieldChange} type="password" id="password" />
-        </InputGroup>
+            <Input placeholder="Password" onChange={this.handleFieldChange} type="password" id="password" className="loginPasswordForm"/>
+        </InputGroup> */}
+        
+        <div className="pleaseLogin">
+        <p>Please login to continue.</p>
+            </div>
+        <form className="login-form-group">
+                <div className="form-group">
+                    <input
+                        type="text"
+                        required
+                        className="loginEmailForm"
+                        onChange={this.handleFieldChange}
+                        id="email"
+                        placeholder="Enter Email"
+                    />
+                </div>
+
+                <div className="form-group">
+                    <input
+                        type="text"
+                        required
+                        className="loginPasswordForm"
+                        onChange={this.handleFieldChange}
+                        id="password"
+                        placeholder="Enter Password"
+                    />
+                </div>
+
 
       <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success">Login</Button>
 
-    <Link to="/register">
+      </form>
+
+      <br></br>
+
+        <div className="toRegister">
+   
         <h3>Don't Have An Account?</h3>
-      <Button className="registerButton" color="danger">Register Here</Button>
-      </Link>
+      <Button tag="a" href="/register" className="registerButton" color="danger">Register Here</Button>
+
+      </div>
 
             </React.Fragment>
 

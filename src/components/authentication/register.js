@@ -32,20 +32,26 @@ export default class Register extends Component {
             .then(() => this.props.history.push("/"))
 
             sessionStorage.setItem(this.state.user_name, this.state.user_password)
+
+            alert(`${this.state.user_name}, Thank you for registering with Hitchhiker's Shop!`)
     }
 
     render() {
         return(
             <React.Fragment>
-
+            
+            <div className="pleaseRegister">
             <h2>Please Register</h2>
+            </div>
+
+            <br></br>
 
             <form className="registerUserForm">
                 <div className="form-group">
                     <input
                         type="text"
                         required
-                        className="form-control"
+                        className="newUserForm"
                         onChange={this.handleFieldChange}
                         id="user_name"
                         placeholder="New User Name"
@@ -56,7 +62,7 @@ export default class Register extends Component {
                     <input
                         type="text"
                         required
-                        className="form-control"
+                        className="newUserEmail"
                         onChange={this.handleFieldChange}
                         id="user_email"
                         placeholder="New User Email"
@@ -67,7 +73,7 @@ export default class Register extends Component {
                     <input
                         type="text"
                         required
-                        className="form-control"
+                        className="newUserPassword"
                         onChange={this.handleFieldChange}
                         id="user_password"
                         placeholder="New User Password"
