@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { Card, Button, CardTitle } from 'reactstrap';
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
 import './product.css'
 
@@ -33,13 +33,13 @@ export default class ProductList extends Component {
                                 <Card body inverse className="productListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     {/* put card title detail link into a button*/}
                                     {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
-                                        <h4>{product.product_name}</h4>
-                                        <p>Price ~ ${product.sale_price}</p>
+                                    <CardTitle><h2>{product.product_name}</h2></CardTitle>
+                                       <CardText> <p>Price ~ ${product.sale_price}</p></CardText>
                                         <br></br>
 
 
                         <Link to="/products">
-                        <Button className="buyProductBtn" color="success" size="sm" onClick={() =>
+                        <Button color="success" size="sm" onClick={() =>
                         this.props.addPurchase({product})} className="sellProductBtn">
                             Purchase
                             </Button>

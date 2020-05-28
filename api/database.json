@@ -121,15 +121,6 @@
   ],
   "purchases": [
     {
-      "userId": 10,
-      "productId": 8,
-      "productName": "Pan Galactic Gargle Blaster",
-      "productPrice": "7.99",
-      "description": "Best drink in the galaxy but it will smash your brains.",
-      "dateTime": "5/24/2020 19:59:34",
-      "id": 24
-    },
-    {
       "userId": 12,
       "productId": 4,
       "productName": "Hover craft",
@@ -164,33 +155,6 @@
       "description": "Best drink in the galaxy but it will smash your brains.",
       "dateTime": "5/25/2020 16:21:06",
       "id": 34
-    },
-    {
-      "userId": 11,
-      "productId": 4,
-      "productName": "Hover craft",
-      "productPrice": "100,000,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/25/2020 22:35:46",
-      "id": 39
-    },
-    {
-      "userId": 10,
-      "productId": 4,
-      "productName": "Hover craft",
-      "productPrice": "100,000,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/25/2020 22:41:26",
-      "id": 41
-    },
-    {
-      "userId": 10,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/25/2020 22:41:35",
-      "id": 42
     },
     {
       "userId": 13,
@@ -238,22 +202,13 @@
       "id": 51
     },
     {
-      "userId": 8,
-      "productId": 8,
-      "productName": "Pan Galactic Gargle Blaster",
-      "productPrice": "7.99",
-      "description": "Best drink in the galaxy but it will smash your brains.",
-      "dateTime": "5/27/2020 2:53:03",
-      "id": 52
-    },
-    {
-      "userId": 8,
+      "userId": 11,
       "productId": 7,
       "productName": "Towel",
       "productPrice": "5.99",
       "description": "You'll need this.",
-      "dateTime": "5/27/2020 2:53:08",
-      "id": 53
+      "dateTime": "5/28/2020",
+      "id": 59
     },
     {
       "userId": 11,
@@ -261,8 +216,44 @@
       "productName": "Spaceship",
       "productPrice": "70,000.00",
       "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/28/2020 6:22:45",
-      "id": 54
+      "dateTime": "5/28/2020",
+      "id": 60
+    },
+    {
+      "userId": 10,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 61
+    },
+    {
+      "userId": 8,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 62
+    },
+    {
+      "userId": 8,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/28/2020",
+      "id": 63
+    },
+    {
+      "userId": 8,
+      "productId": 8,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "dateTime": "5/28/2020",
+      "id": 64
     }
   ],
   "probabilityDriveTickets": [
@@ -392,12 +383,6 @@
       "id": 30
     },
     {
-      "location_name": "magrothea",
-      "drive_name": "spongebob",
-      "userId": 11,
-      "id": 33
-    },
-    {
       "location_name": "mars",
       "drive_name": "groot",
       "userId": 7,
@@ -410,10 +395,22 @@
       "id": 35
     },
     {
-      "id": 36,
-      "drive_name": "matt",
       "location_name": "jupiter",
+      "drive_name": "matt",
+      "userId": 8,
+      "id": 36
+    },
+    {
+      "id": 37,
+      "drive_name": "matt",
+      "location_name": "neptune",
       "userId": 8
+    },
+    {
+      "location_name": "betelgeuse ",
+      "drive_name": "matt",
+      "userId": 8,
+      "id": 38
     }
   ]
 }

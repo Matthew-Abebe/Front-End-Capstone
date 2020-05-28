@@ -93,7 +93,7 @@ render() {
                 <Jumbotron fluid className="jumbotron">
                     <Container fluid>
                         <h1 className="display-3">Drive Through The Galaxy </h1>
-                        <p className="lead">A faster-than-light drive used on spacecraft.</p>
+                        <p className="lead">A wonderful new method of crossing interstellar distances.</p>
                     </Container>
                     </Jumbotron>
 
@@ -117,21 +117,25 @@ render() {
       
       </FormGroup>
       
-      <Button type="submit" color="success" className="driveBtn"
+      <div className="driveButton">
+      <Button type="submit" color="success" size="sm" className="driveBtn"
             onClick={() => {
 
                 this.handleProbabilityDrive()
                 this.constructNewDriveTicket() 
             }}>Start Journey
         </Button>
-            
+        </div>
+
+         <div className="previousDriveTicketsButton">  
         <Link to="/probabilityDriveTickets">
-            <Button type="submit" color="danger" className="previousDriveTicketsBtn"
+            <Button type="submit" color="danger" size="sm" className="previousDriveTicketsBtn"
                 onClick={() => {
                 console.log("this will take user to prob drive list")
             }}>See Previous Trips
                 </Button>
             </Link>
+            </div> 
       
     </Form>
             </div>

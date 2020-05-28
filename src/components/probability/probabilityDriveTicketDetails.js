@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 import { Link } from 'react-router-dom'
-import {
-    Card, CardText, CardBody,
-    CardTitle,
-} from 'reactstrap';
-import { ButtonGroup } from 'reactstrap';
+import { Card, CardText, CardBody, CardTitle, Button, } from 'reactstrap';
+// import { Button } from 'reactstrap';
 
 import './probabilityDrive.css'
 
@@ -52,7 +49,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
             <div>
 
         
-                <Card body inverse color="info">
+                    <Card body inverse className="driveTicketDetailsCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                     {/* <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" /> */}
                     <CardBody>
                         <CardTitle>
@@ -77,14 +74,14 @@ export default class ProbabilityDriveTicketDetails extends Component {
                         {/* <Button>Hi</Button> */}
 
                         <Link to={`/probabilityDriveTickets/${this.state.driveTicketId}/edit`}>
-                            <button>Edit</button>
+                            <Button color="success" size="sm" className="editUserDriveTicketBtn">Edit</Button>
                         </Link>
                         
                         <Link to="/probabilityDriveTickets">
-                        <button onClick={() =>
+                        <Button color="success" size="sm" onClick={() =>
                                         this.props.deleteDriveTicket(this.state.driveTicketId)} className="deleteUserDriveTicketBtn">
                                         Delete
-                                </button>
+                                </Button>
                                 </Link>
                     </CardBody>
                 </Card>

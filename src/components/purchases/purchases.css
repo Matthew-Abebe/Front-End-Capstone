@@ -6,16 +6,12 @@ h4 {
     color: lightgray
 }
 
-.productListCard {
+.purchaseListCard {
     width: 720px;
     margin-left: 10px;
     margin-top: 10px;
 }
 
-.sellProductBtn {
+.deleteSaleBtn {
     margin-right: 5px;
 }
-
-/* .productDetailsBtn {
-
-} */

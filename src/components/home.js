@@ -19,18 +19,22 @@ export default class Home extends Component {
               <br></br>
               <p className="vogon">So, Keep Calm and Vogon.</p>
         
+            <div className="loginButton">
                 <Link to="/login">
                 <Button color="primary" size="lg" className="loginBtn">
                   Login
-                  </Button> 
+                  </Button>{' '}
                   {/* &nbsp;&nbsp;&nbsp; */}
                   </Link>
-               
-                <Button color="danger" size="lg" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
+                  </div>
+
+            <div className="logoutButton">
+               <Button color="danger" size="lg" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
                   Logout
                   </Button>
-            
+                  </div>
             </Jumbotron>      
+            
           </div>
         )
     }

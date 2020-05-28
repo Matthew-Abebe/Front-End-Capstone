@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom'
-import {
-    Card, CardText,
-    CardTitle,
-} from 'reactstrap';
-import { ButtonGroup, } from 'reactstrap';
+import { Card, CardText, CardTitle, CardBody} from 'reactstrap';
+// import { ButtonGroup, } from 'reactstrap';
+
+import './purchases.css'
 
 export default class Purchases extends Component {
 
@@ -43,23 +43,27 @@ export default class Purchases extends Component {
             <React.Fragment>
                 <section className="products">
                     <h2>All Purchases</h2>
+                    
+                    <br></br>
+                    
                     {
                         this.props.purchases.map(purchase =>
                             <div key={purchase.id}>
 
-                                <Card body inverse color="success">
+                        <Card body inverse className="purchaseListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
+
                                     <CardTitle>
                                         <h2>{purchase.productName}</h2>
                                     </CardTitle>
                                     <CardText>
-                                        <p>Purchased: {purchase.dateTime}</p>
+                                        <p>Purchased {purchase.dateTime}</p>
                                     </CardText>
-                                <ButtonGroup sz="large">
-                                    <button onClick={() =>
-                                        this.props.deletePurchase(purchase.id)} className="deleteSaleBtn">
-                                        Delete
-                                        </button>
-                                </ButtonGroup>
+                                    {/* <br></br> */}
+                        <CardBody>
+                           </CardBody>
+                                    <Button color="success" size="sm" onClick={() =>
+                                        this.props.deletePurchase(purchase.id)} className="deleteSaleBtn">Delete
+                                        </Button>
                                 </Card>
                             </div>
                         )
