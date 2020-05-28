@@ -47,7 +47,7 @@ constructNewDriveTicket = (evt) => {
     this.props.addDriveTickets(newDriveTicket)
     .then(() => this.props.history.push("/probabilityDriveTickets"))
     
-    console.log(`Hi ${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
+    // console.log(`${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
     
 }
 

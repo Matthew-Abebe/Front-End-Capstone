@@ -220,24 +220,6 @@
       "id": 60
     },
     {
-      "userId": 10,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/28/2020",
-      "id": 61
-    },
-    {
-      "userId": 8,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/28/2020",
-      "id": 62
-    },
-    {
       "userId": 8,
       "productId": 7,
       "productName": "Towel",
@@ -254,6 +236,33 @@
       "description": "Best drink in the galaxy but it will smash your brains.",
       "dateTime": "5/28/2020",
       "id": 64
+    },
+    {
+      "userId": 8,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 65
+    },
+    {
+      "userId": 10,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/28/2020",
+      "id": 67
+    },
+    {
+      "userId": 10,
+      "productId": 8,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "dateTime": "5/28/2020",
+      "id": 68
     }
   ],
   "probabilityDriveTickets": [
@@ -329,12 +338,6 @@
       "userId": 11
     },
     {
-      "id": 16,
-      "drive_name": "dudeguy",
-      "location_name": "kepler 74c",
-      "userId": 10
-    },
-    {
       "location_name": "neptune",
       "drive_name": "spongebob",
       "userId": 11,
@@ -353,10 +356,10 @@
       "userId": 7
     },
     {
-      "location_name": "pluto",
+      "id": 26,
       "drive_name": "dudeguy",
-      "userId": 10,
-      "id": 26
+      "location_name": "jupiter",
+      "userId": 10
     },
     {
       "location_name": "alpha centauri",
@@ -395,22 +398,22 @@
       "id": 35
     },
     {
-      "location_name": "jupiter",
+      "id": 38,
       "drive_name": "matt",
-      "userId": 8,
-      "id": 36
-    },
-    {
-      "id": 37,
-      "drive_name": "matt",
-      "location_name": "neptune",
+      "location_name": "pluto",
       "userId": 8
     },
     {
-      "location_name": "betelgeuse ",
+      "id": 40,
       "drive_name": "matt",
-      "userId": 8,
-      "id": 38
+      "location_name": "mars",
+      "userId": 8
+    },
+    {
+      "id": 41,
+      "drive_name": "matt",
+      "location_name": "the sun",
+      "userId": 8
     }
   ]
 }
