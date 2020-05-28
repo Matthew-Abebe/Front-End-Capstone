@@ -6,8 +6,16 @@ h4 {
     color: red
 }
 
-.productListCard{
+.productListCard {
     width: 600px;
     margin-left: 20px;
     margin-top: 10px;
 }
+
+.sellProductBtn {
+    margin-right: 5px;
+}
+
+/* .productDetailsBtn {
+
+} */

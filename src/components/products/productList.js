@@ -32,18 +32,26 @@ export default class ProductList extends Component {
 
                                 <Card body inverse className="productListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     {/* put card title detail link into a button*/}
-                                    <CardTitle  tag="a" href={`/products/${product.id}/details`}>
+                                    {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
                                         <h4>{product.product_name}</h4>
                                         <p>Price ~ ${product.sale_price}</p>
                                         <br></br>
+
 
                         <Link to="/products">
                         <Button className="buyProductBtn" color="success" size="sm" onClick={() =>
                         this.props.addPurchase({product})} className="sellProductBtn">
                             Purchase
                             </Button>
+                        
+                        <Link to={`/products/${product.id}/details`}>
+                        <Button className="productDetailsBtn" color="success" size="sm">
+                            Details
+                        </Button>
+                        </Link>
+
                             </Link>
-                                    </CardTitle>
+                                    {/* </CardTitle> */}
                                 </Card>
 
                             </div>
