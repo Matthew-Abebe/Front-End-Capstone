@@ -14,6 +14,7 @@ state = {
 
     location_name: "",
     drive_name: "",
+    ticket_date_time: ""
     // userId: ""
 }
 
@@ -29,6 +30,13 @@ handleFieldChange = evt => {
     this.setState(stateToChange)
 }
 
+getTicketTimeStamp() {
+    var now = new Date();
+    return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear() + " " + now.getHours() + ":"
+    + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ":" + ((now.getSeconds() < 10) ? ("0" + now
+        .getSeconds()) : (now.getSeconds())));
+}
+
 //Construct new drive ticket function
 
 constructNewDriveTicket = (evt) => {
@@ -39,7 +47,8 @@ constructNewDriveTicket = (evt) => {
         id: this.props.match.params.driveTicketId,
         location_name: this.state.location_name,
         drive_name: this.state.drive_name,
-        userId: parseInt(userId)
+        userId: parseInt(userId),
+        ticket_date_time: this.getTicketTimeStamp()
     }
     
     console.log(newDriveTicket) //newDriveTicket is missing its id

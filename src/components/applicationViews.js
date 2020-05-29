@@ -65,7 +65,7 @@ class ApplicationViews extends Component {
             productName: purchase.product.product_name,
             productPrice: purchase.product.sale_price,
             description: purchase.product.description,
-            dateTime: this.getTimeStamp()
+            // dateTime: this.getTimeStamp()
         }
         console.log(purchaseObj)
         DbCalls.postNewPurchase(purchaseObj)
@@ -85,7 +85,8 @@ class ApplicationViews extends Component {
             userId: parseInt(userId),
             driveTicketId: driveTicket.id,
             driveTicketName: driveTicket.drive_name,
-            driveTicketLocation: driveTicket.location_name
+            driveTicketLocation: driveTicket.location_name,
+            driveTicketDateTime: this.getTimeStamp()
         }
         console.log(driveTicketObj)
         DbCalls.postNewDriveTicket(driveTicketObj)

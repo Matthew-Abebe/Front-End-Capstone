@@ -214,24 +214,6 @@
       "id": 51
     },
     {
-      "userId": 11,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/28/2020",
-      "id": 59
-    },
-    {
-      "userId": 11,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/28/2020",
-      "id": 60
-    },
-    {
       "userId": 8,
       "productId": 7,
       "productName": "Towel",
@@ -305,15 +287,6 @@
     },
     {
       "userId": 18,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/28/2020",
-      "id": 73
-    },
-    {
-      "userId": 18,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
       "productPrice": "7.99",
@@ -329,6 +302,60 @@
       "description": "Wiz through the galaxy in a brand new hovercraft!",
       "dateTime": "5/28/2020",
       "id": 75
+    },
+    {
+      "userId": 11,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 76
+    },
+    {
+      "userId": 11,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/28/2020",
+      "id": 77
+    },
+    {
+      "userId": 18,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 78
+    },
+    {
+      "userId": 18,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/28/2020",
+      "id": 79
+    },
+    {
+      "userId": 18,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "5/28/2020",
+      "id": 80
+    },
+    {
+      "userId": 18,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "5/28/2020",
+      "id": 81
     }
   ],
   "probabilityDriveTickets": [
@@ -404,12 +431,6 @@
       "userId": 11
     },
     {
-      "location_name": "neptune",
-      "drive_name": "spongebob",
-      "userId": 11,
-      "id": 21
-    },
-    {
       "id": 22,
       "drive_name": "alien",
       "location_name": "jupiter",
@@ -476,22 +497,25 @@
       "userId": 8
     },
     {
-      "id": 42,
-      "drive_name": "dudeguy",
       "location_name": "pluto",
-      "userId": 10
-    },
-    {
-      "location_name": "jupiter",
       "drive_name": "guest",
       "userId": 18,
-      "id": 43
+      "ticket_date_time": "5/29/2020 13:18:10",
+      "id": 44
     },
     {
-      "location_name": "alpha centauri",
+      "location_name": "neptune",
       "drive_name": "guest",
       "userId": 18,
+      "ticket_date_time": "5/29/2020 13:18:26",
       "id": 45
+    },
+    {
+      "id": 46,
+      "drive_name": "dudeguy",
+      "location_name": "magrothea",
+      "userId": 10,
+      "ticket_date_time": "5/16/2020 11:22:33"
     }
   ]
 }

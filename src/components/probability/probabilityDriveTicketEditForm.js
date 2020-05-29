@@ -6,7 +6,8 @@ export default class ProbabilityDriveTicketEditForm extends Component {
     state = {
         // driveTicketId: "",
         drive_name: "",
-        location_name: ""
+        location_name: "",
+        ticket_date_time: ""
 
     }
 
@@ -26,7 +27,8 @@ export default class ProbabilityDriveTicketEditForm extends Component {
             id: this.props.match.params.driveTicketId, //Undefined issue here! Resolved I think//
             drive_name: this.state.drive_name,
             location_name: this.state.location_name,
-            userId: parseInt(userId)
+            userId: parseInt(userId),
+            ticket_date_time: this.state.ticket_date_time
         }
 
         // console.log(editedDriveTicket)
@@ -42,6 +44,7 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                     // driveTicketId: driveTicket.id,
                     drive_name: driveTicket.drive_name,
                     location_name: driveTicket.location_name,
+                    ticket_date_time: driveTicket.ticket_date_time
                 })
                 // console.log(driveTicket)
             })
@@ -73,6 +76,18 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                             onChange={this.handleFieldChange}
                             id="location_name"
                             value={this.state.location_name}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="ticketDateTime">Time</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="ticket_date_time"
+                            value={this.state.ticket_date_time}
                         />
                     </div>
 

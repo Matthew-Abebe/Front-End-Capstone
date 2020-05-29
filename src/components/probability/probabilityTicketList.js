@@ -35,7 +35,9 @@ export default class ProbabilityTicketList extends Component {
                                     <Card body inverse className="probDriveListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     <CardTitle>
                                         {/* <h2>{driveTicket.drive_name}</h2> */}
-                                        <CardText><h3>Arrived at {driveTicket.location_name}!</h3></CardText>
+                        <CardText><h3>{driveTicket.drive_name} arrived at {driveTicket.location_name}!</h3>
+                        <p>Time: {driveTicket.ticket_date_time}</p>
+                        </CardText>
 
                                         <br></br>
                                     </CardTitle>

@@ -60,3 +60,9 @@
     /* margin-left: 20px; */
     /* margin-bottom: 15px; */
 }
+
+.probDriveListCard {
+    width: 720px;
+    margin-left: 10px;
+    margin-top: 10px;
+}

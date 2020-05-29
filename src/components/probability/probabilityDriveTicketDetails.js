@@ -13,6 +13,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
         driveTicketId: "",
         driverName: "",
         driveLocation: "",
+        driveTicketDateTime: ""
         // description: ""
     }
 
@@ -24,6 +25,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
                     driveTicketId: driveTicket.id, //maybe wrong
                     driverName: driveTicket.drive_name,
                     driveLocation: driveTicket.location_name,
+                    driveTicketDateTime: driveTicket.ticket_date_time
                     // description: product.description
                 })
                 console.log(this.state.driveTicketId)
@@ -36,7 +38,8 @@ export default class ProbabilityDriveTicketDetails extends Component {
                 this.setState({
                     userDriveTicketId: userDriveTicket.id,
                     userDriverTicketName: userDriveTicket.drive_name,
-                    userDriveTicketLocation: userDriveTicket.location_name
+                    userDriveTicketLocation: userDriveTicket.location_name,
+                    userDriveTicketDateTime: userDriveTicket.ticket_date_time
                 })
                 console.log(this.state.userDriveTicketId)
             })
@@ -58,6 +61,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
                         
                         <CardText>
                             <p>Location: {this.state.driveLocation}</p>
+                            <p>Time {this.state.driveTicketDateTime}</p>
                         </CardText>
 
                         {/* <ButtonGroup>
