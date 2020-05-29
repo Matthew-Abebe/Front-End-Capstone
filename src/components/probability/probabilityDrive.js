@@ -118,7 +118,7 @@ render() {
       </FormGroup>
       
       <div className="driveButton">
-      <Button type="submit" color="success" size="sm" className="driveBtn"
+      <Button type="submit" color="success" className="driveBtn"
             onClick={() => {
 
                 this.handleProbabilityDrive()
@@ -129,7 +129,7 @@ render() {
 
          <div className="previousDriveTicketsButton">  
         <Link to="/probabilityDriveTickets">
-            <Button type="submit" color="danger" size="sm" className="previousDriveTicketsBtn"
+            <Button type="submit" color="danger" className="previousDriveTicketsBtn"
                 onClick={() => {
                 console.log("this will take user to prob drive list")
             }}>See Previous Trips

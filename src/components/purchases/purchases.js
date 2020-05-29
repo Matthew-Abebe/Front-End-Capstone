@@ -42,7 +42,9 @@ export default class Purchases extends Component {
         return (
             <React.Fragment>
                 <section className="products">
-                    <h2>All Purchases</h2>
+                    <div className="purchasesHeader">
+                    <h1>Purchases</h1>
+                    </div>
                     
                     <br></br>
                     
@@ -53,7 +55,7 @@ export default class Purchases extends Component {
                         <Card body inverse className="purchaseListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
 
                                     <CardTitle>
-                                        <h2>{purchase.productName}</h2>
+                                        <h3>{purchase.productName}</h3>
                                     </CardTitle>
                                     <CardText>
                                         <p>Purchased {purchase.dateTime}</p>

@@ -1,9 +1,9 @@
 h2 {
-    color: lightgray
+    color: white;
 }
 
 h4 {
-    color: lightgray
+    color: lightgray;
 }
 
 .purchaseListCard {
@@ -14,4 +14,16 @@ h4 {
 
 .deleteSaleBtn {
     margin-right: 5px;
+}
+
+.purchasesHeader {
+    margin-left: 10px;
+}
+
+/* .purchaseListCard {
+    color: red;
+} */
+
+.productName {
+    color: red;
 }

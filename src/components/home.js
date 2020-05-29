@@ -17,7 +17,7 @@ export default class Home extends Component {
               <hr className="my-2" />
               <p>A one stop shop for all intergalactic, hitchiking needs.</p>
               <br></br>
-              <p className="vogon">So, Keep Calm and Vogon.</p>
+              <p className="vogon">So Keep Calm and Vogon.</p>
         
             <div className="loginButton">
                 <Link to="/login">

@@ -22,7 +22,9 @@ export default class ProductList extends Component {
 
             <div>
                 <section className="products">
+                    <div className="productsHeader">
                     <h1>Products</h1>
+                    </div>
 
                     <br></br>
                     
@@ -33,7 +35,7 @@ export default class ProductList extends Component {
                                 <Card body inverse className="productListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     {/* put card title detail link into a button*/}
                                     {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
-                                    <CardTitle><h2>{product.product_name}</h2></CardTitle>
+                                    <CardTitle><h3>{product.product_name}</h3></CardTitle>
                                        <CardText> <p>Price ~ ${product.sale_price}</p></CardText>
                                         <br></br>
 
