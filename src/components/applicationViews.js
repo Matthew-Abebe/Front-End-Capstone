@@ -65,7 +65,7 @@ class ApplicationViews extends Component {
             productName: purchase.product.product_name,
             productPrice: purchase.product.sale_price,
             description: purchase.product.description,
-            // dateTime: this.getTimeStamp()
+            dateTime: this.getTimeStamp()
         }
         console.log(purchaseObj)
         DbCalls.postNewPurchase(purchaseObj)
