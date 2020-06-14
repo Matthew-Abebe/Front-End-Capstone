@@ -8,7 +8,7 @@ export default class Navigation extends React.Component {
     return (
 
       <React.Fragment>
-        <div>
+        {/* <div> */}
           {/* <p>List Based</p> */}
           <Nav className="navbar">
             <NavItem>
@@ -25,9 +25,9 @@ export default class Navigation extends React.Component {
             </NavItem>
           </Nav>
 
-          <hr />
+          {/* <hr /> */}
 
-        </div>
+        {/* </div> */}
 
       </React.Fragment>
     );
