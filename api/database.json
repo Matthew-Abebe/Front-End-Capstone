@@ -314,21 +314,21 @@
     },
     {
       "userId": 18,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "6/4/2020",
-      "id": 83
-    },
-    {
-      "userId": 18,
       "productId": 7,
       "productName": "Towel",
       "productPrice": "5.99",
       "description": "You'll need this.",
       "dateTime": "6/4/2020",
       "id": 84
+    },
+    {
+      "userId": 18,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "6/21/2020",
+      "id": 85
     }
   ],
   "probabilityDriveTickets": [
@@ -460,11 +460,11 @@
       "ticket_date_time": "5/16/2020 11:22:33"
     },
     {
-      "location_name": "pluto",
+      "location_name": "alpha centauri",
       "drive_name": "guest",
       "userId": 18,
-      "ticket_date_time": "6/4/2020 10:25:09",
-      "id": 47
+      "ticket_date_time": "6/21/2020 15:03:26",
+      "id": 48
     }
   ]
 }
