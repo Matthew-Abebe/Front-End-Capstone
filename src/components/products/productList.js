@@ -23,7 +23,7 @@ export default class ProductList extends Component {
             <div>
                 <section className="products">
                     <div className="productsHeader">
-                    <h1>Products</h1>
+                    <h1>Leads</h1>
                     </div>
 
                     <br></br>
@@ -58,7 +58,15 @@ export default class ProductList extends Component {
 
                             </div>
 
+                            
+
                         )}
+                        <Link to={`/products/new`}>
+                        <Button className="addNewProduct" color="success" size="sm">
+                            New Product
+                        </Button>
+                        </Link>
+
                 </section>
             </div>
 

@@ -6,7 +6,7 @@ import Register from './authentication/register'
 import Login from './authentication/login'
 import DbCalls from '../modules/dbCalls'
 import ProductList from './products/productList'
-// import ProductNewForm from './products/productNew'
+import ProductNewForm from './products/productNew'
 import ProductDetails from './products/productDetails'
 import ProductEditForm from './products/productEditForm'
 import Purchases from './purchases/purchases'
@@ -254,12 +254,12 @@ class ApplicationViews extends Component {
                 }
                 } />
 
-                {/* <Route path="/products/new" render={(props) => {
+                 <Route path="/products/new" render={(props) => {
                     return <ProductNewForm {...props}
                         addProducts={this.addProducts}
                         products={this.state.products}
                     />
-                }} /> */}
+                }} /> 
 
                 <Route exact path="/products/:productId(\d+)/details" render={(props) => {
                     return <ProductDetails {

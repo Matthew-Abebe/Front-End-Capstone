@@ -1,44 +1,44 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 
-// export default class ProductNewForm extends Component {
+export default class ProductNewForm extends Component {
 
-    // state = {
-    //     product_name: "",
-    //     sale_price: "",
-    //     manufacture_cost: "",
-    //     description: ""
+    state = {
+        product_name: "",
+        sale_price: "",
+        manufacture_cost: "",
+        description: ""
 
-    // }
+    }
 
-    // handleFieldChange = evt => {
-    //     const stateToChange = {};
-    //     stateToChange[evt.target.id] = evt.target.value
-    //     this.setState(stateToChange)
-    // }
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
+    }
 
-    // constructNewProduct = evt => {
+    constructNewProduct = evt => {
 
-    //     let userId = sessionStorage.getItem("userId")
+        let userId = sessionStorage.getItem("userId")
 
-    //     const newProduct = {
-    //         product_name: this.state.product_name,
-    //         sale_price: this.state.sale_price,
-    //         description: this.state.description,
-    //         userId: parseInt(userId)
-    //     }
+        const newProduct = {
+            product_name: this.state.product_name,
+            sale_price: this.state.sale_price,
+            description: this.state.description,
+            userId: parseInt(userId)
+        }
 
-    //     console.log(newProduct)
+        console.log(newProduct)
 
-    //     this.props.addProducts(newProduct)
-    //         .then(() => this.props.history.push("/products"))
-    // }
+        this.props.addProducts(newProduct)
+            .then(() => this.props.history.push("/products"))
+    }
 
-    // render() {
+    render() {
 
-    //     return (
-    //         <React.Fragment>
+        return (
+            <React.Fragment>
 
-                {/* <form className="productForm">
+                 <form className="productForm">
                     <div className="form-group">
                         <label htmlFor="productName">Product Name</label>
                         <input
@@ -73,18 +73,18 @@
                             id="description"
                             placeholder="Description"
                         />
-                    </div> */}
+                    </div>
 
-                    {/* <button type="button" onClick={this.constructNewProduct} className="addProductBtn">Submit</button> */}
-
-
+                    <button type="button" onClick={this.constructNewProduct} className="addProductBtn">Submit</button>
 
 
-                {/* </form> */}
+
+
+                </form>
 
 
 
 //             </React.Fragment>
-//         )
-//     }
-// }
+        )
+    }
+}

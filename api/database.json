@@ -129,6 +129,13 @@
       "description": "Best drink in the galaxy but it will smash your brains.",
       "userId": 1,
       "id": 8
+    },
+    {
+      "product_name": "Test product",
+      "sale_price": "100",
+      "description": "test product",
+      "userId": 7,
+      "id": 9
     }
   ],
   "purchases": [
@@ -187,33 +194,6 @@
       "id": 45
     },
     {
-      "userId": 7,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/27/2020 2:16:56",
-      "id": 49
-    },
-    {
-      "userId": 7,
-      "productId": 4,
-      "productName": "Spaceship",
-      "productPrice": "70,000.00",
-      "description": "Wiz through the galaxy in a brand new hovercraft!",
-      "dateTime": "5/27/2020 2:52:17",
-      "id": 50
-    },
-    {
-      "userId": 7,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/27/2020 2:52:24",
-      "id": 51
-    },
-    {
       "userId": 8,
       "productId": 7,
       "productName": "Towel",
@@ -242,15 +222,6 @@
     },
     {
       "userId": 10,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/28/2020",
-      "id": 67
-    },
-    {
-      "userId": 10,
       "productId": 8,
       "productName": "Pan Galactic Gargle Blaster",
       "productPrice": "7.99",
@@ -266,24 +237,6 @@
       "description": "Wiz through the galaxy in a brand new hovercraft!",
       "dateTime": "5/28/2020",
       "id": 69
-    },
-    {
-      "userId": 10,
-      "productId": 7,
-      "productName": "Towel",
-      "productPrice": "5.99",
-      "description": "You'll need this.",
-      "dateTime": "5/28/2020",
-      "id": 70
-    },
-    {
-      "userId": 10,
-      "productId": 8,
-      "productName": "Pan Galactic Gargle Blaster",
-      "productPrice": "7.99",
-      "description": "Best drink in the galaxy but it will smash your brains.",
-      "dateTime": "5/28/2020",
-      "id": 71
     },
     {
       "userId": 11,
@@ -329,6 +282,42 @@
       "description": "Wiz through the galaxy in a brand new hovercraft!",
       "dateTime": "6/21/2020",
       "id": 85
+    },
+    {
+      "userId": 7,
+      "productId": 4,
+      "productName": "Spaceship",
+      "productPrice": "70,000.00",
+      "description": "Wiz through the galaxy in a brand new hovercraft!",
+      "dateTime": "8/19/2020",
+      "id": 86
+    },
+    {
+      "userId": 7,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "8/19/2020",
+      "id": 87
+    },
+    {
+      "userId": 7,
+      "productId": 8,
+      "productName": "Pan Galactic Gargle Blaster",
+      "productPrice": "7.99",
+      "description": "Best drink in the galaxy but it will smash your brains.",
+      "dateTime": "8/19/2020",
+      "id": 88
+    },
+    {
+      "userId": 10,
+      "productId": 7,
+      "productName": "Towel",
+      "productPrice": "5.99",
+      "description": "You'll need this.",
+      "dateTime": "8/26/2020",
+      "id": 89
     }
   ],
   "probabilityDriveTickets": [
@@ -386,12 +375,6 @@
       "userId": 1
     },
     {
-      "id": 23,
-      "drive_name": "groot",
-      "location_name": "kuiper belt",
-      "userId": 7
-    },
-    {
       "location_name": "alpha centauri",
       "drive_name": "squidward",
       "userId": 13,
@@ -414,18 +397,6 @@
       "drive_name": "david",
       "userId": 14,
       "id": 30
-    },
-    {
-      "location_name": "mars",
-      "drive_name": "groot",
-      "userId": 7,
-      "id": 34
-    },
-    {
-      "location_name": "Magrothea",
-      "drive_name": "groot",
-      "userId": 7,
-      "id": 35
     },
     {
       "id": 38,
@@ -453,18 +424,25 @@
       "ticket_date_time": "5/16/2020 11:22:33"
     },
     {
-      "id": 46,
-      "drive_name": "dudeguy",
-      "location_name": "magrothea",
-      "userId": 10,
-      "ticket_date_time": "5/16/2020 11:22:33"
-    },
-    {
       "location_name": "alpha centauri",
       "drive_name": "guest",
       "userId": 18,
       "ticket_date_time": "6/21/2020 15:03:26",
       "id": 48
+    },
+    {
+      "location_name": "neptune",
+      "drive_name": "groot",
+      "userId": 7,
+      "ticket_date_time": "8/19/2020 11:52:51",
+      "id": 49
+    },
+    {
+      "id": 50,
+      "drive_name": "dudeguy",
+      "location_name": "mars",
+      "userId": 10,
+      "ticket_date_time": "5/16/2020 11:22:33"
     }
   ]
 }

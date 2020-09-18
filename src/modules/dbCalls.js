@@ -62,15 +62,15 @@ export default {
         }).then(e => e.json())
     },
 
-    // postNewProduct(newProduct) {
-    //     return fetch(`${remoteURL}/products`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(newProduct)
-    //     }).then(e => e.json())
-    // },
+    postNewProduct(newProduct) {
+        return fetch(`${remoteURL}/products`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newProduct)
+        }).then(e => e.json())
+    },
 
     postNewPurchase(newPurchase) {
         return fetch(`${remoteURL}/purchases`, {
