@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 import { Link } from 'react-router-dom'
 import {
-    Card, CardText, CardBody,
+    Button, Card, CardText, CardBody,
     CardTitle,
 } from 'reactstrap';
 import { ButtonGroup } from 'reactstrap';
@@ -63,18 +63,17 @@ export default class ProductDetails extends Component {
                             <p>{this.state.description}</p>
                         </CardText>
 
-                        {/* <ButtonGroup>
-                        <Link to={`/userProducts/${this.state.userProductId}/edit`}>
+                        <ButtonGroup>
+                        <Link to={`/products/${this.state.productId}/edit`}>
                             <button>Edit</button>
                         </Link>
-                        <Link to={`/userProducts/${this.state.userProductId}`}>
+                        <Link to={`/products/${this.state.productId}`}>
                         <button onClick={() =>
-                            this.props.deleteUserProduct(this.state.userProductId)} className="deleteProductBtn">
+                            this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
                             Delete
                             </button>
                             </Link>
-                            </ButtonGroup> */}
-                        {/* <Button>Hi</Button> */}
+                            </ButtonGroup> 
                     </CardBody>
                 </Card>
             </div>

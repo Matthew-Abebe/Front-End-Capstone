@@ -43,7 +43,7 @@ export default class Purchases extends Component {
             <React.Fragment>
                 <section className="products">
                     <div className="purchasesHeader">
-                    <h1>Purchases</h1>
+                    <h1>Customers</h1>
                     </div>
                     
                     <br></br>

@@ -98,27 +98,27 @@ class ApplicationViews extends Component {
                 alert(`Hi ${driveTicketObj.driveTicketName}. You have a new drive ticket for your trip to ${driveTicketObj.driveTicketLocation}!`)
     }
 
-    // putProduct = (editedProductObject) => {
-    //     return DbCalls.putProduct(editedProductObject)
-    //         .then(() => DbCalls.getAllProducts())
-    //         .then(products => {
-    //             this.setState({
-    //                 products: products
-    //             })
-    //         })
+    putProduct = (editedProductObject) => {
+        return DbCalls.putProduct(editedProductObject)
+            .then(() => DbCalls.getAllProducts())
+            .then(products => {
+                this.setState({
+                    products: products
+                })
+            })
 
-    // }
+    }
 
-    // putPurchase = (editedPurchaseObject) => {
-    //     return DbCalls.putPurchase(editedPurchaseObject)
-    //         .then(() => DbCalls.getUserPurchases())
-    //         .then(purchases => {
-    //             this.setState({
-    //                 purchases: purchases
-    //             })
-    //         })
+    putPurchase = (editedPurchaseObject) => {
+        return DbCalls.putPurchase(editedPurchaseObject)
+            .then(() => DbCalls.getUserPurchases())
+            .then(purchases => {
+                this.setState({
+                    purchases: purchases
+                })
+            })
 
-    // }
+    }
 
     putDriveTicket = (editedDriveTicketObject) => {
         return DbCalls.putDriveTicket(editedDriveTicketObject)
@@ -130,15 +130,15 @@ class ApplicationViews extends Component {
             })
     }
 
-    // deleteProduct = (product) => {
-    //     const newState = {};
-    //     DbCalls.deleteProduct(product)
-    //         .then(() =>
-    //             DbCalls.getAllProducts()
-    //         )
-    //         .then(products => { newState.products = products })
-    //         .then(() => this.setState(newState))
-    // }
+    deleteProduct = (product) => {
+        const newState = {};
+        DbCalls.deleteProduct(product)
+            .then(() =>
+                DbCalls.getAllProducts()
+            )
+            .then(products => { newState.products = products })
+            .then(() => this.setState(newState))
+    }
 
     deleteUserProduct = (userProduct) => {
         const newState = {};
@@ -231,7 +231,8 @@ class ApplicationViews extends Component {
                         return <ProductList
                             products={this.state.products}
                             addPurchase={this.addPurchase}
-                            // deleteProduct={this.deleteProduct}
+                            deleteProduct={this.deleteProduct}
+                            deleteUserProduct={this.deleteUserProduct}
                         />
                     } else {
                         return <Redirect to="/login" />
@@ -265,8 +266,8 @@ class ApplicationViews extends Component {
                     return <ProductDetails {
                         ...props
                     }
-                        // deleteProduct={this.deleteProduct}
-                        // products={this.state.products}
+                        deleteProduct={this.deleteProduct}
+                        products={this.state.products}
                         deleteUserProduct={this.deleteUserProduct}
                         userProducts={this.state.userProducts}
                         

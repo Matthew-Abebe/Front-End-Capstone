@@ -8,6 +8,8 @@ import './product.css'
 
 export default class ProductList extends Component {
 
+
+    
     handleClick = (e) => {
         e.preventDefault()
         console.log("clicked link")
@@ -51,6 +53,13 @@ export default class ProductList extends Component {
                             Details
                         </Button>
                         </Link>
+
+                        {/* <Link to={`/products/${this.state.productId}`}>
+                        <button onClick={() =>
+                            this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
+                            Delete
+                            </button>
+                            </Link> */}
 
                             </Link>
                                     {/* </CardTitle> */}
