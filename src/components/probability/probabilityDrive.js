@@ -90,6 +90,21 @@ export default class ProbabilityDrive extends Component {
         // console.log(`${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
         
     }
+
+    constructNewPurchaseTicket = (evt) => {
+
+        let userId = sessionStorage.getItem("userId")
+
+        const newPurchaseTicket = {
+            id: this.props.match.params.purchaseTicketId,
+            userId: parseInt(userId),
+            selectedPurchase: this.state.selectedPurchase
+        }
+
+        console.log(newPurchaseTicket)
+        this.props.addPurchaseTickets(newPurchaseTicket)
+        .then(() => this.props.history.push("/purchaseTickets"))
+    }
     
     handleProbabilityDrive = (evt) => {
         
@@ -115,6 +130,7 @@ export default class ProbabilityDrive extends Component {
     }
     
     render() {
+        console.log(this.state.selectedPurchase)
         return (
 
             <React.Fragment>
@@ -149,17 +165,9 @@ export default class ProbabilityDrive extends Component {
             {this.state.validationError}
           </div>
         </div>
-    
-            <React.Fragment></React.Fragment>
                 
                 <div>
-                    <Jumbotron fluid className="jumbotron">
-                        <Container fluid>
-                            <h1 className="display-3">Drive Through The Galaxy </h1>
-                            <p className="lead">A wonderful new method of crossing interstellar distances.</p>
-                        </Container>
-                        </Jumbotron>
-    
+                    
         <Form>
           <FormGroup>
             <Input type="text" 
@@ -185,7 +193,8 @@ export default class ProbabilityDrive extends Component {
                 onClick={() => {
     
                     this.handleProbabilityDrive()
-                    this.constructNewDriveTicket() 
+                    // this.constructNewDriveTicket()
+                    this.constructNewPurchaseTicket() 
                 }}>Start Journey
             </Button>
             </div>
