@@ -116,7 +116,41 @@ export default class ProbabilityDrive extends Component {
     
     render() {
         return (
+
             <React.Fragment>
+        <div>
+          <select
+            value={this.state.selectedPurchase}
+            onChange={e =>
+              this.setState({
+                selectedPurchase: e.target.value,
+                validationError:
+                  e.target.value === ""
+                    ? "You must select your favourite team"
+                    : ""
+              })
+            }
+          >
+            {this.state.purchases.map(purchase => (
+              <option
+                key={purchase.value}
+                value={purchase.value}
+              >
+                {purchase.display}
+              </option>
+            ))}
+          </select>
+          <div
+            style={{
+              color: "red",
+              marginTop: "5px"
+            }}
+          >
+            {this.state.validationError}
+          </div>
+        </div>
+    
+        
                 
                 <div>
                     <Jumbotron fluid className="jumbotron">
