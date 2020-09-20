@@ -170,6 +170,15 @@ export default {
         }).then(e => e.json(0))
     },
 
+    deleteLead(id) {
+        return fetch(`${remoteURL}/leads/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(e => e.json(0))
+    },
+
     deleteUserProduct(id) {
         return fetch(`${remoteURL}/userProducts/${id}`, {
             method: "DELETE",

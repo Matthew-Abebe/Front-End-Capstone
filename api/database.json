@@ -115,16 +115,8 @@
       "first_name": "Spongebob",
       "last_name": "Squarepants",
       "email_address": "sponge@mail.com",
-      "phone_number": "654654655",
-      "lead_address": "456 Pineapple Blvd Bikini Bottom"
-    },
-    {
-      "id": 22,
-      "first_name": "Larry",
-      "last_name": "Lobster",
-      "email_address": "larry@mail.com",
-      "phone_number": "654654456",
-      "lead_address": "1400 Sea St Bikini Bottom"
+      "phone_number": "654651111",
+      "lead_address": "458 Pineapple Blvd Bikini Bottom"
     },
     {
       "first_name": "Sheldon",
@@ -430,6 +422,11 @@
       "userId": 11,
       "selectedPurchase": "Larry Lobster",
       "id": 19
+    },
+    {
+      "userId": 8,
+      "selectedPurchase": "Spongebob Squarepants",
+      "id": 20
     }
   ]
 }

@@ -75,7 +75,7 @@ export default class LeadDetails extends Component {
                         </Link>
                         <Link to={`/leads`}>
                         <button onClick={() =>
-                            this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
+                            this.props.deleteLead(this.state.leadId)} className="deleteProductBtn">
                             Delete
                             </button>
                             </Link>

@@ -160,6 +160,16 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState))
     }
 
+    deleteLead = (lead) => {
+        const newState = {};
+        DbCalls.deleteLead(lead)
+            .then(() =>
+                DbCalls.getAllLeads()
+            )
+            .then(leads => { newState.leads = leads })
+            .then(() => this.setState(newState))
+    }
+
     deleteUserProduct = (userProduct) => {
         const newState = {};
         DbCalls.deleteUserProduct(userProduct)
@@ -307,7 +317,7 @@ class ApplicationViews extends Component {
                     return <LeadDetails {
                         ...props
                     }
-                        deleteProduct={this.deleteProduct}
+                        deleteLead={this.deleteLead}
                         leads={this.state.leads}
                         deleteUserProduct={this.deleteUserProduct}
                         userProducts={this.state.userProducts}

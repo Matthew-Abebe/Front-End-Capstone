@@ -99,7 +99,7 @@ export default class ProductEditForm extends Component {
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="email_address"
+                            id="phone_number"
                             value={this.state.phone_number}
                         />
                     </div>
