@@ -1,6 +1,6 @@
-## Hitchhiker's Shop
+## Nimble
 
-This application is a mock store site themed after the movie Hitchhiker's Guide to the Galaxy. A user must login in or register. The navigation bar will direct the user to search through; a products list for viewing product details, buying items, and a purchase list to see or delete past purchases. There is also an improbability drive feature where a user enters details for a trip and is informed on outcomes based from the movie. The user can view, edit, or delete drive tickets from previous trips.
+This is a simple application that lets users create, read, update, and delete leads, products, and opportunities to produce sales.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
