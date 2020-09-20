@@ -14,35 +14,35 @@ export default class ProbabilityDrive extends Component {
         location_name: "",
         drive_name: "",
         ticket_date_time: "",
-        purchases: [],
+        products: [],
         selectedPurchase: ""
         // userId: ""
     }
 
     componentDidMount() {
         const remoteURL = "http://localhost:5002"
-        let sessionId = sessionStorage.getItem("userId")
+        // let sessionId = sessionStorage.getItem("userId")
      
       fetch(
-        `${remoteURL}/purchases?userId=${sessionId}`
+        `${remoteURL}/products`
       )
         .then(response => {
           return response.json();
         })
         .then(data => {
-          let purchasesFromApi = data.map(purchase => {
-              return { value: purchase.productName, display: purchase.productName };
+          let productsFromApi = data.map(product => {
+              return { value: product.first_name + " " + product.last_name, display: product.first_name + " " + product.last_name };
             });
             this.setState({
-                purchases: [
+                products: [
                     {
                         value: "",
                         display:
-                        "(Select your purchase)"
+                        "(Select your lead)"
                     }
-                ].concat(purchasesFromApi)
+                ].concat(productsFromApi)
             });
-            console.log(this.state.purchases)
+            console.log(this.state.products)
         })
         .catch(error => {
           console.log(error);
@@ -67,29 +67,7 @@ export default class ProbabilityDrive extends Component {
         + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ":" + ((now.getSeconds() < 10) ? ("0" + now
             .getSeconds()) : (now.getSeconds())));
     }
-    
-    //Construct new drive ticket function
-    
-    constructNewDriveTicket = (evt) => {
-    
-        let userId = sessionStorage.getItem("userId")
-    
-        const newDriveTicket = {
-            id: this.props.match.params.driveTicketId,
-            location_name: this.state.location_name,
-            drive_name: this.state.drive_name,
-            userId: parseInt(userId),
-            ticket_date_time: this.getTicketTimeStamp()
-        }
-        
-        console.log(newDriveTicket) //newDriveTicket is missing its id
-        
-        this.props.addDriveTickets(newDriveTicket)
-        .then(() => this.props.history.push("/probabilityDriveTickets"))
-        
-        // console.log(`${newDriveTicket.drive_name}. You have a new drive ticket for your trip to ${newDriveTicket.location_name}!`)
-        
-    }
+   
 
     constructNewPurchaseTicket = (evt) => {
 
@@ -106,31 +84,9 @@ export default class ProbabilityDrive extends Component {
         .then(() => this.props.history.push("/purchaseTickets"))
     }
     
-    handleProbabilityDrive = (evt) => {
-        
-        let randomNumber = Math.floor(Math.random() * 4)
-        let outcome = ''
-    
-        switch (randomNumber) {
-            case 0:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sperm whale! ...Awaiting normalization.`;
-                break;
-            case 1:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a bowl of petunias! ...Awaiting normalization.`;
-                break;
-            case 2:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} made out of yarn! ...Awaiting normalization.`;
-                break;
-            case 3:
-                outcome = `Congratulations, ${this.state.drive_name}. You have arrived at ${this.state.location_name} as a sofa! ...Awaiting normalization.`;
-                break;
-        }
-    
-        alert(`${outcome}`);
-    }
     
     render() {
-        console.log(this.state.selectedPurchase)
+        // console.log(this.state.selectedPurchase)
         return (
 
             <React.Fragment>
@@ -147,12 +103,12 @@ export default class ProbabilityDrive extends Component {
               })
             }
           >
-            {this.state.purchases.map(purchase => (
+            {this.state.products.map(product => (
               <option
-                key={purchase.value}
-                value={purchase.value}
+                key={product.value}
+                value={product.value}
               >
-                {purchase.display}
+                {product.display}
               </option>
             ))}
           </select>
@@ -192,7 +148,7 @@ export default class ProbabilityDrive extends Component {
           <Button type="submit" color="success" className="driveBtn"
                 onClick={() => {
     
-                    this.handleProbabilityDrive()
+                    // this.handleProbabilityDrive()
                     // this.constructNewDriveTicket()
                     this.constructNewPurchaseTicket() 
                 }}>Start Journey
