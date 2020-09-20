@@ -361,6 +361,7 @@ class ApplicationViews extends Component {
                             ...props
                         }
                             purchases={this.state.purchases}
+                            addPurchaseTickets={this.addPurchaseTickets}
                             deletePurchase={this.deletePurchase}
                             putPurchase={this.putPurchase}
                         // getSpending={this.getSpending}
