@@ -111,12 +111,20 @@
   ],
   "products": [
     {
-      "product_name": "Krabby Patty",
-      "product_price": "$5.99",
-      "product_vendor": "The Krusty Krab",
-      "product_description": "Best patty in Bikini Bottom",
-      "userId": 8,
-      "id": 1
+      "product_name": "Fishing Net",
+      "product_price": "$2.99",
+      "product_vendor": "JellyFishing Inc.",
+      "product_description": "Fish and frolic like the best of them with these jelly fishing nets. ",
+      "userId": 11,
+      "id": 3
+    },
+    {
+      "product_name": "Pineapple",
+      "product_price": "$25.00",
+      "product_vendor": "BikiniHouses",
+      "product_description": "Live in luxury with all the necessities carved out of this marvelous fruit.",
+      "userId": 11,
+      "id": 4
     }
   ],
   "leads": [
@@ -138,14 +146,7 @@
       "lead_address": "1400 Sea St Bikini Bottom"
     }
   ],
-  "purchases": [
-    {
-      "userId": 8,
-      "productId": 21,
-      "dateTime": "9/19/2020",
-      "id": 1
-    }
-  ],
+  "purchases": [],
   "probabilityDriveTickets": [
     {
       "id": 1,

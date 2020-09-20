@@ -74,7 +74,7 @@ export default class ProductList extends Component {
 <br></br>
                         <Link to={`/products/new`}>
                         <Button className="addNewProduct" color="success" size="sm">
-                            Create a New Lead
+                            Create a New Product
                         </Button>
                         </Link>
 

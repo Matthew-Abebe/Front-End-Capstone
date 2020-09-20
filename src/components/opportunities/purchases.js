@@ -14,7 +14,9 @@ export default class Purchases extends Component {
         location_name: "",
         drive_name: "",
         ticket_date_time: "",
+        products: [],
         leads: [],
+        selectedProduct: "",
         selectedLead: ""
         // userId: ""
     }
@@ -47,6 +49,31 @@ export default class Purchases extends Component {
           .catch(error => {
             console.log(error);
           });
+
+          fetch(
+            `${remoteURL}/products`
+          )
+            .then(response => {
+              return response.json();
+            })
+            .then(data => {
+              let productsFromApi = data.map(product => {
+                  return { value: product.product_name, display: product.product_name };
+                });
+                this.setState({
+                  products: [
+                    {
+                      value: "",
+                      display:
+                      "(Select your product)"
+                    }
+                  ].concat(productsFromApi)
+                });
+                console.log(this.state.products)
+              })
+              .catch(error => {
+                console.log(error);
+              });
         }
         
         constructNewPurchaseTicket = (evt) => {
@@ -56,7 +83,8 @@ export default class Purchases extends Component {
           const newPurchaseTicket = {
             id: this.props.match.params.purchaseTicketId,
             userId: parseInt(userId),
-            selectedPurchase: this.state.selectedPurchase
+            selectedLead: this.state.selectedLead,
+            selectedProduct: this.state.selectedProduct
           }
           
           console.log(newPurchaseTicket)
@@ -78,13 +106,13 @@ export default class Purchases extends Component {
             <br></br>
         <div>
           <select
-            value={this.state.selectedPurchase}
+            value={this.state.selectedLead}
             onChange={e =>
               this.setState({
-                selectedPurchase: e.target.value,
+                selectedLead: e.target.value,
                 validationError:
                   e.target.value === ""
-                    ? "You must select your favourite team"
+                    ? "You must select a lead"
                     : ""
               })
             }
@@ -109,6 +137,41 @@ export default class Purchases extends Component {
         </div>
                 
                 <div>
+
+                <div>
+            </div>
+            <br></br>
+        <div>
+          <select
+            value={this.state.selectedProduct}
+            onChange={e =>
+              this.setState({
+                selectedProduct: e.target.value,
+                validationError:
+                  e.target.value === ""
+                    ? "You must select a product"
+                    : ""
+              })
+            }
+          >
+            {this.state.products.map(product => (
+              <option
+                key={product.value}
+                value={product.value}
+              >
+                {product.display}
+              </option>
+            ))}
+          </select>
+          <div
+            style={{
+              color: "red",
+              marginTop: "5px"
+            }}
+          >
+            {this.state.validationError}
+          </div>
+        </div>
                     
        
           
@@ -119,7 +182,7 @@ export default class Purchases extends Component {
                     // this.handleProbabilityDrive()
                     // this.constructNewDriveTicket()
                     this.constructNewPurchaseTicket() 
-                }}>Start Journey
+                }}>Enter Details
             </Button>
             </div>
     

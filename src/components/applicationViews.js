@@ -6,13 +6,15 @@ import Register from './authentication/register'
 import Login from './authentication/login'
 import DbCalls from '../modules/dbCalls'
 import ProductList from './products/productList'
+import NewProductForm from './products/newProductForm'
 import ProductDetails from './products/productDetails'
+import ProductEditForm from './products/productEditForm'
 import LeadList from './leads/leadList'
 import NewLeadForm from './leads/newLeadForm'
 import LeadDetails from './leads/leadDetails'
 import LeadEditForm from './leads/leadEditForm'
-import Purchases from './purchases/purchases'
-import PurchaseEditForm from './purchases/purchasesEdit'
+import Purchases from './opportunities/purchases'
+import PurchaseEditForm from './opportunities/purchasesEdit'
 import ProbabilityDrive from './probability/probabilityDrive';
 import ProbabilityTicketList from './probability/probabilityTicketList'
 import PurchaseTicketList from './probability/purchaseTicketList'
@@ -43,7 +45,7 @@ class ApplicationViews extends Component {
                     users: users
                 }))
 
-    addProduct = (product) =>
+    addProducts = (product) =>
         DbCalls.postNewProduct(product)
             .then(() => DbCalls.getAllLeads())
             .then(leads =>
@@ -332,11 +334,17 @@ class ApplicationViews extends Component {
                 }
                 } />
 
-                 <Route path="/leads/new" render={(props) => {
-                    return <NewLeadForm {...props}
+                <Route path="/products/new" render={(props) => {
+                    return <NewProductForm {...props}
                         addProducts={this.addProducts}
-                        addLeads={this.addLeads}
                         products={this.state.products}
+                    />
+                }} />
+
+                <Route path="/leads/new" render={(props) => {
+                    return <NewLeadForm {...props}
+                        addLeads={this.addLeads}
+                        leads={this.state.leads}
                     />
                 }} />
 
@@ -344,7 +352,7 @@ class ApplicationViews extends Component {
                     return <ProductDetails {
                         ...props
                     }
-                        deleteLead={this.deleteLead}
+                        deleteProduct={this.deleteProduct}
                         products={this.state.products}
                         deleteUserProduct={this.deleteUserProduct}
                         userProducts={this.state.userProducts}
@@ -373,6 +381,16 @@ class ApplicationViews extends Component {
                     />
                 }} />
 
+                <Route path="/products/:productId(\d+)/edit"
+                    render={props => {
+                        return <ProductEditForm {
+                            ...props
+                        }
+                            products={this.state.products}
+                            putProduct={this.putProduct}
+                        />
+                    }} />
+
                 <Route path="/leads/:leadId(\d+)/edit"
                     render={props => {
                         return <LeadEditForm {
@@ -400,6 +418,8 @@ class ApplicationViews extends Component {
                             ...props
                         }
                             purchases={this.state.purchases}
+                            leads={this.state.leads}
+                            products={this.state.products}
                             addPurchaseTickets={this.addPurchaseTickets}
                             deletePurchase={this.deletePurchase}
                             putPurchase={this.putPurchase}
