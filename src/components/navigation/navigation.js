@@ -18,10 +18,13 @@ export default class Navigation extends React.Component {
               <NavLink href="/products">Products</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/purchases">Purchases</NavLink>
+              <NavLink href="/leads">Leads</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/ProbabilityDrive">Infinite Probability-Drive</NavLink>
+              <NavLink href="/purchases">Opportunities</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/ProbabilityDrive">Sales</NavLink>
             </NavItem>
           </Nav>
 

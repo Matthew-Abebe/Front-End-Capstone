@@ -14,8 +14,8 @@ export default class ProbabilityDrive extends Component {
         location_name: "",
         drive_name: "",
         ticket_date_time: "",
-        products: [],
-        selectedPurchase: ""
+        leads: [],
+        selectedLead: ""
         // userId: ""
     }
 
@@ -24,25 +24,25 @@ export default class ProbabilityDrive extends Component {
         // let sessionId = sessionStorage.getItem("userId")
      
       fetch(
-        `${remoteURL}/products`
+        `${remoteURL}/leads`
       )
         .then(response => {
           return response.json();
         })
         .then(data => {
-          let productsFromApi = data.map(product => {
-              return { value: product.first_name + " " + product.last_name, display: product.first_name + " " + product.last_name };
+          let leadsFromApi = data.map(lead => {
+              return { value: lead.first_name + " " + lead.last_name, display: lead.first_name + " " + lead.last_name };
             });
             this.setState({
-                products: [
+                leads: [
                     {
                         value: "",
                         display:
                         "(Select your lead)"
                     }
-                ].concat(productsFromApi)
+                ].concat(leadsFromApi)
             });
-            console.log(this.state.products)
+            console.log(this.state.leads)
         })
         .catch(error => {
           console.log(error);
@@ -103,12 +103,12 @@ export default class ProbabilityDrive extends Component {
               })
             }
           >
-            {this.state.products.map(product => (
+            {this.state.leads.map(lead => (
               <option
-                key={product.value}
-                value={product.value}
+                key={lead.value}
+                value={lead.value}
               >
-                {product.display}
+                {lead.display}
               </option>
             ))}
           </select>

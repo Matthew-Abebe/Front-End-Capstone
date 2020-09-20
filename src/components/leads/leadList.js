@@ -6,7 +6,7 @@ import './product.css'
 
 
 
-export default class ProductList extends Component {
+export default class LeadList extends Component {
 
 
     
@@ -16,7 +16,7 @@ export default class ProductList extends Component {
     }
 
     render() {
-        console.log(this.props.products)
+        console.log(this.props.leads)
         return (
 
 
@@ -31,24 +31,26 @@ export default class ProductList extends Component {
                     <br></br>
                     
                     {
-                        this.props.products.map(product =>
-                            <div key={product.id}>
+                        this.props.leads.map(lead =>
+                            <div key={lead.id}>
 
                                 <Card body inverse className="productListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     {/* put card title detail link into a button*/}
                                     {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
-                                    <CardTitle><h3>{product.product_name}</h3></CardTitle>
-                                       <CardText> <p>Price ~ ${product.sale_price}</p></CardText>
+                                    <CardTitle><h3>{lead.first_name} {lead.last_name}</h3></CardTitle>
+                                       {/* <CardText> <p>Email: {product.email_address}</p></CardText> */}
+                                       {/* <CardText><p>Phone: {product.phone_number}</p></CardText> */}
+                                       {/* <CardText><p>Address: {product.lead_address}</p></CardText> */}
                                         <br></br>
 
 
                         <Link to="/products">
                         <Button color="success" size="sm" onClick={() =>
-                        this.props.addPurchase({product})} className="sellProductBtn">
+                        this.props.addPurchase({lead})} className="sellProductBtn">
                             Purchase
                             </Button>
                         
-                        <Link to={`/products/${product.id}/details`}>
+                        <Link to={`/leads/${lead.id}/details`}>
                         <Button className="productDetailsBtn" color="success" size="sm">
                             Details
                         </Button>
@@ -67,12 +69,12 @@ export default class ProductList extends Component {
 
                             </div>
 
-                            
 
                         )}
+<br></br>
                         <Link to={`/products/new`}>
                         <Button className="addNewProduct" color="success" size="sm">
-                            New Product
+                            Create a New Lead
                         </Button>
                         </Link>
 
