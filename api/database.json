@@ -111,22 +111,20 @@
   ],
   "leads": [
     {
-      "first_name": "Sponge",
-      "last_name": "Square",
+      "id": 21,
+      "first_name": "Spongebob",
+      "last_name": "Squarepants",
       "email_address": "sponge@mail.com",
       "phone_number": "654654655",
-      "lead_address": "456 Pineapple Blvd Bikini Bottom",
-      "userId": 8,
-      "id": 21
+      "lead_address": "456 Pineapple Blvd Bikini Bottom"
     },
     {
+      "id": 22,
       "first_name": "Larry",
       "last_name": "Lobster",
       "email_address": "larry@mail.com",
       "phone_number": "654654456",
-      "lead_address": "1400 Sea St Bikini Bottom",
-      "userId": 8,
-      "id": 22
+      "lead_address": "1400 Sea St Bikini Bottom"
     },
     {
       "first_name": "Sheldon",
@@ -422,6 +420,16 @@
       "userId": 11,
       "selectedPurchase": "Sheldon Plankton",
       "id": 17
+    },
+    {
+      "userId": 7,
+      "selectedPurchase": "Sponge Square",
+      "id": 18
+    },
+    {
+      "userId": 11,
+      "selectedPurchase": "Larry Lobster",
+      "id": 19
     }
   ]
 }

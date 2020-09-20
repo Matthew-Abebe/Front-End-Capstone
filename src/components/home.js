@@ -13,7 +13,7 @@ export default class Home extends Component {
             <div>
             <Jumbotron className="jumbotron">
               <h1 className="display-3">Nimble</h1>
-              <p className="lead">Welcome to Nimble</p>
+              <p className="lead">Welcome to Nimble.</p>
               <hr className="my-2" />
               <br></br>
               {/* <p className="vogon">So Keep Calm and Vogon.</p> */}

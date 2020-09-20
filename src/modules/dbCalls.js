@@ -127,6 +127,16 @@ export default {
         }).then(e => e.json())
     },
 
+    putLead(editedLead) {
+        return fetch(`${remoteURL}/leads/${editedLead.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedLead)
+        }).then(e => e.json())
+    },
+
     putPurchase(editedPurchase) {
 
         return fetch(`${remoteURL}/purchases/${editedPurchase.id}`, {

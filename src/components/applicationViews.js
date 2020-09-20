@@ -118,6 +118,17 @@ class ApplicationViews extends Component {
 
     }
 
+    putLead = (editedLeadObject) => {
+        return DbCalls.putLead(editedLeadObject)
+            .then(() => DbCalls.getAllLeads())
+            .then(leads => {
+                this.setState({
+                    leads: leads
+                })
+            })
+
+    }
+
     putPurchase = (editedPurchaseObject) => {
         return DbCalls.putPurchase(editedPurchaseObject)
             .then(() => DbCalls.getUserPurchases())
@@ -313,13 +324,14 @@ class ApplicationViews extends Component {
                     />
                 }} />
 
-                <Route path="/products/:productId(\d+)/edit"
+                <Route path="/leads/:leadId(\d+)/edit"
                     render={props => {
                         return <ProductEditForm {
                             ...props
                         }
+                            leads={this.state.leads}
                             products={this.state.products}
-                            putProduct={this.putProduct}
+                            putLead={this.putLead}
                         />
                     }} />
 

@@ -4,11 +4,11 @@ import DbCalls from '../../modules/dbCalls'
 export default class ProductEditForm extends Component {
 
     state = {
-        product_name: "",
-        sale_price: "",
-        manufacture_cost: "",
-        description: ""
-
+        first_name: "",
+        last_name: "",
+        email_address: "",
+        phone_number: "",
+        lead_address: ""
     }
 
     handleFieldChange = evt => {
@@ -18,30 +18,35 @@ export default class ProductEditForm extends Component {
         this.setState(stateToChange)
     }
 
-    updateExistingProduct = evt => {
+    updateExistingLead = evt => {
         evt.preventDefault()
 
-        const editedProduct = {
-            id: this.props.match.params.productId,
-            product_name: this.state.product_name,
-            sale_price: this.state.sale_price,
-            description: this.state.description
+        const editedLead = {
+            id: this.props.match.params.leadId,
+            first_name: this.state.first_name,
+            last_name: this.state.last_name,
+            email_address: this.state.email_address,
+            phone_number: this.state.phone_number,
+            lead_address: this.state.lead_address
         }
 
         // console.log(editedProduct)
-        this.props.putProduct(editedProduct)
-            .then(() => this.props.history.push("/products"))
+        this.props.putLead(editedLead)
+            .then(() => this.props.history.push("/leads"))
+            console.log(editedLead)
     }
 
 
     componentDidMount() {
-        DbCalls.getProduct(this.props.match.params.productId)
-            .then(product => {
-                console.log(product)
+        DbCalls.getLead(this.props.match.params.leadId)
+            .then(lead => {
+                console.log(lead)
                 this.setState({
-                    product_name: product.product_name,
-                    sale_price: product.sale_price,
-                    description: product.description
+                    first_name: lead.first_name,
+                    last_name: lead.last_name,
+                    email_address: lead.email_address,
+                    phone_number: lead.phone_number,
+                    lead_address: lead.lead_address
                 })
             })
     }
@@ -50,46 +55,70 @@ export default class ProductEditForm extends Component {
         return (
             <React.Fragment>
 
-                <form className="productForm">
+                <form className="leadEditForm">
                     <div className="form-group">
-                        <label htmlFor="productName">Product Name</label>
+                        <label htmlFor="FirstName">First Name</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_name"
-                            value={this.state.product_name}
+                            id="first_name"
+                            value={this.state.first_name}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productSalePrice">Product Price</label>
+                        <label htmlFor="LastName">Last Name</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="sale_price"
-                            value={this.state.sale_price}
+                            id="last_name"
+                            value={this.state.last_name}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productDescription">Product Description</label>
+                        <label htmlFor="EmailAddress">Email</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="description"
-                            value={this.state.description}
+                            id="email_address"
+                            value={this.state.email_address}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="PhoneNumber">Phone Number</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="email_address"
+                            value={this.state.phone_number}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="LeadAddress">Address</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="lead_address"
+                            value={this.state.lead_address}
                         />
                     </div>
 
                     <button type="submit"
-                        onClick={(evt) => this.updateExistingProduct(evt)}
-                        className="editProductBtn"
+                        onClick={(evt) => this.updateExistingLead(evt)}
+                        className="editLeadBtn"
                     >
                         Save Edit
                         </button>
