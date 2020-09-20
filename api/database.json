@@ -109,32 +109,33 @@
       "id": 18
     }
   ],
+  "products": [
+    {
+      "product_name": "Krabby Patty",
+      "product_price": "$5.99",
+      "product_vendor": "The Krusty Krab",
+      "product_description": "Best patty in Bikini Bottom",
+      "userId": 8,
+      "id": 1
+    }
+  ],
   "leads": [
     {
-      "id": 21,
       "first_name": "Spongebob",
       "last_name": "Squarepants",
       "email_address": "sponge@mail.com",
-      "phone_number": "654651111",
-      "lead_address": "458 Pineapple Blvd Bikini Bottom"
+      "phone_number": "654654656",
+      "lead_address": "456 Pineapple Blvd Bikini Bottom",
+      "userId": 8,
+      "id": 25
     },
     {
-      "first_name": "Sheldon",
-      "last_name": "Plankton",
-      "email_address": "sheldon@mail.com",
-      "phone_number": "884445454",
-      "lead_address": "1200 Bucket Ct Bikini Bottom",
-      "userId": 11,
-      "id": 23
-    },
-    {
-      "first_name": "Sandy",
-      "last_name": "Squirell",
-      "email_address": "sandy@mail.com",
-      "phone_number": "423412342",
-      "lead_address": "354 Tree Way Bikini Bottom",
-      "userId": 11,
-      "id": 24
+      "id": 26,
+      "first_name": "Larry",
+      "last_name": "Lobster",
+      "email_address": "larry@mail.com",
+      "phone_number": "4654645455",
+      "lead_address": "1400 Sea St Bikini Bottom"
     }
   ],
   "purchases": [
@@ -442,6 +443,21 @@
       "userId": 8,
       "selectedPurchase": "Sheldon Plankton",
       "id": 23
+    },
+    {
+      "userId": 8,
+      "selectedPurchase": "Sandy Squirell",
+      "id": 24
+    },
+    {
+      "userId": 8,
+      "selectedPurchase": "Spongebob Squarepants",
+      "id": 25
+    },
+    {
+      "userId": 8,
+      "selectedPurchase": "Larry Lobster",
+      "id": 26
     }
   ]
 }

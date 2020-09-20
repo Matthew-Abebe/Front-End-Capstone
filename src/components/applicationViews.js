@@ -5,10 +5,12 @@ import Home from './home'
 import Register from './authentication/register'
 import Login from './authentication/login'
 import DbCalls from '../modules/dbCalls'
+import ProductList from './products/productList'
+import ProductDetails from './products/productDetails'
 import LeadList from './leads/leadList'
-import ProductNewForm from './leads/productNew'
+import NewLeadForm from './leads/newLeadForm'
 import LeadDetails from './leads/leadDetails'
-import ProductEditForm from './leads/productEditForm'
+import LeadEditForm from './leads/leadEditForm'
 import Purchases from './purchases/purchases'
 import PurchaseEditForm from './purchases/purchasesEdit'
 import ProbabilityDrive from './probability/probabilityDrive';
@@ -21,6 +23,7 @@ class ApplicationViews extends Component {
 
     state = {
         users: [],
+        products: [],
         leads: [],
         purchases: [],
         driveTickets: [],
@@ -38,6 +41,14 @@ class ApplicationViews extends Component {
             .then(users =>
                 this.setState({
                     users: users
+                }))
+
+    addProduct = (product) =>
+        DbCalls.postNewProduct(product)
+            .then(() => DbCalls.getAllLeads())
+            .then(leads =>
+                this.setState({
+                    leads: leads
                 }))
 
     addLeads = (lead) =>
@@ -204,15 +215,17 @@ class ApplicationViews extends Component {
     fetchAll = async () => {
         this.setState({
             users: await DbCalls.getAllUsers(),
+            products: await DbCalls.getAllProducts(),
             leads: await DbCalls.getAllLeads(),
             purchases: await DbCalls.getUserPurchases(),
             driveTickets: await DbCalls.getUserDriveTickets(),
             purchaseTickets: await DbCalls.getUserPurchaseTickets()
         })
         console.log(this.state.users)
+        console.log(this.state.products)
         console.log(this.state.leads)
         console.log(this.state.purchases)
-        console.log(this.state.driveTickets) //should only return tickets for user that is logged in
+        console.log(this.state.driveTickets)
         console.log(this.state.purchaseTickets)
     }
 
@@ -257,6 +270,20 @@ class ApplicationViews extends Component {
                         />
                     }}
                 />
+
+                <Route exact path="/products" render={(props) => {
+                    if (this.isAuthenticated()) {
+                        return <ProductList
+                            products={this.state.products}
+                            addPurchase={this.addPurchase}
+                            deleteProduct={this.deleteProduct}
+                            deleteUserProduct={this.deleteUserProduct}
+                        />
+                    } else {
+                        return <Redirect to="/login" />
+                    }
+                }
+                } />
 
                 <Route exact path="/leads" render={(props) => {
                     if (this.isAuthenticated()) {
@@ -305,11 +332,23 @@ class ApplicationViews extends Component {
                 }
                 } />
 
-                 <Route path="/products/new" render={(props) => {
-                    return <ProductNewForm {...props}
+                 <Route path="/leads/new" render={(props) => {
+                    return <NewLeadForm {...props}
                         addProducts={this.addProducts}
                         addLeads={this.addLeads}
                         products={this.state.products}
+                    />
+                }} />
+
+                <Route exact path="/products/:productId(\d+)/details" render={(props) => {
+                    return <ProductDetails {
+                        ...props
+                    }
+                        deleteLead={this.deleteLead}
+                        products={this.state.products}
+                        deleteUserProduct={this.deleteUserProduct}
+                        userProducts={this.state.userProducts}
+                        
                     />
                 }} /> 
 
@@ -336,7 +375,7 @@ class ApplicationViews extends Component {
 
                 <Route path="/leads/:leadId(\d+)/edit"
                     render={props => {
-                        return <ProductEditForm {
+                        return <LeadEditForm {
                             ...props
                         }
                             leads={this.state.leads}

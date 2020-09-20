@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class ProductNewForm extends Component {
+export default class NewLeadForm extends Component {
 
     state = {
         first_name: "",

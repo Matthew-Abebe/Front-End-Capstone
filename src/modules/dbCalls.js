@@ -6,6 +6,10 @@ export default {
         return fetch(`${remoteURL}/users/${id}`).then(e => e.json())
     },
 
+    getProduct(id) {
+        return fetch(`${remoteURL}/products/${id}`).then(e => e.json())
+    },
+
     getLead(id) {
         return fetch(`${remoteURL}/leads/${id}`).then(e => e.json())
     },
@@ -26,6 +30,10 @@ export default {
 
     getAllUsers: () => {
         return fetch(`${remoteURL}/users`).then(e => e.json())
+    },
+
+    getAllProducts() {
+        return fetch(`${remoteURL}/products`).then(e => e.json())
     },
 
     getAllLeads() {
@@ -72,6 +80,16 @@ export default {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newUser)
+        }).then(e => e.json())
+    },
+
+    postNewProduct(newProduct) {
+        return fetch(`${remoteURL}/products`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newProduct)
         }).then(e => e.json())
     },
 

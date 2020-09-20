@@ -22,10 +22,11 @@ export default class PurchaseTicketList extends Component {
         return (
 
             <React.Fragment>
+                
 
             <div>
                 <section className="driveTickets">
-                    <h1>Purchase Tickets</h1>
+                    <h1>Sales</h1>
                     <br></br>
 
                     {
@@ -40,6 +41,12 @@ export default class PurchaseTicketList extends Component {
 
                                         <br></br>
                                     </CardTitle>
+
+                                    {/* <Link to={`/probabilityDriveTickets/${driveTicket.id}/details`}> */}
+                        <Button className="purchaseDetailsBtn" color="success" size="sm">
+                            Details
+                        </Button>
+                        {/* </Link> */}
                                 </Card>
 
                                 </div>

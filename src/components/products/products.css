@@ -1,0 +1,25 @@
+h2 {
+    color: lightgray
+}
+
+h4 {
+    color: lightgray
+}
+
+.productListCard {
+    width: 720px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.sellProductBtn {
+    margin-right: 5px;
+}
+
+/* .productDetailsBtn {
+
+} */
+
+.productsHeader {
+    margin-left: 10px;
+}

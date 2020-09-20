@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 
-export default class ProductEditForm extends Component {
+export default class LeadEditForm extends Component {
 
     state = {
         first_name: "",

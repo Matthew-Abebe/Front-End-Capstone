@@ -7,32 +7,31 @@ import {
 } from 'reactstrap';
 import { ButtonGroup } from 'reactstrap';
 
-import './leadDetails.css'
+import './productDetails.css'
 
 
-export default class LeadDetails extends Component {
+export default class ProductDetails extends Component {
 
     state = {
-        leadId: "",
-        first_name: "",
-        last_name: "",
-        email_address: "",
-        lead_address: ""
+        productId: "",
+        product_name: "",
+        product_price: "",
+        product_vendor: "",
+        product_description: ""
     };
 
     componentDidMount() {
-        DbCalls.getLead(this.props.match.params.leadId)
-            .then(lead => {
-                console.log(lead)
+        DbCalls.getProduct(this.props.match.params.productId)
+            .then(product => {
+                console.log(product)
                 this.setState({
-                    leadId: lead.id,
-                    first_name: lead.first_name,
-                    last_name: lead.last_name,
-                    email_address: lead.email_address,
-                    phone_number: lead.phone_number,
-                    lead_address: lead.lead_address,
+                    productId: product.id,
+                    product_name: product.product_name,
+                    product_price: product.product_price,
+                    product_vendor: product.product_vendor,
+                    product_description: product.product_description
                 })
-                console.log(this.state.leadId)
+                console.log(this.state.productId)
             }
             )
 
@@ -57,25 +56,25 @@ export default class LeadDetails extends Component {
                     {/* <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" /> */}
                     <CardBody>
                         <CardTitle>
-                            <h2>{this.state.first_name} {this.state.last_name}</h2>
+                            <h2>{this.state.product_name}</h2>
                         </CardTitle>
                         <CardText>
-                            <p>Email: {this.state.email_address}</p>
+                            <p>Price: {this.state.product_price}</p>
                         </CardText>
                         <CardText>
-                            <p>Phone: {this.state.phone_number}</p>
+                            <p>Vendor: {this.state.product_vendor}</p>
                         </CardText>
                         <CardText>
-                            <p>Address: {this.state.lead_address}</p>
+                            <p>Description: {this.state.product_description}</p>
                         </CardText>
 
                         <ButtonGroup>
-                        <Link to={`/leads/${this.state.leadId}/edit`}>
+                        <Link to={`/products/${this.state.productId}/edit`}>
                             <button>Edit</button>
                         </Link>
-                        <Link to={`/leads`}>
+                        <Link to={`/products`}>
                         <button onClick={() =>
-                            this.props.deleteLead(this.state.leadId)} className="deleteProductBtn">
+                            this.props.deleteLead(this.state.productId)} className="deleteProductBtn">
                             Delete
                             </button>
                             </Link>

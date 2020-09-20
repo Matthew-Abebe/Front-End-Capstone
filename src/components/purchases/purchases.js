@@ -34,41 +34,48 @@ export default class Purchases extends Component {
               return { value: lead.first_name + " " + lead.last_name, display: lead.first_name + " " + lead.last_name };
             });
             this.setState({
-                leads: [
-                    {
-                        value: "",
-                        display:
-                        "(Select your lead)"
-                    }
-                ].concat(leadsFromApi)
+              leads: [
+                {
+                  value: "",
+                  display:
+                  "(Select your lead)"
+                }
+              ].concat(leadsFromApi)
             });
             console.log(this.state.leads)
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-
-    constructNewPurchaseTicket = (evt) => {
-
-        let userId = sessionStorage.getItem("userId")
-
-        const newPurchaseTicket = {
+          })
+          .catch(error => {
+            console.log(error);
+          });
+        }
+        
+        constructNewPurchaseTicket = (evt) => {
+          
+          let userId = sessionStorage.getItem("userId")
+          
+          const newPurchaseTicket = {
             id: this.props.match.params.purchaseTicketId,
             userId: parseInt(userId),
             selectedPurchase: this.state.selectedPurchase
-        }
-
-        console.log(newPurchaseTicket)
+          }
+          
+          console.log(newPurchaseTicket)
         this.props.addPurchaseTickets(newPurchaseTicket)
         .then(() => this.props.history.push("/purchaseTickets"))
-    }
-
+      }
+      
     render() {
-        // console.log(this.state.selectedPurchase)
+      // console.log(this.state.selectedPurchase)
         return (
-
-            <React.Fragment>
+          
+          
+          <React.Fragment>
+            <div>
+              <section>
+                <h2>Opportunities</h2>
+              </section>
+            </div>
+            <br></br>
         <div>
           <select
             value={this.state.selectedPurchase}
@@ -103,25 +110,7 @@ export default class Purchases extends Component {
                 
                 <div>
                     
-        <Form>
-          <FormGroup>
-            <Input type="text" 
-             value={this.state.value}
-             required
-             className="driveName" 
-             onChange={this.handleFieldChange}
-             id="drive_name" 
-             placeholder="Enter Name" />
-    
-            <Input type="text"
-             value={this.state.value}
-             required
-             className="location"
-             onChange={this.handleFieldChange}
-             id="location_name" 
-             placeholder="Enter Destination" />
-          
-          </FormGroup>
+       
           
           <div className="driveButton">
           <Button type="submit" color="success" className="driveBtn"
@@ -144,7 +133,6 @@ export default class Purchases extends Component {
                 </Link>
                 </div> 
           
-        </Form>
                 </div>
               
                 </React.Fragment>
