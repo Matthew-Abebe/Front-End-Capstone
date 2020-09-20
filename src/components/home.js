@@ -12,12 +12,11 @@ export default class Home extends Component {
           
             <div>
             <Jumbotron className="jumbotron">
-              <h1 className="display-3">Don't Panic!</h1>
-              <p className="lead">Welcome to Hitchhiker's Shop</p>
+              <h1 className="display-3">Nimble</h1>
+              <p className="lead">Welcome to Nimble</p>
               <hr className="my-2" />
-              <p>A one stop shop for all intergalactic, hitchiking needs.</p>
               <br></br>
-              <p className="vogon">So Keep Calm and Vogon.</p>
+              {/* <p className="vogon">So Keep Calm and Vogon.</p> */}
         
             <div className="loginButton">
                 <Link to="/login">
