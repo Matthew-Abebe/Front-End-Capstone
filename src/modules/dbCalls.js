@@ -14,17 +14,17 @@ export default {
         return fetch(`${remoteURL}/leads/${id}`).then(e => e.json())
     },
 
-    getPurchase(id) {
-        return fetch(`${remoteURL}/purchases/${id}`).then(e => e.json())
-    },
+    // getPurchase(id) {
+    //     return fetch(`${remoteURL}/purchases/${id}`).then(e => e.json())
+    // },
 
-    getDriveTicket(id) {
-        return fetch(`${remoteURL}/probabilityDriveTickets/${id}`).then (e => e.json())
-    },
+    // getDriveTicket(id) {
+    //     return fetch(`${remoteURL}/probabilityDriveTickets/${id}`).then (e => e.json())
+    // },
 
-    getPurchaseTicket(id) {
-        return fetch(`${remoteURL}/purchaseTickets/${id}`).then (e => e.json())
-    },
+    // getPurchaseTicket(id) {
+    //     return fetch(`${remoteURL}/purchaseTickets/${id}`).then (e => e.json())
+    // },
 
     getSale(id) {
         return fetch(`${remoteURL}/sales/${id}`).then (e => e.json())
@@ -131,25 +131,25 @@ export default {
         }).then(e => e.json())
     },
 
-    postNewPurchase(newPurchase) {
-        return fetch(`${remoteURL}/purchases`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newPurchase)
-        }).then(e => e.json())
-    },
+    // postNewPurchase(newPurchase) {
+    //     return fetch(`${remoteURL}/purchases`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(newPurchase)
+    //     }).then(e => e.json())
+    // },
 
-    postNewDriveTicket(newDriveTicket) {
-        return fetch(`${remoteURL}/probabilityDriveTickets`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newDriveTicket)
-        }).then(e => e.json())
-    },
+    // postNewDriveTicket(newDriveTicket) {
+    //     return fetch(`${remoteURL}/probabilityDriveTickets`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(newDriveTicket)
+    //     }).then(e => e.json())
+    // },
 
     postNewPurchaseTicket(newPurchaseTicket) {
         return fetch(`${remoteURL}/purchaseTickets`, {

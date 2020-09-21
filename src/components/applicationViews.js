@@ -30,14 +30,14 @@ class ApplicationViews extends Component {
         leads: [],
         sales: [],
         purchases: [],
-        driveTickets: [],
+        // driveTickets: [],
         purchaseTickets: []
     };
 
-    getTimeStamp() {
-        var now = new Date();
-        return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
-    }
+    // getTimeStamp() {
+    //     var now = new Date();
+    //     return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
+    // }
 
     addUser = (user) =>
         DbCalls.postNewUser(user)
@@ -49,7 +49,7 @@ class ApplicationViews extends Component {
 
     addProducts = (product) =>
         DbCalls.postNewProduct(product)
-            .then(() => DbCalls.getAllProducts())
+            .then(() => DbCalls.getUserProducts())
             .then(products =>
                 this.setState({
                     products: products
@@ -57,31 +57,15 @@ class ApplicationViews extends Component {
 
     addLeads = (lead) =>
         DbCalls.postNewLead(lead)
-            .then(() => DbCalls.getAllLeads())
+            .then(() => DbCalls.getUserLeads())
             .then(leads =>
                 this.setState({
                     leads: leads
                 }))
 
-    addDriveTickets = (driveTicket) =>
-        DbCalls.postNewDriveTicket(driveTicket)
-            .then(() => DbCalls.getAllDriveTickets())
-            .then(driveTickets =>
-                this.setState({
-                    driveTickets: driveTickets
-                }))
-
-    addPurchaseTickets = (purchaseTicket) =>
-        DbCalls.postNewPurchaseTicket(purchaseTicket)
-            .then(() => DbCalls.getAllPurchaseTickets())
-            .then(purchaseTickets =>
-                this.setState({
-                    purchaseTickets: purchaseTickets
-                }))
-
     addSales = (sale) =>
         DbCalls.postNewSale(sale)
-            .then(() => DbCalls.getAllSales())
+            .then(() => DbCalls.getUserSales())
             .then(sales =>
                 this.setState({
                     sales: sales
@@ -152,26 +136,26 @@ class ApplicationViews extends Component {
 
     }
 
-    putPurchase = (editedPurchaseObject) => {
-        return DbCalls.putPurchase(editedPurchaseObject)
-            .then(() => DbCalls.getUserPurchases())
-            .then(purchases => {
-                this.setState({
-                    purchases: purchases
-                })
-            })
+    // putPurchase = (editedPurchaseObject) => {
+    //     return DbCalls.putPurchase(editedPurchaseObject)
+    //         .then(() => DbCalls.getUserPurchases())
+    //         .then(purchases => {
+    //             this.setState({
+    //                 purchases: purchases
+    //             })
+    //         })
 
-    }
+    // }
 
-    putDriveTicket = (editedDriveTicketObject) => {
-        return DbCalls.putDriveTicket(editedDriveTicketObject)
-            .then(() => DbCalls.getUserDriveTickets())
-            .then(driveTickets => {
-                this.setState({
-                    driveTickets: driveTickets
-                })
-            })
-    }
+    // putDriveTicket = (editedDriveTicketObject) => {
+    //     return DbCalls.putDriveTicket(editedDriveTicketObject)
+    //         .then(() => DbCalls.getUserDriveTickets())
+    //         .then(driveTickets => {
+    //             this.setState({
+    //                 driveTickets: driveTickets
+    //             })
+    //         })
+    // }
 
     putSale = (editedSaleObject) => {
         return DbCalls.putSale(editedSaleObject)
@@ -250,16 +234,17 @@ class ApplicationViews extends Component {
             products: await DbCalls.getUserProducts(),
             leads: await DbCalls.getUserLeads(),
             sales: await DbCalls.getUserSales(),
-            purchases: await DbCalls.getUserPurchases(),
-            driveTickets: await DbCalls.getUserDriveTickets(),
-            purchaseTickets: await DbCalls.getUserPurchaseTickets()
+            // purchases: await DbCalls.getUserPurchases(),
+            // driveTickets: await DbCalls.getUserDriveTickets(),
+            // purchaseTickets: await DbCalls.getUserPurchaseTickets()
         })
         console.log(this.state.users)
         console.log(this.state.products)
         console.log(this.state.leads)
-        console.log(this.state.purchases)
-        console.log(this.state.driveTickets)
-        console.log(this.state.purchaseTickets)
+        console.log(this.state.sales)
+        // console.log(this.state.purchases)
+        // console.log(this.state.driveTickets)
+        // console.log(this.state.purchaseTickets)
     }
 
     componentDidMount = () => {
@@ -337,9 +322,6 @@ class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <ProbabilityTicketList {...props}
                             
-                        // addDriveTicket={this.addDriveTicket}
-                        // putDriveTicket={this.putDriveTicket}
-                        // deleteDriveTicket={this.deleteDriveTicket}
                         driveTickets={this.state.driveTickets}
                         purchaseTickets={this.state.purchaseTickets}
                         />
@@ -353,12 +335,9 @@ class ApplicationViews extends Component {
                     if (this.isAuthenticated()) {
                         return <SalesList {...props}
                             
-                        // addDriveTicket={this.addDriveTicket}
-                        // putDriveTicket={this.putDriveTicket}
-                        // deleteDriveTicket={this.deleteDriveTicket}
                         sales={this.state.sales}
-                        driveTickets={this.state.driveTickets}
-                        purchaseTickets={this.state.purchaseTickets}
+                        // driveTickets={this.state.driveTickets}
+                        // purchaseTickets={this.state.purchaseTickets}
                         />
                     } else {
                         return <Redirect to="/login" />

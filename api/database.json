@@ -7,24 +7,6 @@
       "password": "killallhumans"
     },
     {
-      "user_name": "Toys R Us",
-      "user_email": "toys@email.com",
-      "user_password": "lovetoys",
-      "id": 2
-    },
-    {
-      "user_name": "Toys R Us",
-      "user_email": "toys@email.com",
-      "user_password": "lovetoys",
-      "id": 3
-    },
-    {
-      "user_name": "Toys R Us",
-      "user_email": "toys@email.com",
-      "user_password": "lovetoys",
-      "id": 4
-    },
-    {
       "user_name": "Daniel Abebe",
       "user_email": "coolguy@email.com",
       "user_password": "ps4",
@@ -67,48 +49,6 @@
       "id": 11
     },
     {
-      "name": "elmo",
-      "email": "elmo@mail.com",
-      "password": "elmo",
-      "id": 12
-    },
-    {
-      "name": "squidward",
-      "email": "squidward@mail.com",
-      "password": "squidward",
-      "id": 13
-    },
-    {
-      "name": "david",
-      "email": "david@mail.com",
-      "password": "david",
-      "id": 14
-    },
-    {
-      "name": "clutch",
-      "email": "clutch@mail.com",
-      "password": "clutch",
-      "id": 15
-    },
-    {
-      "name": "spiderman",
-      "email": "spiderman@mail.com",
-      "password": "spiderman",
-      "id": 16
-    },
-    {
-      "name": "bob",
-      "email": "bob@mail.com",
-      "password": "bob",
-      "id": 17
-    },
-    {
-      "name": "guest",
-      "email": "guest@mail.com",
-      "password": "guest",
-      "id": 18
-    },
-    {
       "name": "robin",
       "email": "robin@mail.com",
       "password": "robin",
@@ -139,6 +79,14 @@
       "product_vendor": "BikiniHouses",
       "product_description": "Live in luxury with all the necessities carved out of this marvelous fruit.",
       "id": 3
+    },
+    {
+      "userId": 8,
+      "product_name": "Fishing Net2",
+      "product_price": "$9.99",
+      "product_vendor": "JellyFishing Inc.",
+      "product_description": "Upgraded version of our first net this one comes with a propeller.",
+      "id": 4
     }
   ],
   "leads": [
@@ -159,203 +107,28 @@
       "lead_address": "354 Tree Way Bikini Bottom",
       "userId": 8,
       "id": 27
-    }
-  ],
-  "purchases": [],
-  "probabilityDriveTickets": [
-    {
-      "id": 1,
-      "drive_name": "alien",
-      "location_name": "blackhole",
-      "userId": 1
     },
     {
-      "id": 3,
-      "drive_name": "matt",
-      "location_name": "mars"
-    },
-    {
-      "id": 4,
-      "drive_name": "elmo",
-      "location_name": "saturn",
-      "userId": 12
-    },
-    {
-      "id": 8,
-      "drive_name": "matt",
-      "location_name": "mars"
-    },
-    {
-      "id": 9,
-      "drive_name": "matt",
-      "location_name": "neptune"
-    },
-    {
-      "id": 10,
-      "drive_name": "matt",
-      "location_name": "mars"
-    },
-    {
-      "id": 12,
-      "drive_name": "matt",
-      "location_name": "jupiter"
-    },
-    {
-      "id": 13,
-      "drive_name": "matt",
-      "location_name": "mars"
-    },
-    {
-      "id": 14,
-      "drive_name": "matt",
-      "location_name": "alpha centauri"
-    },
-    {
-      "id": 22,
-      "drive_name": "alien",
-      "location_name": "jupiter",
-      "userId": 1
-    },
-    {
-      "location_name": "alpha centauri",
-      "drive_name": "squidward",
-      "userId": 13,
-      "id": 27
-    },
-    {
-      "location_name": "pluto",
-      "drive_name": "squidward",
-      "userId": 13,
+      "first_name": "Larry",
+      "last_name": "Lobster",
+      "email_address": "larry@mail.com",
+      "phone_number": "5466165465",
+      "lead_address": "1400 Sea St Bikini Bottom",
+      "userId": 10,
       "id": 28
     },
     {
-      "location_name": "alpha centauri",
-      "drive_name": "david",
-      "userId": 14,
+      "first_name": "Patrick",
+      "last_name": "Star",
+      "email_address": "pat@mail.com",
+      "phone_number": "6546165146",
+      "lead_address": "455 Rock St Bikini Bottom",
+      "userId": 8,
       "id": 29
-    },
-    {
-      "location_name": "venus",
-      "drive_name": "david",
-      "userId": 14,
-      "id": 30
-    },
-    {
-      "id": 38,
-      "drive_name": "matt",
-      "location_name": "pluto",
-      "userId": 8
-    },
-    {
-      "id": 40,
-      "drive_name": "matt",
-      "location_name": "mars",
-      "userId": 8
-    },
-    {
-      "id": 41,
-      "drive_name": "matt",
-      "location_name": "the sun",
-      "userId": 8
-    },
-    {
-      "id": 44,
-      "drive_name": "guest",
-      "location_name": "magrothea",
-      "userId": 18,
-      "ticket_date_time": "5/16/2020 11:22:33"
-    },
-    {
-      "location_name": "alpha centauri",
-      "drive_name": "guest",
-      "userId": 18,
-      "ticket_date_time": "6/21/2020 15:03:26",
-      "id": 48
-    },
-    {
-      "location_name": "neptune",
-      "drive_name": "groot",
-      "userId": 7,
-      "ticket_date_time": "8/19/2020 11:52:51",
-      "id": 49
-    },
-    {
-      "id": 50,
-      "drive_name": "dudeguy",
-      "location_name": "mars",
-      "userId": 10,
-      "ticket_date_time": "5/16/2020 11:22:33"
-    },
-    {
-      "location_name": "neptune",
-      "drive_name": "matt",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 16:29:25",
-      "id": 51
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 17:18:29",
-      "id": 52
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 17:51:06",
-      "id": 53
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 18:14:01",
-      "id": 54
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 18:14:55",
-      "id": 55
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 18:19:16",
-      "id": 56
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 7,
-      "ticket_date_time": "9/19/2020 18:21:28",
-      "id": 57
-    },
-    {
-      "location_name": "",
-      "drive_name": "",
-      "userId": 10,
-      "ticket_date_time": "9/19/2020 18:22:39",
-      "id": 58
     }
   ],
+  "purchases": [],
   "sales": [
-    {
-      "userId": 10,
-      "selectedLead": "Larry Lobster",
-      "selectedProduct": "Fishing Net",
-      "id": 1
-    },
-    {
-      "userId": 10,
-      "selectedLead": "Spongebob Squarepants",
-      "selectedProduct": "Pineapple",
-      "id": 2
-    },
     {
       "userId": 8,
       "selectedLead": "Sandy Squirell",
@@ -364,9 +137,55 @@
     },
     {
       "userId": 8,
-      "selectedLead": "Larry Lobster",
+      "selectedLead": "Sandy Squirell",
+      "selectedProduct": "Fishing Net",
+      "id": 5
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Sandy Squirell",
       "selectedProduct": "Pineapple",
-      "id": 4
+      "id": 6
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Fishing Net2",
+      "id": 7
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Fishing Net2",
+      "id": 8
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Fishing Net2",
+      "dateTime": "9/21/2020",
+      "id": 9
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Sandy Squirell",
+      "selectedProduct": "Pineapple",
+      "dateTime": "9/21/2020",
+      "id": 10
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Spongebob Squarepants",
+      "selectedProduct": "Pineapple",
+      "dateTime": "9/21/2020",
+      "id": 11
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Sandy Squirell",
+      "selectedProduct": "Pineapple",
+      "dateTime": "9/21/2020",
+      "id": 12
     }
   ]
 }

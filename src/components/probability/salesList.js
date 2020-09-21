@@ -37,6 +37,7 @@ export default class SalesList extends Component {
                                     <CardTitle>
                                         {/* <h2>{driveTicket.drive_name}</h2> */}
                         <CardText><h3>{sale.selectedLead}</h3></CardText>
+                        <p>{sale.dateTime}</p>
                         {/* <CardText><h3>{sale.selectedProduct}</h3></CardText> */}
                         
 

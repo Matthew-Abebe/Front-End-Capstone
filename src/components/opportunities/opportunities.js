@@ -10,17 +10,19 @@ import './purchases.css'
 export default class Opportunities extends Component {
 
     state = {
-    
-        location_name: "",
-        drive_name: "",
-        ticket_date_time: "",
+        userId: [],
         products: [],
         leads: [],
         sales: [],
         selectedProduct: "",
-        selectedLead: ""
-        // userId: ""
+        selectedLead: "",
+        dateTime: ""
     }
+
+    getTimeStamp() {
+      var now = new Date();
+      return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
+  }
 
     componentDidMount() {
         const remoteURL = "http://localhost:5002"
@@ -85,7 +87,8 @@ export default class Opportunities extends Component {
             id: this.props.match.params.saleId,
             userId: parseInt(userId),
             selectedLead: this.state.selectedLead,
-            selectedProduct: this.state.selectedProduct
+            selectedProduct: this.state.selectedProduct,
+            dateTime: this.getTimeStamp()
           }
           
           console.log(newSale)
@@ -201,74 +204,3 @@ export default class Opportunities extends Component {
         }
     
     }
-
-    // getSpending() {
-    //     console.log(this.props.purchases)
-
-    //     let spendingArray = []
-
-    //     let spendingSum = 0;
-
-    //     this.props.purchases.map(purchases => {
-
-    //         spendingArray.push(purchases.productPrice)
-
-    //         console.log(spendingArray)
-
-    //         for (let i = 0; i < spendingArray.length; i++) {
-
-    //             spendingSum += spendingArray
-    //         }
-
-    //         console.log(spendingArray.reduce(function (a, b) {
-    //             return parseFloat(a) + parseFloat(b);
-    //         }, 0)
-    //         )
-    //         console.log(spendingArray)
-    //     })
-    // }
-
-//     render() {
-//         return (
-//             <React.Fragment>
-//                 <section className="products">
-//                     <div className="purchasesHeader">
-//                     <h1>Opportunities</h1>
-//                     </div>
-                    
-//                     <br></br>
-                    
-//                     {
-//                         this.props.purchases.map(purchase =>
-//                             <div key={purchase.id}>
-
-//                         <Card body inverse className="purchaseListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
-
-//                                     <CardTitle>
-//                                         <h3>{purchase.productName}</h3>
-//                                     </CardTitle>
-//                                     <CardText>
-//                                         <p>Purchased {purchase.dateTime}</p>
-//                                     </CardText>
-//                                     {/* <br></br> */}
-//                         <CardBody>
-//                            </CardBody>
-//                                     <Button color="success" size="sm" onClick={() =>
-//                                         this.props.deletePurchase(purchase.id)} className="deleteSaleBtn">Delete
-//                                         </Button>
-//                                 </Card>
-//                             </div>
-//                         )
-//                     }
-//                 </section>
-
-//                 {/* <section>
-//                     <button onClick={() => this.getSpending()}>Spending</button>
-//                 </section> */}
-
-//             </React.Fragment>
-
-
-//         )
-//     }
-// }
