@@ -21,7 +21,7 @@ export default class Navigation extends React.Component {
               <NavLink href="/leads">Leads</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/purchases">Opportunities</NavLink>
+              <NavLink href="/opportunities">Opportunities</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/sales">Sales</NavLink>

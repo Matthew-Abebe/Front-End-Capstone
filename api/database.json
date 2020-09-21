@@ -347,71 +347,6 @@
   ],
   "sales": [
     {
-      "userId": 7,
-      "selectedPurchase": "Spaceship Version 1",
-      "id": 2
-    },
-    {
-      "userId": 7,
-      "selectedPurchase": "Widget 1",
-      "id": 3
-    },
-    {
-      "userId": 7,
-      "selectedPurchase": "Spaceship Version 1",
-      "id": 4
-    },
-    {
-      "userId": 7,
-      "selectedPurchase": "Spaceship Version 1",
-      "id": 5
-    },
-    {
-      "userId": 10,
-      "selectedPurchase": "Spaceship",
-      "id": 6
-    },
-    {
-      "userId": 10,
-      "selectedPurchase": "Spaceship",
-      "id": 7
-    },
-    {
-      "userId": 10,
-      "selectedPurchase": "Widget 1",
-      "id": 8
-    },
-    {
-      "userId": 10,
-      "selectedPurchase": "Sponge Square",
-      "id": 12
-    },
-    {
-      "userId": 11,
-      "selectedPurchase": "Sponge Square",
-      "id": 15
-    },
-    {
-      "userId": 11,
-      "selectedPurchase": "Sponge Square",
-      "id": 16
-    },
-    {
-      "userId": 11,
-      "selectedPurchase": "Sheldon Plankton",
-      "id": 17
-    },
-    {
-      "userId": 7,
-      "selectedPurchase": "Sponge Square",
-      "id": 18
-    },
-    {
-      "userId": 11,
-      "selectedPurchase": "Larry Lobster",
-      "id": 19
-    },
-    {
       "id": 26,
       "selectedLead": "John",
       "selectedProduct": "Fishing pole",
@@ -419,10 +354,16 @@
       "ticket_date_time": ""
     },
     {
-      "userId": 8,
+      "userId": 7,
       "selectedLead": "Spongebob Squarepants",
-      "selectedProduct": "Fishing Net",
+      "selectedProduct": "Pineapple",
       "id": 27
+    },
+    {
+      "userId": 7,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Fishing Net",
+      "id": 28
     }
   ]
 }

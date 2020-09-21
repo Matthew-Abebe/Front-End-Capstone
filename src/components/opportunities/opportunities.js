@@ -7,7 +7,7 @@ import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 import './purchases.css'
 
-export default class Purchases extends Component {
+export default class Opportunities extends Component {
 
     state = {
     
@@ -16,6 +16,7 @@ export default class Purchases extends Component {
         ticket_date_time: "",
         products: [],
         leads: [],
+        sales: [],
         selectedProduct: "",
         selectedLead: ""
         // userId: ""
@@ -76,20 +77,20 @@ export default class Purchases extends Component {
               });
         }
         
-        constructNewPurchaseTicket = (evt) => {
+        constructNewSale = (evt) => {
           
           let userId = sessionStorage.getItem("userId")
           
-          const newPurchaseTicket = {
-            id: this.props.match.params.purchaseTicketId,
+          const newSale = {
+            id: this.props.match.params.saleId,
             userId: parseInt(userId),
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct
           }
           
-          console.log(newPurchaseTicket)
-        this.props.addPurchaseTickets(newPurchaseTicket)
-        .then(() => this.props.history.push("/purchaseTickets"))
+          console.log(newSale)
+        this.props.addSales(newSale)
+        .then(() => this.props.history.push("/sales"))
       }
       
     render() {
@@ -178,19 +179,16 @@ export default class Purchases extends Component {
           <div className="driveButton">
           <Button type="submit" color="success" className="driveBtn"
                 onClick={() => {
-    
-                    // this.handleProbabilityDrive()
-                    // this.constructNewDriveTicket()
-                    this.constructNewPurchaseTicket() 
+                    this.constructNewSale() 
                 }}>Enter Details
             </Button>
             </div>
     
              <div className="previousDriveTicketsButton">  
-            <Link to="/probabilityDriveTickets">
+            <Link to="/sales">
                 <Button type="submit" color="danger" className="previousDriveTicketsBtn"
                     onClick={() => {
-                    console.log("this will take user to prob drive list")
+                    console.log("this will take user to sales list")
                 }}>See Previous Trips
                     </Button>
                 </Link>

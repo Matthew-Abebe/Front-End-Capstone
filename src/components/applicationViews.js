@@ -13,13 +13,13 @@ import LeadList from './leads/leadList'
 import NewLeadForm from './leads/newLeadForm'
 import LeadDetails from './leads/leadDetails'
 import LeadEditForm from './leads/leadEditForm'
-import Purchases from './opportunities/purchases'
 import PurchaseEditForm from './opportunities/purchasesEdit'
 import ProbabilityDrive from './probability/probabilityDrive';
 import ProbabilityTicketList from './probability/probabilityTicketList'
 import SalesList from './probability/salesList'
 import SalesDetails from './probability/salesDetails';
 import SalesEditForm from './probability/salesEditForm';
+import Opportunities from './opportunities/opportunities';
 
 
 class ApplicationViews extends Component {
@@ -80,7 +80,7 @@ class ApplicationViews extends Component {
                 }))
 
     addSales = (sale) =>
-        DbCalls.postSale(sale)
+        DbCalls.postNewSale(sale)
             .then(() => DbCalls.getAllSales())
             .then(sales =>
                 this.setState({
@@ -445,15 +445,16 @@ class ApplicationViews extends Component {
                         />
                     }} />
 
-                <Route exact path="/purchases" render={(props) => {
+                <Route exact path="/opportunities" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <Purchases {
+                        return <Opportunities {
                             ...props
                         }
                             purchases={this.state.purchases}
                             leads={this.state.leads}
                             products={this.state.products}
-                            addPurchaseTickets={this.addPurchaseTickets}
+                            sales={this.state.sales}
+                            addSales={this.addSales}
                             deletePurchase={this.deletePurchase}
                             putPurchase={this.putPurchase}
                         // getSpending={this.getSpending}
