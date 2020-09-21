@@ -98,14 +98,14 @@ export default class Login extends Component {
 
       </form>
 
-      <br></br>
+      {/* <br></br>
 
         <div className="toRegister">
    
         <h3>Don't Have An Account?</h3>
       <Button tag="a" href="/register" className="registerButton" color="danger">Register Here</Button>
 
-      </div>
+      </div> */}
 
             </React.Fragment>
 

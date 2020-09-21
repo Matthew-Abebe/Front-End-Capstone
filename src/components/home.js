@@ -32,9 +32,20 @@ export default class Home extends Component {
                   Logout
                   </Button>
                   </div>
-            </Jumbotron>      
+            </Jumbotron>   
+
+            <br></br>
+
+        <div className="toRegister">
+   
+        {/* <h3>Don't Have An Account?</h3> */}
+      <Button tag="a" href="/register" className="registerButton" color="danger">Register Here</Button>
+
+      </div>   
             
           </div>
+
+          
         )
     }
 }
