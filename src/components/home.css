@@ -1,5 +1,6 @@
 .jumbotron {
-    background: none
+    background: none;
+    background-color: transparent;
 }
 
 h1 {

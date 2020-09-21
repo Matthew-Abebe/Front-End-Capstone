@@ -13,14 +13,14 @@ export default class Home extends Component {
             <div>
             <Jumbotron className="jumbotron">
               <h1 className="display-3">Nimble</h1>
-              <p className="lead">Welcome to Nimble.</p>
+              <p className="lead">Welcome to Nimble. A means to create leads, opportunities, and sales with ease.</p>
               <hr className="my-2" />
               <br></br>
               {/* <p className="vogon">So Keep Calm and Vogon.</p> */}
         
             <div className="loginButton">
                 <Link to="/login">
-                <Button color="primary" size="lg" className="loginBtn">
+                <Button color="success" size="sm" className="loginBtn">
                   Login
                   </Button>{' '}
                   {/* &nbsp;&nbsp;&nbsp; */}
@@ -28,7 +28,7 @@ export default class Home extends Component {
                   </div>
 
             <div className="logoutButton">
-               <Button color="danger" size="lg" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
+               <Button color="danger" size="sm" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
                   Logout
                   </Button>
                   </div>
