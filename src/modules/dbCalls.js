@@ -26,6 +26,10 @@ export default {
         return fetch(`${remoteURL}/purchaseTickets/${id}`).then (e => e.json())
     },
 
+    getSale(id) {
+        return fetch(`${remoteURL}/sales/${id}`).then (e => e.json())
+    },
+
     ///...///
 
     getAllUsers: () => {
@@ -55,6 +59,10 @@ export default {
     getAllPurchaseTickets() {
         return fetch (`${remoteURL}/purchaseTickets`).then(e => e.json()) 
     },
+
+    getAllSales() {
+        return fetch (`${remoteURL}/sales`).then(e => e.json()) 
+    },
     
     getUserPurchases() {
         let sessionId = sessionStorage.getItem("userId")
@@ -69,6 +77,11 @@ export default {
     getUserPurchaseTickets() {
         let sessionId = sessionStorage.getItem("userId")
         return fetch(`${remoteURL}/purchaseTickets?userId=${sessionId}`).then(e => e.json())
+    },
+
+    getUserSales() {
+        let sessionId = sessionStorage.getItem("userId")
+        return fetch(`${remoteURL}/sales?userId=${sessionId}`).then(e => e.json())
     },
     
     ///...///
@@ -133,6 +146,17 @@ export default {
         }).then(e => e.json())
     },
 
+    
+    postNewSale(newSale) {
+        return fetch(`${remoteURL}/sales`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newSale)
+        }).then(e => e.json())
+    },
+
     ///...///
 
     putProduct(editedProduct) {
@@ -177,6 +201,18 @@ export default {
         }).then(e => e.json())
     },
 
+    putSale(editedSale) {
+
+        return fetch(`${remoteURL}/sales/${editedSale.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedSale)
+        }).then(e => e.json())
+    },
+    
+
     ///...///
 
     deleteProduct(id) {
@@ -208,6 +244,15 @@ export default {
 
     deleteDriveTicket(id) {
         return fetch(`${remoteURL}/probabilityDriveTickets/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(e => e.json(0))    
+    },
+
+    deleteSale(id) {
+        return fetch(`${remoteURL}/sales/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

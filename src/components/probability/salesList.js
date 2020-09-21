@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
-import './probabilityDrive.css'
+import './sales.css'
 
 
 
-export default class PurchaseTicketList extends Component {
+export default class SalesList extends Component {
 
     // state = {
 
@@ -30,23 +30,24 @@ export default class PurchaseTicketList extends Component {
                     <br></br>
 
                     {
-                        this.props.purchaseTickets.map(purchaseTicket =>
-                            <div key={purchaseTicket.id}>
+                        this.props.sales.map(sale =>
+                            <div key={sale.id}>
 
                                     <Card body inverse className="probDriveListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                                     <CardTitle>
                                         {/* <h2>{driveTicket.drive_name}</h2> */}
-                        <CardText><h3>{purchaseTicket.selectedPurchase}</h3>
-                        </CardText>
+                        <CardText><h3>{sale.selectedLead}</h3></CardText>
+                        {/* <CardText><h3>{sale.selectedProduct}</h3></CardText> */}
+                        
 
                                         <br></br>
                                     </CardTitle>
 
-                                    {/* <Link to={`/probabilityDriveTickets/${driveTicket.id}/details`}> */}
+                                    <Link to={`/sales/${sale.id}/details`}>
                         <Button className="purchaseDetailsBtn" color="success" size="sm">
                             Details
                         </Button>
-                        {/* </Link> */}
+                        </Link>
                                 </Card>
 
                                 </div>

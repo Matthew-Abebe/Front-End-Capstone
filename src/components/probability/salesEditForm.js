@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 
-export default class ProbabilityDriveTicketEditForm extends Component {
+export default class SalesEditForm extends Component {
 
     state = {
         // driveTicketId: "",
+        selectedLead: "",
+        selectedProduct: "",
         drive_name: "",
         location_name: "",
         ticket_date_time: ""
@@ -18,33 +20,35 @@ export default class ProbabilityDriveTicketEditForm extends Component {
         this.setState(stateToChange)
     }
 
-    updateExistingDriveTicket = evt => {
+    updateExistingSale = evt => {
         evt.preventDefault()
 
         let userId = sessionStorage.getItem("userId")
 
-        const editedDriveTicket = {
-            id: this.props.match.params.driveTicketId, //Undefined issue here! Resolved I think//
-            drive_name: this.state.drive_name,
-            location_name: this.state.location_name,
+        const editedSale = {
+            id: this.props.match.params.saleId,
+            selectedLead: this.state.selectedLead,
+            selectedProduct: this.state.selectedProduct,
             userId: parseInt(userId),
             ticket_date_time: this.state.ticket_date_time
         }
 
         // console.log(editedDriveTicket)
-        this.props.putDriveTicket(editedDriveTicket)
-            .then(() => this.props.history.push("/probabilityDriveTickets"))
+        this.props.putSale(editedSale)
+            .then(() => this.props.history.push("/sales"))
     }
 
 
     componentDidMount() {
-        DbCalls.getProduct(this.props.match.params.driveTicketId)
-            .then(driveTicket => {
+        DbCalls.getSale(this.props.match.params.saleId)
+            .then(sale => {
                 this.setState({
                     // driveTicketId: driveTicket.id,
-                    drive_name: driveTicket.drive_name,
-                    location_name: driveTicket.location_name,
-                    ticket_date_time: driveTicket.ticket_date_time
+                    selectedLead: sale.selectedLead,
+                    selectedProduct: sale.selectedProduct,
+                    // drive_name: driveTicket.drive_name,
+                    // location_name: driveTicket.location_name,
+                    // ticket_date_time: driveTicket.ticket_date_time
                 })
                 // console.log(driveTicket)
             })
@@ -56,30 +60,30 @@ export default class ProbabilityDriveTicketEditForm extends Component {
 
                 <form className="driveTicketForm">
                     <div className="form-group">
-                        <label htmlFor="driveName">Name</label>
+                        <label htmlFor="selectedLead">Selected Lead</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="drive_name"
-                            value={this.state.drive_name}
+                            id="selectedLead"
+                            value={this.state.selectedLead}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="locationName">Location</label>
+                        <label htmlFor="selectedProduct">Selected Product</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="location_name"
-                            value={this.state.location_name}
+                            id="selectedProduct"
+                            value={this.state.selectedProduct}
                         />
                     </div>
 
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <label htmlFor="ticketDateTime">Time</label>
                         <input
                             type="text"
@@ -89,11 +93,11 @@ export default class ProbabilityDriveTicketEditForm extends Component {
                             id="ticket_date_time"
                             value={this.state.ticket_date_time}
                         />
-                    </div>
+                    </div> */}
 
 
                     <button type="submit"
-                        onClick={(evt) => this.updateExistingDriveTicket(evt)}
+                        onClick={(evt) => this.updateExistingSale(evt)}
                         className="editDriveTicketBtn"
                     >
                         Save Edit

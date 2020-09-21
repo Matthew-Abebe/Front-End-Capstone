@@ -7,9 +7,11 @@ import { Card, CardText, CardBody, CardTitle, Button, } from 'reactstrap';
 import './probabilityDrive.css'
 
 
-export default class ProbabilityDriveTicketDetails extends Component {
+export default class SalesDetails extends Component {
 
     state = {
+        selectedLead: "",
+        selectedProduct: "",
         driveTicketId: "",
         driverName: "",
         driveLocation: "",
@@ -18,31 +20,33 @@ export default class ProbabilityDriveTicketDetails extends Component {
     }
 
     componentDidMount() {
-        DbCalls.getDriveTicket(this.props.match.params.driveTicketId)
-            .then(driveTicket => {
-                console.log(driveTicket)
+        DbCalls.getSale(this.props.match.params.saleId)
+            .then(sale => {
+                console.log(sale)
                 this.setState({
-                    driveTicketId: driveTicket.id, //maybe wrong
-                    driverName: driveTicket.drive_name,
-                    driveLocation: driveTicket.location_name,
-                    driveTicketDateTime: driveTicket.ticket_date_time
+                    saleId: sale.id, //maybe wrong
+                    selectedLead: sale.selectedLead,
+                    selectedProduct: sale.selectedProduct,
+                    // driverName: driveTicket.drive_name,
+                    // driveLocation: driveTicket.location_name,
+                    // driveTicketDateTime: driveTicket.ticket_date_time
                     // description: product.description
                 })
-                console.log(this.state.driveTicketId)
+                console.log(this.state.saleId)
             }
             )
 
-            DbCalls.getUserDriveTickets(this.props.match.params.userDriveTicketId)
-            .then(userDriveTicket => {
-                console.log(userDriveTicket)
-                this.setState({
-                    userDriveTicketId: userDriveTicket.id,
-                    userDriverTicketName: userDriveTicket.drive_name,
-                    userDriveTicketLocation: userDriveTicket.location_name,
-                    userDriveTicketDateTime: userDriveTicket.ticket_date_time
-                })
-                console.log(this.state.userDriveTicketId)
-            })
+            // DbCalls.getUserDriveTickets(this.props.match.params.userDriveTicketId)
+            // .then(userDriveTicket => {
+            //     console.log(userDriveTicket)
+            //     this.setState({
+            //         userDriveTicketId: userDriveTicket.id,
+            //         userDriverTicketName: userDriveTicket.drive_name,
+            //         userDriveTicketLocation: userDriveTicket.location_name,
+            //         userDriveTicketDateTime: userDriveTicket.ticket_date_time
+            //     })
+            //     console.log(this.state.userDriveTicketId)
+            // })
     }
 
     render() {
@@ -56,13 +60,14 @@ export default class ProbabilityDriveTicketDetails extends Component {
                     {/* <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" /> */}
                     <CardBody>
                         <CardTitle>
-                            <p>Name: {this.state.driverName}</p>
+                            <p>Name: {this.state.selectedLead}</p>
+                            <p>Product: {this.state.selectedProduct}</p>
                         </CardTitle>
                         
-                        <CardText>
+                        {/* <CardText>
                             <p>Location: {this.state.driveLocation}</p>
                             <p>Time {this.state.driveTicketDateTime}</p>
-                        </CardText>
+                        </CardText> */}
 
                         {/* <ButtonGroup>
                         <Link to={`/products/${this.state.productId}/edit`}>
@@ -77,13 +82,13 @@ export default class ProbabilityDriveTicketDetails extends Component {
                             </ButtonGroup> */}
                         {/* <Button>Hi</Button> */}
 
-                        <Link to={`/probabilityDriveTickets/${this.state.driveTicketId}/edit`}>
+                        <Link to={`/sales/${this.state.saleId}/edit`}>
                             <Button color="success" size="sm" className="editUserDriveTicketBtn">Edit</Button>
                         </Link>
                         
-                        <Link to="/probabilityDriveTickets">
+                        <Link to="/sales">
                         <Button color="success" size="sm" onClick={() =>
-                                        this.props.deleteDriveTicket(this.state.driveTicketId)} className="deleteUserDriveTicketBtn">
+                                        this.props.deleteSale(this.state.saleId)} className="deleteUserDriveTicketBtn">
                                         Delete
                                 </Button>
                                 </Link>
@@ -91,7 +96,7 @@ export default class ProbabilityDriveTicketDetails extends Component {
                 </Card>
             </div>
 
-        }
+        
       
         
         </React.Fragment>

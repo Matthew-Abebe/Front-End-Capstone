@@ -17,9 +17,10 @@ import Purchases from './opportunities/purchases'
 import PurchaseEditForm from './opportunities/purchasesEdit'
 import ProbabilityDrive from './probability/probabilityDrive';
 import ProbabilityTicketList from './probability/probabilityTicketList'
-import PurchaseTicketList from './probability/purchaseTicketList'
-import ProbabilityDriveTicketDetails from './probability/probabilityDriveTicketDetails';
-import ProbabilityDriveEditForm from './probability/probabilityDriveTicketEditForm';
+import SalesList from './probability/salesList'
+import SalesDetails from './probability/salesDetails';
+import SalesEditForm from './probability/salesEditForm';
+
 
 class ApplicationViews extends Component {
 
@@ -27,6 +28,7 @@ class ApplicationViews extends Component {
         users: [],
         products: [],
         leads: [],
+        sales: [],
         purchases: [],
         driveTickets: [],
         purchaseTickets: []
@@ -75,6 +77,14 @@ class ApplicationViews extends Component {
             .then(purchaseTickets =>
                 this.setState({
                     purchaseTickets: purchaseTickets
+                }))
+
+    addSales = (sale) =>
+        DbCalls.postSale(sale)
+            .then(() => DbCalls.getAllSales())
+            .then(sales =>
+                this.setState({
+                    sales: sales
                 }))
 
     addPurchase = (purchase) => {
@@ -163,6 +173,16 @@ class ApplicationViews extends Component {
             })
     }
 
+    putSale = (editedSaleObject) => {
+        return DbCalls.putSale(editedSaleObject)
+            .then(() => DbCalls.getUserSales())
+            .then(sales => {
+                this.setState({
+                    sales: sales
+                })
+            })
+    }
+
     deleteProduct = (product) => {
         const newState = {};
         DbCalls.deleteProduct(product)
@@ -203,6 +223,16 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState))
     }
 
+    deleteSale = (sale) => {
+        const newState = {};
+        DbCalls.deleteSale(sale)
+            .then(() =>
+                DbCalls.getUserSales()
+            )
+            .then(sales => { newState.sales = sales })
+            .then(() => this.setState(newState))
+    }
+
     deletePurchase = (purchase) => {
         const newState = {};
         DbCalls.deletePurchase(purchase)
@@ -219,6 +249,7 @@ class ApplicationViews extends Component {
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getAllProducts(),
             leads: await DbCalls.getAllLeads(),
+            sales: await DbCalls.getAllSales(),
             purchases: await DbCalls.getUserPurchases(),
             driveTickets: await DbCalls.getUserDriveTickets(),
             purchaseTickets: await DbCalls.getUserPurchaseTickets()
@@ -318,13 +349,14 @@ class ApplicationViews extends Component {
                 }
                 } />
 
-                <Route exact path="/purchaseTickets" render={(props) => {
+                <Route exact path="/sales" render={(props) => {
                     if (this.isAuthenticated()) {
-                        return <PurchaseTicketList {...props}
+                        return <SalesList {...props}
                             
                         // addDriveTicket={this.addDriveTicket}
                         // putDriveTicket={this.putDriveTicket}
                         // deleteDriveTicket={this.deleteDriveTicket}
+                        sales={this.state.sales}
                         driveTickets={this.state.driveTickets}
                         purchaseTickets={this.state.purchaseTickets}
                         />
@@ -372,12 +404,13 @@ class ApplicationViews extends Component {
                     />
                 }} />
 
-                    <Route exact path="/probabilityDriveTickets/:driveTicketId(\d+)/details" render={(props) => {
-                    return <ProbabilityDriveTicketDetails {
+                    <Route exact path="/sales/:saleId(\d+)/details" render={(props) => {
+                    return <SalesDetails {
                         ...props
                     }
-                        deleteDriveTicket={this.deleteDriveTicket}
-                        driveTickets={this.state.driveTickets}   
+                        deleteSale={this.deleteSale}
+                        driveTickets={this.state.driveTickets} 
+                        sales={this.state.sales}  
                     />
                 }} />
 
@@ -402,13 +435,13 @@ class ApplicationViews extends Component {
                         />
                     }} />
 
-                <Route path="/probabilityDriveTickets/:driveTicketId(\d+)/edit"
+                <Route path="/sales/:saleId(\d+)/edit"
                     render={props => {
-                        return <ProbabilityDriveEditForm {
+                        return <SalesEditForm {
                             ...props
                         }
-                            driveTickets={this.state.driveTickets}
-                            putDriveTicket={this.putDriveTicket}
+                            sales={this.state.sales}
+                            putSale={this.putSale}
                         />
                     }} />
 

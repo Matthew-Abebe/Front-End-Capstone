@@ -125,6 +125,14 @@
       "product_description": "Live in luxury with all the necessities carved out of this marvelous fruit.",
       "userId": 11,
       "id": 4
+    },
+    {
+      "product_name": "Test product",
+      "product_price": "$7.99",
+      "product_vendor": "Metalworks",
+      "product_description": "Sheet metal",
+      "userId": 8,
+      "id": 5
     }
   ],
   "leads": [
@@ -144,6 +152,15 @@
       "email_address": "larry@mail.com",
       "phone_number": "4654645455",
       "lead_address": "1400 Sea St Bikini Bottom"
+    },
+    {
+      "first_name": "Sandy",
+      "last_name": "Squirell",
+      "email_address": "sandy@mail.com",
+      "phone_number": "1231231234",
+      "lead_address": "354 Tree Way Bikini Bottom",
+      "userId": 8,
+      "id": 27
     }
   ],
   "purchases": [],
@@ -328,13 +345,7 @@
       "id": 58
     }
   ],
-  "purchaseTickets": [
-    {
-      "id": 1,
-      "product_name": "",
-      "location_name": "",
-      "userId": 1
-    },
+  "sales": [
     {
       "userId": 7,
       "selectedPurchase": "Spaceship Version 1",
@@ -371,34 +382,9 @@
       "id": 8
     },
     {
-      "userId": 8,
-      "selectedPurchase": "",
-      "id": 9
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "",
-      "id": 10
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Larry Lobster",
-      "id": 11
-    },
-    {
       "userId": 10,
       "selectedPurchase": "Sponge Square",
       "id": 12
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "",
-      "id": 13
-    },
-    {
-      "userId": 8,
-      "selectedLead": "",
-      "id": 14
     },
     {
       "userId": 11,
@@ -426,39 +412,17 @@
       "id": 19
     },
     {
+      "id": 26,
+      "selectedLead": "John",
+      "selectedProduct": "Fishing pole",
       "userId": 8,
-      "selectedPurchase": "Spongebob Squarepants",
-      "id": 20
+      "ticket_date_time": ""
     },
     {
       "userId": 8,
-      "selectedPurchase": "Spongebob Squarepants",
-      "id": 21
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Sheldon Plankton",
-      "id": 22
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Sheldon Plankton",
-      "id": 23
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Sandy Squirell",
-      "id": 24
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Spongebob Squarepants",
-      "id": 25
-    },
-    {
-      "userId": 8,
-      "selectedPurchase": "Larry Lobster",
-      "id": 26
+      "selectedLead": "Spongebob Squarepants",
+      "selectedProduct": "Fishing Net",
+      "id": 27
     }
   ]
 }
