@@ -49,10 +49,10 @@ class ApplicationViews extends Component {
 
     addProducts = (product) =>
         DbCalls.postNewProduct(product)
-            .then(() => DbCalls.getAllLeads())
-            .then(leads =>
+            .then(() => DbCalls.getAllProducts())
+            .then(products =>
                 this.setState({
-                    leads: leads
+                    products: products
                 }))
 
     addLeads = (lead) =>
@@ -247,7 +247,7 @@ class ApplicationViews extends Component {
     fetchAll = async () => {
         this.setState({
             users: await DbCalls.getAllUsers(),
-            products: await DbCalls.getAllProducts(),
+            products: await DbCalls.getUserProducts(),
             leads: await DbCalls.getAllLeads(),
             sales: await DbCalls.getAllSales(),
             purchases: await DbCalls.getUserPurchases(),

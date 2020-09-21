@@ -107,32 +107,38 @@
       "email": "guest@mail.com",
       "password": "guest",
       "id": 18
+    },
+    {
+      "name": "robin",
+      "email": "robin@mail.com",
+      "password": "robin",
+      "id": 19
     }
   ],
   "products": [
     {
+      "userId": 8,
       "product_name": "Fishing Net",
-      "product_price": "$2.99",
+      "product_price": "$9.99",
       "product_vendor": "JellyFishing Inc.",
       "product_description": "Fish and frolic like the best of them with these jelly fishing nets. ",
-      "userId": 11,
-      "id": 3
+      "id": 1
     },
     {
+      "userId": 10,
+      "product_name": "Fishing Net2",
+      "product_price": "$10.99",
+      "product_vendor": "JellyFishing Inc.",
+      "product_description": "Upgraded version of our first net this one comes with a propeller.",
+      "id": 2
+    },
+    {
+      "userId": 8,
       "product_name": "Pineapple",
       "product_price": "$25.00",
       "product_vendor": "BikiniHouses",
       "product_description": "Live in luxury with all the necessities carved out of this marvelous fruit.",
-      "userId": 11,
-      "id": 4
-    },
-    {
-      "product_name": "Test product",
-      "product_price": "$7.99",
-      "product_vendor": "Metalworks",
-      "product_description": "Sheet metal",
-      "userId": 8,
-      "id": 5
+      "id": 3
     }
   ],
   "leads": [
@@ -357,6 +363,18 @@
       "selectedLead": "Spongebob Squarepants",
       "selectedProduct": "Pineapple",
       "id": 2
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Sandy Squirell",
+      "selectedProduct": "Test product",
+      "id": 3
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Pineapple",
+      "id": 4
     }
   ]
 }

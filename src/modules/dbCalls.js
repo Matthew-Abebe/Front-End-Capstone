@@ -68,6 +68,11 @@ export default {
         let sessionId = sessionStorage.getItem("userId")
         return fetch(`${remoteURL}/purchases?userId=${sessionId}`).then(e => e.json())
     },
+
+    getUserProducts() {
+        let sessionId = sessionStorage.getItem("userId")
+        return fetch(`${remoteURL}/products?userId=${sessionId}`).then(e => e.json())
+    },
     
     getUserDriveTickets() {
         let sessionId = sessionStorage.getItem("userId")

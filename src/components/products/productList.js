@@ -16,7 +16,7 @@ export default class ProductList extends Component {
     }
 
     render() {
-        console.log(this.props.leads)
+        console.log(this.props.products)
         return (
 
 

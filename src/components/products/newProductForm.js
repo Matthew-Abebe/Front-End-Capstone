@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export default class NewProductForm extends Component {
 
     state = {
+        userId: "",
         product_name: "",
         product_price: "",
         product_vendor: "",
@@ -20,11 +21,11 @@ export default class NewProductForm extends Component {
         let userId = sessionStorage.getItem("userId")
 
         const newProduct = {
+            userId: parseInt(userId),
             product_name: this.state.product_name,
             product_price: this.state.product_price,
             product_vendor: this.state.product_vendor,
-            product_description: this.state.product_description,
-            userId: parseInt(userId)
+            product_description: this.state.product_description
         }
 
         console.log(newProduct)
