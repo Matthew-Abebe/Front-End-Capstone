@@ -248,8 +248,8 @@ class ApplicationViews extends Component {
         this.setState({
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getUserProducts(),
-            leads: await DbCalls.getAllLeads(),
-            sales: await DbCalls.getAllSales(),
+            leads: await DbCalls.getUserLeads(),
+            sales: await DbCalls.getUserSales(),
             purchases: await DbCalls.getUserPurchases(),
             driveTickets: await DbCalls.getUserDriveTickets(),
             purchaseTickets: await DbCalls.getUserPurchaseTickets()

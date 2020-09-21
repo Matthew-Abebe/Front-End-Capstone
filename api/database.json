@@ -152,14 +152,6 @@
       "id": 25
     },
     {
-      "id": 26,
-      "first_name": "Larry",
-      "last_name": "Lobster",
-      "email_address": "larry@mail.com",
-      "phone_number": "4654645455",
-      "lead_address": "1400 Sea St Bikini Bottom"
-    },
-    {
       "first_name": "Sandy",
       "last_name": "Squirell",
       "email_address": "sandy@mail.com",

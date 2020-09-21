@@ -24,10 +24,10 @@ export default class Opportunities extends Component {
 
     componentDidMount() {
         const remoteURL = "http://localhost:5002"
-        // let sessionId = sessionStorage.getItem("userId")
+        let sessionId = sessionStorage.getItem("userId")
      
       fetch(
-        `${remoteURL}/leads`
+        `${remoteURL}/leads?userId=${sessionId}`
       )
         .then(response => {
           return response.json();
@@ -52,7 +52,7 @@ export default class Opportunities extends Component {
           });
 
           fetch(
-            `${remoteURL}/products`
+            `${remoteURL}/products?userId=${sessionId}`
           )
             .then(response => {
               return response.json();
