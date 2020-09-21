@@ -15,6 +15,7 @@ export default class Opportunities extends Component {
         leads: [],
         sales: [],
         selectedProduct: "",
+        selectedProductPrice: "",
         selectedLead: "",
         dateTime: ""
     }
@@ -88,6 +89,7 @@ export default class Opportunities extends Component {
             userId: parseInt(userId),
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct,
+            // selectedProductPrice: this.state.product_price,
             dateTime: this.getTimeStamp()
           }
           

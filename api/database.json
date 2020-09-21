@@ -83,6 +83,14 @@
       "product_vendor": "Metalworks",
       "product_description": "Sheet metal",
       "id": 5
+    },
+    {
+      "userId": 10,
+      "product_name": "Rock",
+      "product_price": "$4.99",
+      "product_vendor": "Rocks Inc.",
+      "product_description": "A nice, secure, and portable place to live under the sea.",
+      "id": 6
     }
   ],
   "leads": [
@@ -112,16 +120,27 @@
       "lead_address": "455 Rock St Bikini Bottom",
       "userId": 8,
       "id": 28
+    },
+    {
+      "first_name": "Larry",
+      "last_name": "Lobster",
+      "email_address": "larry@mail.com",
+      "phone_number": "6846546546",
+      "lead_address": "1400 Sea St Bikini Bottom",
+      "userId": 10,
+      "id": 29
+    },
+    {
+      "first_name": "Patrick",
+      "last_name": "Star",
+      "email_address": "pat@mail.com",
+      "phone_number": "654654654",
+      "lead_address": "455 Rock St Bikini Bottom",
+      "userId": 10,
+      "id": 30
     }
   ],
   "sales": [
-    {
-      "userId": 10,
-      "selectedLead": "Larry Lobster",
-      "selectedProduct": "Fishing Net2",
-      "dateTime": "9/21/2020",
-      "id": 9
-    },
     {
       "userId": 8,
       "selectedLead": "Sandy Squirell",
@@ -142,6 +161,20 @@
       "selectedProduct": "Fishing Net2",
       "dateTime": "9/21/2020",
       "id": 14
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Larry Lobster",
+      "selectedProduct": "Fishing Net2",
+      "dateTime": "9/21/2020",
+      "id": 16
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Patrick Star",
+      "selectedProduct": "Rock",
+      "dateTime": "9/21/2020",
+      "id": 18
     }
   ]
 }

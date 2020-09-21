@@ -44,27 +44,13 @@ export default class LeadList extends Component {
                                         <br></br>
 
 
-                        <Link to="/products">
-                        <Button color="success" size="sm" onClick={() =>
-                        this.props.addPurchase({lead})} className="sellProductBtn">
-                            Purchase
-                            </Button>
+                       
                         
                         <Link to={`/leads/${lead.id}/details`}>
                         <Button className="productDetailsBtn" color="success" size="sm">
                             Details
                         </Button>
                         </Link>
-
-                        {/* <Link to={`/products/${this.state.productId}`}>
-                        <button onClick={() =>
-                            this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
-                            Delete
-                            </button>
-                            </Link> */}
-
-                            </Link>
-                                    {/* </CardTitle> */}
                                 </Card>
 
                             </div>
@@ -73,7 +59,7 @@ export default class LeadList extends Component {
                         )}
 <br></br>
                         <Link to={`/leads/new`}>
-                        <Button className="addNewProduct" color="success" size="sm">
+                        <Button className="addNewLead" color="success" size="lg">
                             Create a New Lead
                         </Button>
                         </Link>

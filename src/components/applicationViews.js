@@ -14,11 +14,10 @@ import NewLeadForm from './leads/newLeadForm'
 import LeadDetails from './leads/leadDetails'
 import LeadEditForm from './leads/leadEditForm'
 import PurchaseEditForm from './opportunities/purchasesEdit'
-import ProbabilityDrive from './probability/probabilityDrive';
-import ProbabilityTicketList from './probability/probabilityTicketList'
-import SalesList from './probability/salesList'
-import SalesDetails from './probability/salesDetails';
-import SalesEditForm from './probability/salesEditForm';
+import ProbabilityTicketList from './sales/probabilityTicketList'
+import SalesList from './sales/salesList'
+import SalesDetails from './sales/salesDetails';
+import SalesEditForm from './sales/salesEditForm';
 import Opportunities from './opportunities/opportunities';
 
 
@@ -452,22 +451,6 @@ class ApplicationViews extends Component {
                             purchases={this.state.purchases}
                             putPurchase={this.putPurchase}
                         />
-                    }} />
-
-                <Route exact path="/probabilityDrive"
-                    render={(props) => {
-                        if (this.isAuthenticated()) {
-                            return <ProbabilityDrive {...props}
-
-                            addDriveTicket={this.addDriveTicket}
-                            addDriveTickets={this.addDriveTickets}
-                            addPurchaseTickets={this.addPurchaseTickets}
-                            driveTickets={this.state.driveTickets}
-                            purchaseTickets={this.state.purchaseTickets}
-                            />
-                        } else {
-                            return <Redirect to="/login" />
-                        }
                     }} />
 
             </React.Fragment>
