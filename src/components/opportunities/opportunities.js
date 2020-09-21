@@ -184,15 +184,15 @@ export default class Opportunities extends Component {
             </Button>
             </div>
     
-             <div className="previousDriveTicketsButton">  
+             {/* <div className="previousDriveTicketsButton">  
             <Link to="/sales">
                 <Button type="submit" color="danger" className="previousDriveTicketsBtn"
                     onClick={() => {
                     console.log("this will take user to sales list")
-                }}>See Previous Trips
+                }}>Go to Sales
                     </Button>
                 </Link>
-                </div> 
+                </div>  */}
           
                 </div>
               

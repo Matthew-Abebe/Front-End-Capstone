@@ -12,19 +12,19 @@ export default class Navigation extends React.Component {
           {/* <p>List Based</p> */}
           <Nav className="navbar">
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink href="/"><strong>Home</strong></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/products">Products</NavLink>
+              <NavLink href="/products"><strong>Products</strong></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/leads">Leads</NavLink>
+              <NavLink href="/leads"><strong>Leads</strong></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/opportunities">Opportunities</NavLink>
+              <NavLink href="/opportunities"><strong>Opportunities</strong></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/sales">Sales</NavLink>
+              <NavLink href="/sales"><strong>Sales</strong></NavLink>
             </NavItem>
           </Nav>
 

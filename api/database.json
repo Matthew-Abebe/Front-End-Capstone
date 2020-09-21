@@ -347,13 +347,6 @@
   ],
   "sales": [
     {
-      "id": 26,
-      "selectedLead": "John",
-      "selectedProduct": "Fishing pole",
-      "userId": 8,
-      "ticket_date_time": ""
-    },
-    {
       "userId": 7,
       "selectedLead": "Spongebob Squarepants",
       "selectedProduct": "Pineapple",
