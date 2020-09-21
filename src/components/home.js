@@ -17,31 +17,16 @@ export default class Home extends Component {
               <hr className="my-2" />
               <br></br>
               {/* <p className="vogon">So Keep Calm and Vogon.</p> */}
-        
-            <div className="loginButton">
-                <Link to="/login">
-                <Button color="success" size="sm" className="loginBtn">
-                  Login
-                  </Button>{' '}
-                  {/* &nbsp;&nbsp;&nbsp; */}
-                  </Link>
-                  </div>
 
-            <div className="logoutButton">
-               <Button color="danger" size="sm" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>
-                  Logout
-                  </Button>
-                  </div>
+              <div>
+                
+              </div>
+              
             </Jumbotron>   
+              <Button tag="a" href="/register" className="registerButton" color="info">Register</Button>{' '} 
+              <Button tag="a" href="/login" color="info" className="loginBtn">Login</Button>{' '}
+              <Button color="info" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>Logout</Button>{' '}
 
-            <br></br>
-
-        <div className="toRegister">
-   
-        {/* <h3>Don't Have An Account?</h3> */}
-      <Button tag="a" href="/register" className="registerButton" color="danger">Register Here</Button>
-
-      </div>   
             
           </div>
 

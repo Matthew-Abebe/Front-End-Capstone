@@ -1,6 +1,6 @@
 .jumbotron {
     background: none;
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 h1 {
@@ -15,18 +15,28 @@ p {
     color: lightgreen
 }
 
-.loginButton {
+.loginBtn {
     display: inline-block;
     justify-content: center;
-    /* margin-left: 5px; */
-    /* margin-right: 5px; */
+    /* margin-left: 100px; */
+    /* margin-right: 50px; */
     margin-top: 20px;
     margin-bottom: 15px;
 }
 
-.logoutButton {
+.logoutBtn {
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.registerButton {
     display: inline-block;
     justify-content: center;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-right: 350px;
+    margin-bottom: 7px;
 }
+
