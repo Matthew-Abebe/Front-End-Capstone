@@ -347,16 +347,16 @@
   ],
   "sales": [
     {
-      "userId": 7,
-      "selectedLead": "Spongebob Squarepants",
-      "selectedProduct": "Pineapple",
-      "id": 27
-    },
-    {
-      "userId": 7,
+      "userId": 10,
       "selectedLead": "Larry Lobster",
       "selectedProduct": "Fishing Net",
-      "id": 28
+      "id": 1
+    },
+    {
+      "userId": 10,
+      "selectedLead": "Spongebob Squarepants",
+      "selectedProduct": "Pineapple",
+      "id": 2
     }
   ]
 }

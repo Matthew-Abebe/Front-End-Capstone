@@ -33,7 +33,7 @@ export default class SalesList extends Component {
                         this.props.sales.map(sale =>
                             <div key={sale.id}>
 
-                                    <Card body inverse className="probDriveListCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                                    <Card body inverse className="probDriveListCard" style={{ backgroundColor: '#008080', borderColor: '#333' }}>
                                     <CardTitle>
                                         {/* <h2>{driveTicket.drive_name}</h2> */}
                         <CardText><h3>{sale.selectedLead}</h3></CardText>
