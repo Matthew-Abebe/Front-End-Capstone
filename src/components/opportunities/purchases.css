@@ -27,3 +27,18 @@ h4 {
 .productName {
     color: red;
 }
+
+.selectLeadInput {
+    max-width: 600px;
+    margin-left: 10px;
+}
+
+.selectProductInput {
+    max-width: 600px;
+    margin-left: 10px;
+}
+
+.enterOpportunityButton {
+    margin-top: 50px;
+    margin-left: 10px;
+}

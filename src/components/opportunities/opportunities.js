@@ -3,6 +3,7 @@ import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import { Card, CardText, CardTitle, CardBody} from 'reactstrap';
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 // import { ButtonGroup, } from 'reactstrap';
 
 import './purchases.css'
@@ -111,7 +112,7 @@ export default class Opportunities extends Component {
             </div>
             <br></br>
         <div>
-          <select
+          <Input className="selectLeadInput" type="select"
             value={this.state.selectedLead}
             onChange={e =>
               this.setState({
@@ -131,7 +132,7 @@ export default class Opportunities extends Component {
                 {lead.display}
               </option>
             ))}
-          </select>
+          </Input>
           <div
             style={{
               color: "red",
@@ -148,7 +149,7 @@ export default class Opportunities extends Component {
             </div>
             <br></br>
         <div>
-          <select
+          <Input className="selectProductInput" type="select"
             value={this.state.selectedProduct}
             onChange={e =>
               this.setState({
@@ -168,7 +169,7 @@ export default class Opportunities extends Component {
                 {product.display}
               </option>
             ))}
-          </select>
+          </Input>
           <div
             style={{
               color: "red",
@@ -181,8 +182,8 @@ export default class Opportunities extends Component {
                     
        
           
-          <div className="driveButton">
-          <Button type="submit" color="success" className="driveBtn"
+          <div className="enterOpportunity">
+          <Button type="submit" color="success" className="enterOpportunityButton"
                 onClick={() => {
                     this.constructNewSale() 
                 }}>Enter Details
