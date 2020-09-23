@@ -9,6 +9,8 @@ body {
     background:lightblue;
 }
 
-a.nav-link {
-    color:black
+a.nav-link a:hover::after{
+    color: #000;
+    
+
 }

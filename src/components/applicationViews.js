@@ -114,27 +114,6 @@ class ApplicationViews extends Component {
 
     }
 
-    // putPurchase = (editedPurchaseObject) => {
-    //     return DbCalls.putPurchase(editedPurchaseObject)
-    //         .then(() => DbCalls.getUserPurchases())
-    //         .then(purchases => {
-    //             this.setState({
-    //                 purchases: purchases
-    //             })
-    //         })
-
-    // }
-
-    // putDriveTicket = (editedDriveTicketObject) => {
-    //     return DbCalls.putDriveTicket(editedDriveTicketObject)
-    //         .then(() => DbCalls.getUserDriveTickets())
-    //         .then(driveTickets => {
-    //             this.setState({
-    //                 driveTickets: driveTickets
-    //             })
-    //         })
-    // }
-
     putSale = (editedSaleObject) => {
         return DbCalls.putSale(editedSaleObject)
             .then(() => DbCalls.getUserSales())
