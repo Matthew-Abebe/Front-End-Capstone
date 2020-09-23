@@ -4,6 +4,7 @@ import DbCalls from '../../modules/dbCalls'
 export default class ProductEditForm extends Component {
 
     state = {
+        userId: "",
         product_name: "",
         product_price: "",
         product_vendor: "",
@@ -22,6 +23,7 @@ export default class ProductEditForm extends Component {
 
         const editedProduct = {
             id: this.props.match.params.productId,
+            userId: this.state.userId,
             product_name: this.state.product_name,
             product_price: this.state.product_price,
             product_vendor: this.state.product_vendor,
@@ -40,6 +42,7 @@ export default class ProductEditForm extends Component {
             .then(product => {
                 console.log(product)
                 this.setState({
+                    userId: product.userId,
                     product_name: product.product_name,
                     product_price: product.product_price,
                     product_vendor: product.product_vendor,

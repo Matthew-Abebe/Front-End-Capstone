@@ -92,30 +92,9 @@ class ApplicationViews extends Component {
                 alert(`You purchased: ${purchaseObj.productName}. Thank you!`)
     }
 
-    addDriveTicket = (driveTicket) => {
-        
-        let userId = sessionStorage.getItem("userId")
-
-        const driveTicketObj = {
-            userId: parseInt(userId),
-            driveTicketId: driveTicket.id,
-            driveTicketName: driveTicket.drive_name,
-            driveTicketLocation: driveTicket.location_name,
-            driveTicketDateTime: this.getTimeStamp()
-        }
-        console.log(driveTicketObj)
-        DbCalls.postNewDriveTicket(driveTicketObj)
-            .then(() => DbCalls.getUserDriveTickets())
-            .then(driveTickets =>
-                this.setState({
-                    driveTickets: driveTickets
-                }))
-                alert(`Hi ${driveTicketObj.driveTicketName}. You have a new drive ticket for your trip to ${driveTicketObj.driveTicketLocation}!`)
-    }
-
     putProduct = (editedProductObject) => {
         return DbCalls.putProduct(editedProductObject)
-            .then(() => DbCalls.getAllProducts())
+            .then(() => DbCalls.getUserProducts())
             .then(products => {
                 this.setState({
                     products: products
@@ -126,7 +105,7 @@ class ApplicationViews extends Component {
 
     putLead = (editedLeadObject) => {
         return DbCalls.putLead(editedLeadObject)
-            .then(() => DbCalls.getAllLeads())
+            .then(() => DbCalls.getUserLeads())
             .then(leads => {
                 this.setState({
                     leads: leads

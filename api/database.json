@@ -41,6 +41,12 @@
       "email": "spongebob@mail.com",
       "password": "spongebob",
       "id": 11
+    },
+    {
+      "name": "John",
+      "email": "john@mail.com",
+      "password": "john123!",
+      "id": 12
     }
   ],
   "products": [
@@ -91,6 +97,22 @@
       "product_vendor": "Rocks Inc.",
       "product_description": "A nice, secure, and portable place to live under the sea.",
       "id": 6
+    },
+    {
+      "id": 8,
+      "userId": 12,
+      "product_name": "Juicer",
+      "product_price": "$39.99",
+      "product_vendor": "Creative Juices Inc.",
+      "product_description": "A very powerful juicer that will improve your health."
+    },
+    {
+      "id": 9,
+      "userId": 12,
+      "product_name": "Knives",
+      "product_price": "$12.00",
+      "product_vendor": "Sharpen LLC",
+      "product_description": "A set of knives to go in your kitchen."
     }
   ],
   "leads": [
@@ -138,6 +160,24 @@
       "lead_address": "455 Rock St Bikini Bottom",
       "userId": 10,
       "id": 30
+    },
+    {
+      "id": 31,
+      "userId": 12,
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "email_address": "bob@mail.com",
+      "phone_number": "1234567891",
+      "lead_address": "107 Plainfield, TX 22211"
+    },
+    {
+      "id": 32,
+      "userId": 12,
+      "first_name": "Jane",
+      "last_name": "Hill",
+      "email_address": "jane@mail.com",
+      "phone_number": "3216549873",
+      "lead_address": "584 Peak St. Seattle, WA 87888"
     }
   ],
   "sales": [
@@ -175,6 +215,13 @@
       "selectedProduct": "Rock",
       "dateTime": "9/21/2020",
       "id": 18
+    },
+    {
+      "id": 19,
+      "selectedLead": "Bob Smith",
+      "selectedProduct": "Juicer",
+      "userId": 12,
+      "ticket_date_time": ""
     }
   ]
 }

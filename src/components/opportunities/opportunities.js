@@ -106,7 +106,7 @@ export default class Opportunities extends Component {
           <React.Fragment>
             <div>
               <section>
-                <h2>Opportunities</h2>
+                <h1>Opportunities</h1>
               </section>
             </div>
             <br></br>

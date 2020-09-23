@@ -4,6 +4,7 @@ import DbCalls from '../../modules/dbCalls'
 export default class LeadEditForm extends Component {
 
     state = {
+        userId: "",
         first_name: "",
         last_name: "",
         email_address: "",
@@ -23,6 +24,7 @@ export default class LeadEditForm extends Component {
 
         const editedLead = {
             id: this.props.match.params.leadId,
+            userId: this.state.userId,
             first_name: this.state.first_name,
             last_name: this.state.last_name,
             email_address: this.state.email_address,
@@ -42,6 +44,7 @@ export default class LeadEditForm extends Component {
             .then(lead => {
                 console.log(lead)
                 this.setState({
+                    userId: lead.userId,
                     first_name: lead.first_name,
                     last_name: lead.last_name,
                     email_address: lead.email_address,
