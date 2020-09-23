@@ -22,9 +22,9 @@ export default class Home extends Component {
                 
               </div>
               
-              <Button tag="a" href="/register" className="registerButton" color="info">Register</Button>{' '} 
-              <Button tag="a" href="/login" color="info" className="loginBtn">Login</Button>{' '}
-              <Button color="info" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>Logout</Button>{' '}
+              <Button tag="a" href="/register" className="registerButton" color="info" size="lg">Register</Button>{' '} 
+              <Button tag="a" href="/login" color="info" className="loginBtn" size="lg">Login</Button>{' '}
+              <Button color="info" size="lg" className="logoutBtn" onClick={() => sessionStorage.clear("userId")}>Logout</Button>{' '}
             </Jumbotron>   
 
             

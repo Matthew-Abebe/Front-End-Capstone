@@ -6,7 +6,7 @@ body {
 }
 
 .navbar {
-    background:lightblue;
+    background:#17a2b8;
 }
 
 a.nav-link a:hover::after{
