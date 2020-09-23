@@ -1,9 +1,14 @@
 .jumbotron {
     /* background: none; */
-    margin-top: 50px;
-    margin-left: 5px;
-    max-width: 900px;
-    background-color:navy;
+    /* margin-top: 100px; */
+    /* margin-left: 400px; */
+    max-width: 800px;
+    background-color: indianred;
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
 h1 {

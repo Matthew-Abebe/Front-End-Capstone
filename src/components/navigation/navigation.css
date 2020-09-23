@@ -1,12 +1,13 @@
 body {
-    background-image: url("https://www.hdwallpapers.in/download/warp_abstract-HD.jpg");
+    /* background-image: url("https://www.hdwallpapers.in/download/warp_abstract-HD.jpg"); */
+    background-image: url("https://ak.picdn.net/shutterstock/videos/24201787/thumb/3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
 }
 
 .navbar {
-    background:#17a2b8;
+    background:skyblue;
 }
 
 a.nav-link a:hover::after{
