@@ -52,7 +52,7 @@ export default class Login extends Component {
             <React.Fragment>
 
                 <div className="registerWelcome">
-                    <h1>Welcome to Hitchiker's Shop!</h1>
+                    <h1>Welcome to Nimble!</h1>
                 </div>
 
                     <br></br>

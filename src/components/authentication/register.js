@@ -33,7 +33,7 @@ export default class Register extends Component {
 
             sessionStorage.setItem(this.state.user_name, this.state.user_password)
 
-            alert(`${this.state.user_name}, Thank you for registering with Hitchhiker's Shop!`)
+            alert(`${this.state.user_name}, Thank you for registering with Nimble!`)
     }
 
     render() {
