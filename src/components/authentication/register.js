@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'reactstrap';
+import { Button, Input } from 'reactstrap';
 
 import './register.css'
 
@@ -48,7 +48,7 @@ export default class Register extends Component {
 
             <form className="registerUserForm">
                 <div className="form-group">
-                    <input
+                    <Input
                         type="text"
                         required
                         className="newUserForm"
@@ -59,7 +59,7 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                    <input
+                    <Input
                         type="text"
                         required
                         className="newUserEmail"
@@ -70,7 +70,7 @@ export default class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                    <input
+                    <Input
                         type="text"
                         required
                         className="newUserPassword"
@@ -80,7 +80,7 @@ export default class Register extends Component {
                     />
                 </div>
 
-                <Button type="button" onClick={this.handleRegister} className="addNewUserBtn" color="success">Register</Button>
+                <Button type="button" onClick={this.handleRegister} className="addNewUserBtn" color="success" size="lg">Register</Button>
 
             </form>
 

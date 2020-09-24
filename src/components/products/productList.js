@@ -25,16 +25,14 @@ export default class ProductList extends Component {
             <div>
                 <section className="products">
                     <div className="productsHeader">
-                    <h1>Products</h1>
+                    <h1 className="productsHeader">Products Available</h1>
                 </div>
-
-                    <br></br>
                     
                     {
                         this.props.products.map(product =>
                             <div key={product.id}>
 
-                <Card body inverse className="productListCard" style={{ backgroundColor: '#008080', borderColor: '#333' }}>
+                <Card body inverse className="productListCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
                     <CardTitle><h3>{product.product_name}</h3></CardTitle>
 
                     <br></br>
@@ -46,10 +44,8 @@ export default class ProductList extends Component {
                             </div>
                         )}
 
-                    <br></br>
-
                     <Link to={`/products/new`}>
-                        <Button className="addNewProduct" color="success" size="lg">Create a New Product</Button>
+                        <Button className="addNewProductButton" color="success" size="lg">Create a New Product</Button>
                         </Link>
                 </section>
             </div>

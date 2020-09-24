@@ -1,5 +1,7 @@
-h2 {
-    color: lightgray
+h1.productsHeader {
+    color: white;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 h4 {
@@ -9,21 +11,20 @@ h4 {
 .productListCard {
     width: 720px;
     margin-left: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
-.addNewProduct {
+.addNewProductButton {
+    margin-top: 20px;
     margin-left: 10px;
 }
 
-.sellProductBtn {
-    margin-right: 5px;
-}
 
 /* .productDetailsBtn {
 
 } */
 
 .productsHeader {
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
 }

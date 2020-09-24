@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
 }
 
-h1 {
+h1.display-3 {
     color: white
 }
 
@@ -47,4 +47,3 @@ p {
     margin-right: 200px;
     margin-bottom: 7px;
 }
-

@@ -72,7 +72,7 @@ export default class Login extends Component {
             </div>
         <form className="login-form-group">
                 <div className="form-group">
-                    <input
+                    <Input
                         type="text"
                         required
                         className="loginEmailForm"
@@ -83,7 +83,7 @@ export default class Login extends Component {
                 </div>
 
                 <div className="form-group">
-                    <input
+                    <Input
                         type="text"
                         required
                         className="loginPasswordForm"
@@ -94,7 +94,7 @@ export default class Login extends Component {
                 </div>
 
 
-      <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success">Login</Button>
+      <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success" size="lg">Login</Button>
 
       </form>
 

@@ -51,14 +51,6 @@
   ],
   "products": [
     {
-      "userId": 8,
-      "product_name": "Fishing Net",
-      "product_price": "$9.99",
-      "product_vendor": "JellyFishing Inc.",
-      "product_description": "Fish and frolic like the best of them with these jelly fishing nets. ",
-      "id": 1
-    },
-    {
       "userId": 10,
       "product_name": "Fishing Net2",
       "product_price": "$10.99",
@@ -75,22 +67,6 @@
       "id": 3
     },
     {
-      "userId": 8,
-      "product_name": "Fishing Net2",
-      "product_price": "$9.99",
-      "product_vendor": "JellyFishing Inc.",
-      "product_description": "Upgraded version of our first net this one comes with a propeller.",
-      "id": 4
-    },
-    {
-      "userId": 8,
-      "product_name": "Test product",
-      "product_price": "$25.00",
-      "product_vendor": "Metalworks",
-      "product_description": "Sheet metal",
-      "id": 5
-    },
-    {
       "userId": 10,
       "product_name": "Rock",
       "product_price": "$4.99",
@@ -104,7 +80,7 @@
       "product_name": "Juicer",
       "product_price": "$39.99",
       "product_vendor": "Creative Juices Inc.",
-      "product_description": "A very powerful juicer that will improve your health."
+      "product_description": "A very powerful juicer that will improve your nutrition and health."
     },
     {
       "id": 9,
@@ -112,7 +88,7 @@
       "product_name": "Knives",
       "product_price": "$12.00",
       "product_vendor": "Sharpen LLC",
-      "product_description": "A set of knives to go in your kitchen."
+      "product_description": "A sharp set of knives to go in your kitchen."
     }
   ],
   "leads": [
@@ -183,20 +159,6 @@
   "sales": [
     {
       "userId": 8,
-      "selectedLead": "Sandy Squirell",
-      "selectedProduct": "Pineapple",
-      "dateTime": "9/21/2020",
-      "id": 12
-    },
-    {
-      "userId": 8,
-      "selectedLead": "Patrick Star",
-      "selectedProduct": "Fishing Net",
-      "dateTime": "9/21/2020",
-      "id": 13
-    },
-    {
-      "userId": 8,
       "selectedLead": "Patrick Star",
       "selectedProduct": "Fishing Net2",
       "dateTime": "9/21/2020",
@@ -217,11 +179,11 @@
       "id": 18
     },
     {
-      "id": 19,
-      "selectedLead": "Bob Smith",
-      "selectedProduct": "Juicer",
       "userId": 12,
-      "ticket_date_time": ""
+      "selectedLead": "Jane Hill",
+      "selectedProduct": "Knives",
+      "dateTime": "9/23/2020",
+      "id": 20
     }
   ]
 }

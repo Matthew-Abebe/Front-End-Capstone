@@ -128,7 +128,7 @@ class ApplicationViews extends Component {
         const newState = {};
         DbCalls.deleteProduct(product)
             .then(() =>
-                DbCalls.getAllProducts()
+                DbCalls.getUserProducts()
             )
             .then(products => { newState.products = products })
             .then(() => this.setState(newState))
@@ -138,7 +138,7 @@ class ApplicationViews extends Component {
         const newState = {};
         DbCalls.deleteLead(lead)
             .then(() =>
-                DbCalls.getAllLeads()
+                DbCalls.getUserLeads()
             )
             .then(leads => { newState.leads = leads })
             .then(() => this.setState(newState))
