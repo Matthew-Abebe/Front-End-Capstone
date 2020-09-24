@@ -107,10 +107,10 @@ export default class Opportunities extends Component {
           <React.Fragment>
             <div>
               <section>
-                <h1>Opportunities</h1>
+                <h1 className="opportunitiesHeader">Opportunities</h1>
               </section>
             </div>
-            <br></br>
+
         <div>
           <Input className="selectLeadInput" type="select"
             value={this.state.selectedLead}
@@ -141,12 +141,8 @@ export default class Opportunities extends Component {
           >
             {this.state.validationError}
           </div>
-        </div>
-                
+        </div>  
                 <div>
-
-                <div>
-            </div>
             <br></br>
         <div>
           <Input className="selectProductInput" type="select"

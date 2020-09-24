@@ -1,3 +1,9 @@
+h1.salesHeader {
+    color: white;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
 .driveName {
     width: 500px;
     display: inline-block;

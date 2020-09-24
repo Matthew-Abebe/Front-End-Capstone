@@ -1,3 +1,9 @@
+h1.leadsHeader {
+    color: white;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
 h2 {
     color: lightgray
 }
@@ -6,7 +12,7 @@ h4 {
     color: lightgray
 }
 
-.productListCard {
+.leadsListCard {
     width: 720px;
     margin-left: 10px;
     margin-top: 10px;
@@ -19,7 +25,3 @@ h4 {
 /* .productDetailsBtn {
 
 } */
-
-.productsHeader {
-    margin-left: 10px;
-}

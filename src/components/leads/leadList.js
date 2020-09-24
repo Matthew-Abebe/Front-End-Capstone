@@ -23,18 +23,16 @@ export default class LeadList extends Component {
             <React.Fragment>
 
             <div>
-                <section className="products">
-                    <div className="productsHeader">
-                    <h1>Qualified Leads</h1>
+                <section className="leads">
+                    <div className="leadsHeader">
+                    <h1 className="leadsHeader">Qualified Leads</h1>
                     </div>
-
-                    <br></br>
                     
                     {
                         this.props.leads.map(lead =>
                             <div key={lead.id}>
 
-                                <Card body inverse className="productListCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
+                                <Card body inverse className="leadsListCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
                                     {/* put card title detail link into a button*/}
                                     {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
                                     <CardTitle><h3>{lead.first_name} {lead.last_name}</h3></CardTitle>

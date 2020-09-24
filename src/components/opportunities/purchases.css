@@ -1,3 +1,9 @@
+h1.opportunitiesHeader {
+    color: white;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
 h2 {
     color: white;
 }

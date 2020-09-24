@@ -26,8 +26,7 @@ export default class SalesList extends Component {
 
             <div>
                 <section className="driveTickets">
-                    <h1>Sales</h1>
-                    <br></br>
+                    <h1 className="salesHeader">Sales</h1>
 
                     {
                         this.props.sales.map(sale =>

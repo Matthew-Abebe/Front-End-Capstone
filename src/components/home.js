@@ -12,8 +12,8 @@ export default class Home extends Component {
           
             <div>
             <Jumbotron className="jumbotron">
-              <h1 className="display-3">Nimble</h1>
-              <p className="lead">Welcome to Nimble. A means to create leads, opportunities, and sales with ease.</p>
+              <h1 className="display-3">Leadox</h1>
+              <p className="lead">Welcome to Leadox. A means to create leads, opportunities, and sales with ease.</p>
               <hr className="my-2" />
               <br></br>
               {/* <p className="vogon">So Keep Calm and Vogon.</p> */}
