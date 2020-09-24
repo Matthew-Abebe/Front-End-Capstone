@@ -1,4 +1,4 @@
-## Nimble
+## Leadox
 
 This is a simple application that lets users create, read, update, and delete leads, products, and opportunities to produce sales.
 
