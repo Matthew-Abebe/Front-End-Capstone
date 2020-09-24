@@ -8,7 +8,7 @@ import './login.css'
 export default class Login extends Component {
 
     state = {
-
+        
         email: "",
         password: ""
 
@@ -51,8 +51,8 @@ export default class Login extends Component {
         return (
             <React.Fragment>
 
-                <div className="registerWelcome">
-                    <h1>Welcome to Nimble!</h1>
+                <div className="loginWelcome">
+                    <h1 className="loginWelcome">Welcome to Leadox.</h1>
                 </div>
 
                     <br></br>

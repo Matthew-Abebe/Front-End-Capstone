@@ -1,3 +1,10 @@
+h1.loginWelcome {
+    color: white;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 h1 {
     color: white
 }
@@ -33,7 +40,7 @@ h3 {
     margin-top: 5px;
 }
 
-.registerWelcome {
+.loginWelcome {
     margin-left: 10px
 }
 
