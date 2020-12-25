@@ -13,6 +13,7 @@ export default class SalesDetails extends Component {
         saleId: "",
         selectedLead: "",
         selectedProduct: "",
+        saleTime: ""
     }
 
     componentDidMount() {
@@ -23,6 +24,7 @@ export default class SalesDetails extends Component {
                     saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
+                    saleTime: sale.saleTime
                 })
                 console.log(this.state.saleId)
             }
@@ -41,6 +43,7 @@ export default class SalesDetails extends Component {
                         <CardTitle>
                             <p>Name: {this.state.selectedLead}</p>
                             <p>Product: {this.state.selectedProduct}</p>
+                            <p>Timestamp: {this.state.saleTime}</p>
                         </CardTitle>
                         <Link to={`/sales/${this.state.saleId}/edit`}>
                             <Button color="success" size="sm" className="editSaleBtn">Edit</Button>

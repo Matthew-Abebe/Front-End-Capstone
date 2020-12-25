@@ -8,9 +8,6 @@ import './sales.css'
 
 export default class SalesList extends Component {
 
-    // state = {
-
-    // } 
 
     handleClick = (e) => {
         e.preventDefault()
@@ -30,8 +27,8 @@ export default class SalesList extends Component {
 
                         <Card body inverse className="salesCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
                             <CardTitle>
-                                <CardText><h3>{sale.selectedLead}</h3></CardText>
-                                    <p>{sale.dateTime}</p>
+                                <CardText><h2>{sale.selectedLead}</h2></CardText>
+                                <CardText><h3>{sale.selectedProduct}</h3></CardText>
 
                                         <br></br>
 
@@ -41,10 +38,10 @@ export default class SalesList extends Component {
                             Details
                         </Button>
                         </Link>
+                        
                                 </Card>
 
-                                </div>
-
+                            </div>
                         )}
                     </section>
                 </div>

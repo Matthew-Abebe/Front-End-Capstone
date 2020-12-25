@@ -43,7 +43,7 @@ export default class Login extends Component {
             )
         } if (matchUser) {
             this.props.history.push("/")
-            window.alert(`Welcome back ${matchUser.name}!`)
+            window.alert(`Welcome back ${matchUser.user_name}!`)
         }
     }
 

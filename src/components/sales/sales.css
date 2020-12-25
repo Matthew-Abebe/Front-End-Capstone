@@ -4,31 +4,6 @@ h1.salesHeader {
     margin-top: 25px;
 }
 
-.driveName {
-    width: 500px;
-    display: inline-block;
-    justify-content: center;
-    margin-left: 10px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-}
-
-.location {
-    width: 500px;
-    display: inline-block;
-    justify-content: center;
-    margin-left: 10px;
-    margin-bottom: 5px;
-}
-
-.driveBtn {
-    display: inline-block;
-}
-
-.previousDriveTicketsBtn {
-    display: inline-block;
-}
-
 .salesDetailsCard {
     width: 720px;
     margin-left: 10px;
@@ -41,18 +16,6 @@ h1.salesHeader {
 
 .deleteSaleBtn {
     margin-right: 5px;
-}
-
-.driveButton {
-    display: inline-block;
-    justify-content: center;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-.previousDriveTicketsButton {
-    display: inline-block;
-    justify-content: center;
 }
 
 .salesCard {

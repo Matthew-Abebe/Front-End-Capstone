@@ -1,180 +1,40 @@
 {
   "users": [
     {
-      "name": "iammatt",
-      "email": "iammatt",
-      "password": "iammatt",
-      "id": 8
-    },
-    {
-      "name": "dudeguy",
-      "email": "dudeguy@mail.com",
-      "password": "dudeguy",
-      "id": 10
-    },
-    {
-      "name": "spongebob",
-      "email": "spongebob@mail.com",
-      "password": "spongebob",
-      "id": 11
-    },
-    {
-      "name": "John",
-      "email": "john@mail.com",
-      "password": "john123!",
-      "id": 12
-    },
-    {
-      "name": "Bob Fisher",
-      "email": "bfish@mail.com",
-      "password": "bobfisher1",
-      "id": 13
+      "user_name": "DScott1",
+      "email": "danielscott@mail.com",
+      "password": "dscottpass123",
+      "id": 1
     }
   ],
   "products": [
     {
-      "userId": 10,
-      "product_name": "Fishing Net2",
-      "product_price": "$10.99",
-      "product_vendor": "JellyFishing Inc.",
-      "product_description": "Upgraded version of our first net this one comes with a propeller.",
-      "id": 2
-    },
-    {
-      "userId": 10,
-      "product_name": "Rock",
-      "product_price": "$4.99",
-      "product_vendor": "Rocks Inc.",
-      "product_description": "A nice, secure, and portable place to live under the sea.",
-      "id": 6
-    },
-    {
-      "id": 8,
-      "userId": 12,
-      "product_name": "Juicer",
-      "product_price": "$39.99",
-      "product_vendor": "Creative Juices Inc.",
-      "product_description": "A very powerful juicer that will improve your nutrition and health."
-    },
-    {
-      "id": 9,
-      "userId": 12,
-      "product_name": "Knives",
-      "product_price": "$12.00",
-      "product_vendor": "Sharpen LLC",
-      "product_description": "A sharp set of knives to go in your kitchen."
-    },
-    {
-      "userId": 13,
-      "productName": "Lollipop",
-      "productPrice": "$0.50",
-      "productVendor": "Candy Corporation",
-      "productDescription": "Suckers in many flavors.",
-      "id": 17
-    },
-    {
-      "id": 18,
-      "userId": 8,
+      "id": 1,
+      "userId": 1,
       "productName": "Television",
-      "productPrice": "$100.00",
+      "productPrice": "$120.00",
       "productVendor": "Entertainment LLC",
       "productDescription": "Large screen HD TV"
-    },
-    {
-      "userId": 8,
-      "productName": "Loveseat",
-      "productPrice": "$120.00",
-      "productVendor": "Furniture Co.",
-      "productDescription": "A well designed loveseat to go in your living room.",
-      "id": 19
     }
   ],
   "leads": [
     {
-      "first_name": "Spongebob",
-      "last_name": "Squarepants",
-      "email_address": "sponge@mail.com",
-      "phone_number": "654654656",
-      "lead_address": "456 Pineapple Blvd Bikini Bottom",
-      "userId": 8,
-      "id": 25
-    },
-    {
-      "first_name": "Sandy",
-      "last_name": "Squirell",
-      "email_address": "sandy@mail.com",
-      "phone_number": "1231231234",
-      "lead_address": "354 Tree Way Bikini Bottom",
-      "userId": 8,
-      "id": 27
-    },
-    {
-      "id": 31,
-      "userId": 12,
-      "first_name": "Bob",
-      "last_name": "Smith",
-      "email_address": "bob@mail.com",
-      "phone_number": "1234567891",
-      "lead_address": "107 Plainfield, TX 22211"
-    },
-    {
-      "id": 32,
-      "userId": 12,
-      "first_name": "Jane",
-      "last_name": "Hill",
-      "email_address": "jane@mail.com",
-      "phone_number": "3216549873",
-      "lead_address": "584 Peak St. Seattle, WA 87888"
-    },
-    {
-      "first_name": "Jim",
-      "last_name": "Dean",
-      "email_address": "jim@mail.com",
-      "phone_number": "789521456",
-      "lead_address": "322 E Bird St Atlanta, GA 22444",
-      "userId": 13,
-      "id": 33
-    },
-    {
-      "first_name": "Jane",
-      "last_name": "Doe",
-      "email_address": "jdoe@mail.com",
-      "phone_number": "456-456-9898",
-      "lead_address": "4323 Hollow Rd Jackson, MS 22312",
-      "userId": 13,
-      "id": 35
-    },
-    {
-      "first_name": "Dale",
-      "last_name": "Junior",
-      "email_address": "dalejr@mail.com",
-      "phone_number": "234-543-6543",
-      "lead_address": "5669 Ludwick Ave Dayton, OH 39852",
-      "userId": 8,
-      "id": 36
+      "first_name": "James",
+      "last_name": "Ryan",
+      "email_address": "jamesryan@mail.com",
+      "phone_number": "631-552-4177",
+      "lead_address": "7794 South St Houston, TX 64428",
+      "userId": 1,
+      "id": 1
     }
   ],
   "sales": [
     {
-      "userId": 10,
-      "selectedLead": "Larry Lobster",
-      "selectedProduct": "Fishing Net2",
-      "dateTime": "9/21/2020",
-      "id": 16
-    },
-    {
-      "userId": 10,
-      "selectedLead": "Patrick Star",
-      "selectedProduct": "Rock",
-      "dateTime": "9/21/2020",
-      "id": 18
-    },
-    {
-      "userId": 12,
-      "selectedLead": "Jane Hill",
-      "selectedProduct": "Knives",
-      "dateTime": "9/23/2020",
-      "id": 20
+      "userId": 1,
+      "selectedLead": "James Ryan",
+      "selectedProduct": "Television",
+      "saleTime": "12/25/2020, 2:29:07 AM",
+      "id": 1
     }
   ]
 }

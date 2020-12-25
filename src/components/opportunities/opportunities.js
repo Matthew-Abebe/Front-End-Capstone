@@ -18,13 +18,18 @@ export default class Opportunities extends Component {
         selectedProduct: "",
         selectedProductPrice: "",
         selectedLead: "",
-        dateTime: ""
+        saleTime: ""
     }
 
-    getTimeStamp() {
+    getDate() {
       var now = new Date();
-      return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
+      var moment = now.toLocaleString()
+      // var moment = now.toString().slice(0, 21)
+      // return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
+      return(moment);
   }
+
+
 
     componentDidMount() {
         const remoteURL = "http://localhost:5002"
@@ -90,7 +95,7 @@ export default class Opportunities extends Component {
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct,
             selectedProductPrice: this.state.selectedProductPrice,
-            dateTime: this.getTimeStamp()
+            saleTime: this.getDate()
           }
           
           console.log(newSale)
