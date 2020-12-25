@@ -4,6 +4,10 @@ h1.leadsHeader {
     margin-top: 25px;
 }
 
+.createQualifiedLead {
+    margin-top: 20px;
+}
+
 h2 {
     color: lightgray
 }
@@ -18,6 +22,57 @@ h4 {
     margin-top: 10px;
 }
 
-.sellProductBtn {
-    margin-right: 5px;
+.addLeadBtn {
+    margin-left: 10px;
 }
+
+.leadFirstNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadLastNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadEmailAddressForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadPhoneNumberForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadAddressForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+

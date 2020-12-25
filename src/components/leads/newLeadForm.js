@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Button } from 'reactstrap';
 
+import './leads.css'
+
 export default class NewLeadForm extends Component {
 
     state = {
@@ -42,13 +44,17 @@ export default class NewLeadForm extends Component {
         return (
             <React.Fragment>
 
+            <div className="createQualifiedLead">
+                <h2>Create a Qualified Lead</h2>
+                </div>
+
                  <form className="productForm">
                     <div className="form-group">
-                        <label htmlFor="productName"></label>
+                        <label htmlFor="leadFirstName"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadFirstNameForm"
                             onChange={this.handleFieldChange}
                             id="first_name"
                             placeholder="First Name"
@@ -56,11 +62,11 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productName"></label>
+                        <label htmlFor="leadLastName"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadLastNameForm"
                             onChange={this.handleFieldChange}
                             id="last_name"
                             placeholder="Last Name"
@@ -68,11 +74,11 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="emailAddress"></label>
+                        <label htmlFor="leadEmailAddress"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEmailAddressForm"
                             onChange={this.handleFieldChange}
                             id="email_address"
                             placeholder="Email Address"
@@ -80,11 +86,11 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="description"></label>
+                        <label htmlFor="leadPhoneNumber"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadPhoneNumberForm"
                             onChange={this.handleFieldChange}
                             id="phone_number"
                             placeholder="Phone Number"
@@ -96,7 +102,7 @@ export default class NewLeadForm extends Component {
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadAddressForm"
                             onChange={this.handleFieldChange}
                             id="lead_address"
                             placeholder="Lead Address"
@@ -105,7 +111,7 @@ export default class NewLeadForm extends Component {
 
                     <br></br>
 
-                    <Button type="button" color="success" onClick={this.constructNewLead} className="addProductBtn">Submit</Button>
+                    <Button type="button" color="success" onClick={this.constructNewLead} className="addLeadBtn">Submit</Button>
                 </form>
              </React.Fragment>
         )
