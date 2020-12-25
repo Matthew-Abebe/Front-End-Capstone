@@ -28,9 +28,7 @@ class ApplicationViews extends Component {
         products: [],
         leads: [],
         sales: [],
-        purchases: [],
-        // driveTickets: [],
-        purchaseTickets: []
+        purchases: []
     };
 
     // getTimeStamp() {
@@ -70,27 +68,27 @@ class ApplicationViews extends Component {
                     sales: sales
                 }))
 
-    addPurchase = (purchase) => {
+    // addPurchase = (purchase) => {
         
-        let userId = sessionStorage.getItem("userId")
+    //     let userId = sessionStorage.getItem("userId")
         
-        const purchaseObj = {
-            userId: parseInt(userId),
-            productId: purchase.product.id,
-            productName: purchase.product.product_name,
-            productPrice: purchase.product.sale_price,
-            description: purchase.product.description,
-            dateTime: this.getTimeStamp()
-        }
-        console.log(purchaseObj)
-        DbCalls.postNewPurchase(purchaseObj)
-            .then(() => DbCalls.getUserPurchases())
-            .then(purchases =>
-                this.setState({
-                    purchases: purchases
-                }))
-                alert(`You purchased: ${purchaseObj.productName}. Thank you!`)
-    }
+    //     const purchaseObj = {
+    //         userId: parseInt(userId),
+    //         productId: purchase.product.id,
+    //         productName: purchase.product.product_name,
+    //         productPrice: purchase.product.sale_price,
+    //         description: purchase.product.description,
+    //         dateTime: this.getTimeStamp()
+    //     }
+    //     console.log(purchaseObj)
+    //     DbCalls.postNewPurchase(purchaseObj)
+    //         .then(() => DbCalls.getUserPurchases())
+    //         .then(purchases =>
+    //             this.setState({
+    //                 purchases: purchases
+    //             }))
+    //             alert(`You purchased: ${purchaseObj.productName}. Thank you!`)
+    // }
 
     putProduct = (editedProductObject) => {
         return DbCalls.putProduct(editedProductObject)
@@ -144,26 +142,6 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState))
     }
 
-    deleteUserProduct = (userProduct) => {
-        const newState = {};
-        DbCalls.deleteUserProduct(userProduct)
-            .then(() =>
-                DbCalls.getUserProducts()
-            )
-            .then(userProducts => { newState.userProducts = userProducts })
-            .then(() => this.setState(newState))
-    }
-
-    deleteDriveTicket = (driveTicket) => {
-        const newState = {};
-        DbCalls.deleteDriveTicket(driveTicket)
-            .then(() =>
-                DbCalls.getUserDriveTickets()
-            )
-            .then(driveTickets => { newState.driveTickets = driveTickets })
-            .then(() => this.setState(newState))
-    }
-
     deleteSale = (sale) => {
         const newState = {};
         DbCalls.deleteSale(sale)
@@ -174,34 +152,17 @@ class ApplicationViews extends Component {
             .then(() => this.setState(newState))
     }
 
-    deletePurchase = (purchase) => {
-        const newState = {};
-        DbCalls.deletePurchase(purchase)
-            .then(() =>
-                DbCalls.getUserPurchases()
-            )
-            .then(purchases => { newState.purchases = purchases })
-            .then(() => this.setState(newState))
-    }
-
-
     fetchAll = async () => {
         this.setState({
             users: await DbCalls.getAllUsers(),
             products: await DbCalls.getUserProducts(),
             leads: await DbCalls.getUserLeads(),
             sales: await DbCalls.getUserSales(),
-            // purchases: await DbCalls.getUserPurchases(),
-            // driveTickets: await DbCalls.getUserDriveTickets(),
-            // purchaseTickets: await DbCalls.getUserPurchaseTickets()
         })
         console.log(this.state.users)
         console.log(this.state.products)
         console.log(this.state.leads)
         console.log(this.state.sales)
-        // console.log(this.state.purchases)
-        // console.log(this.state.driveTickets)
-        // console.log(this.state.purchaseTickets)
     }
 
     componentDidMount = () => {
@@ -274,7 +235,7 @@ class ApplicationViews extends Component {
                     }
                 }
                 } />
-
+{/* 
                 <Route exact path="/probabilityDriveTickets" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <ProbabilityTicketList {...props}
@@ -285,16 +246,14 @@ class ApplicationViews extends Component {
                     } else {
                         return <Redirect to="/login" />
                     }
-                }
-                } />
+                } */}
+                {/* } /> */}
 
                 <Route exact path="/sales" render={(props) => {
                     if (this.isAuthenticated()) {
                         return <SalesList {...props}
                             
                         sales={this.state.sales}
-                        // driveTickets={this.state.driveTickets}
-                        // purchaseTickets={this.state.purchaseTickets}
                         />
                     } else {
                         return <Redirect to="/login" />
@@ -386,13 +345,13 @@ class ApplicationViews extends Component {
                         return <Opportunities {
                             ...props
                         }
-                            purchases={this.state.purchases}
+                            // purchases={this.state.purchases}
                             leads={this.state.leads}
                             products={this.state.products}
                             sales={this.state.sales}
                             addSales={this.addSales}
-                            deletePurchase={this.deletePurchase}
-                            putPurchase={this.putPurchase}
+                            // deletePurchase={this.deletePurchase}
+                            // putPurchase={this.putPurchase}
                         // getSpending={this.getSpending}
 
                         />
@@ -401,7 +360,7 @@ class ApplicationViews extends Component {
                     }
                     }} />
 
-                <Route exact path="/purchases/:purchasesId(\d+)/edit"
+                {/* <Route exact path="/purchases/:purchasesId(\d+)/edit"
                     render={(props) => {
                         return <PurchaseEditForm {
                             ...props
@@ -409,7 +368,7 @@ class ApplicationViews extends Component {
                             purchases={this.state.purchases}
                             putPurchase={this.putPurchase}
                         />
-                    }} />
+                    }} /> */}
 
             </React.Fragment>
         )

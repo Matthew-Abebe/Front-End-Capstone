@@ -49,7 +49,6 @@ export default class Opportunities extends Component {
                 }
               ].concat(leadsFromApi)
             });
-            console.log(this.state.leads)
           })
           .catch(error => {
             console.log(error);
@@ -63,18 +62,18 @@ export default class Opportunities extends Component {
             })
             .then(data => {
               let productsFromApi = data.map(product => {
-                  return { value: product.product_name, display: product.product_name };
+                  return { value: product.productName, display: product.productName, selectedProductPrice: product.productPrice };
                 });
                 this.setState({
                   products: [
                     {
                       value: "",
                       display:
-                      "(Select your product)"
+                      "(Select your product)",
+                      selectedProductPrice: ""
                     }
                   ].concat(productsFromApi)
                 });
-                console.log(this.state.products)
               })
               .catch(error => {
                 console.log(error);
@@ -90,7 +89,7 @@ export default class Opportunities extends Component {
             userId: parseInt(userId),
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct,
-            // selectedProductPrice: this.state.product_price,
+            selectedProductPrice: this.state.selectedProductPrice,
             dateTime: this.getTimeStamp()
           }
           
@@ -100,7 +99,7 @@ export default class Opportunities extends Component {
       }
       
     render() {
-      // console.log(this.state.selectedPurchase)
+      console.log(this.state.products)
         return (
           
           
@@ -147,9 +146,11 @@ export default class Opportunities extends Component {
         <div>
           <Input className="selectProductInput" type="select"
             value={this.state.selectedProduct}
+            selectedProductPrice={this.state.selectedProductPrice}
             onChange={e =>
               this.setState({
                 selectedProduct: e.target.value,
+                selectedProductPrice: e.target.selectedProductPrice,
                 validationError:
                   e.target.value === ""
                     ? "You must select a product"
@@ -161,6 +162,7 @@ export default class Opportunities extends Component {
               <option
                 key={product.value}
                 value={product.value}
+                // selectedProductPrice={product.selectedProductPrice}
               >
                 {product.display}
               </option>
@@ -185,16 +187,6 @@ export default class Opportunities extends Component {
                 }}>Enter Details
             </Button>
             </div>
-    
-             {/* <div className="previousDriveTicketsButton">  
-            <Link to="/sales">
-                <Button type="submit" color="danger" className="previousDriveTicketsBtn"
-                    onClick={() => {
-                    console.log("this will take user to sales list")
-                }}>Go to Sales
-                    </Button>
-                </Link>
-                </div>  */}
           
                 </div>
               

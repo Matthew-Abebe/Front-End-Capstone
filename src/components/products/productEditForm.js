@@ -5,10 +5,10 @@ export default class ProductEditForm extends Component {
 
     state = {
         userId: "",
-        product_name: "",
-        product_price: "",
-        product_vendor: "",
-        product_description: ""
+        productName: "",
+        productPrice: "",
+        productVendor: "",
+        productDescription: ""
     }
 
     handleFieldChange = evt => {
@@ -24,10 +24,10 @@ export default class ProductEditForm extends Component {
         const editedProduct = {
             id: this.props.match.params.productId,
             userId: this.state.userId,
-            product_name: this.state.product_name,
-            product_price: this.state.product_price,
-            product_vendor: this.state.product_vendor,
-            product_description: this.state.product_description
+            productName: this.state.productName,
+            productPrice: this.state.productPrice,
+            productVendor: this.state.productVendor,
+            productDescription: this.state.productDescription
         }
 
         // console.log(editedProduct)
@@ -43,10 +43,10 @@ export default class ProductEditForm extends Component {
                 console.log(product)
                 this.setState({
                     userId: product.userId,
-                    product_name: product.product_name,
-                    product_price: product.product_price,
-                    product_vendor: product.product_vendor,
-                    product_description: product.product_description
+                    productName: product.productName,
+                    productPrice: product.productPrice,
+                    productVendor: product.productVendor,
+                    productDescription: product.productDescription
                 })
             })
     }
@@ -57,50 +57,50 @@ export default class ProductEditForm extends Component {
 
                 <form className="productEditForm">
                     <div className="form-group">
-                        <label htmlFor="ProductName">Name</label>
+                        <label htmlFor="Product Name">Name</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_name"
-                            value={this.state.product_name}
+                            id="productName"
+                            value={this.state.productName}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="ProductPrice">Price</label>
+                        <label htmlFor="Product Price">Price</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_price"
-                            value={this.state.product_price}
+                            id="productPrice"
+                            value={this.state.productPrice}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="ProductVendor">Vendor</label>
+                        <label htmlFor="Product Vendor">Vendor</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_vendor"
-                            value={this.state.product_vendor}
+                            id="productVendor"
+                            value={this.state.productVendor}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="ProductDescription">Description</label>
+                        <label htmlFor="Product Description">Description</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_description"
-                            value={this.state.product_description}
+                            id="productDescription"
+                            value={this.state.productDescription}
                         />
                     </div>
 

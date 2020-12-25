@@ -14,10 +14,10 @@ export default class ProductDetails extends Component {
 
     state = {
         productId: "",
-        product_name: "",
-        product_price: "",
-        product_vendor: "",
-        product_description: ""
+        productName: "",
+        productPrice: "",
+        productVendor: "",
+        productDescription: ""
     };
 
     componentDidMount() {
@@ -26,10 +26,10 @@ export default class ProductDetails extends Component {
                 console.log(product)
                 this.setState({
                     productId: product.id,
-                    product_name: product.product_name,
-                    product_price: product.product_price,
-                    product_vendor: product.product_vendor,
-                    product_description: product.product_description
+                    productName: product.productName,
+                    productPrice: product.productPrice,
+                    productVendor: product.productVendor,
+                    productDescription: product.productDescription
                 })
                 console.log(this.state.productId)
             }
@@ -56,16 +56,12 @@ export default class ProductDetails extends Component {
                     {/* <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" /> */}
                     <CardBody>
                         <CardTitle>
-                            <h2>{this.state.product_name}</h2>
+                            <h2>{this.state.productName}</h2>
                         </CardTitle>
                         <CardText>
-                            <p>Price: {this.state.product_price}</p>
-                        </CardText>
-                        <CardText>
-                            <p>Vendor: {this.state.product_vendor}</p>
-                        </CardText>
-                        <CardText>
-                            <p>Description: {this.state.product_description}</p>
+                            <p>Price: {this.state.productPrice}</p>
+                            <p>Vendor: {this.state.productVendor}</p>
+                            <p>Description: {this.state.productDescription}</p>
                         </CardText>
 
                         <ButtonGroup>

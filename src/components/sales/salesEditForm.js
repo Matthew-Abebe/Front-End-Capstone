@@ -4,12 +4,12 @@ import DbCalls from '../../modules/dbCalls'
 export default class SalesEditForm extends Component {
 
     state = {
-        // driveTicketId: "",
+        saleId: "",
         selectedLead: "",
         selectedProduct: "",
         drive_name: "",
         location_name: "",
-        ticket_date_time: ""
+        dateTime: ""
 
     }
 
@@ -30,7 +30,7 @@ export default class SalesEditForm extends Component {
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct,
             userId: parseInt(userId),
-            ticket_date_time: this.state.ticket_date_time
+            dateTime: this.state.dateTime
         }
 
         // console.log(editedDriveTicket)
@@ -43,12 +43,12 @@ export default class SalesEditForm extends Component {
         DbCalls.getSale(this.props.match.params.saleId)
             .then(sale => {
                 this.setState({
-                    // driveTicketId: driveTicket.id,
+                    saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
                     // drive_name: driveTicket.drive_name,
                     // location_name: driveTicket.location_name,
-                    // ticket_date_time: driveTicket.ticket_date_time
+                    dateTime: sale.dateTime
                 })
                 // console.log(driveTicket)
             })

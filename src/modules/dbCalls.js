@@ -14,18 +14,6 @@ export default {
         return fetch(`${remoteURL}/leads/${id}`).then(e => e.json())
     },
 
-    // getPurchase(id) {
-    //     return fetch(`${remoteURL}/purchases/${id}`).then(e => e.json())
-    // },
-
-    // getDriveTicket(id) {
-    //     return fetch(`${remoteURL}/probabilityDriveTickets/${id}`).then (e => e.json())
-    // },
-
-    // getPurchaseTicket(id) {
-    //     return fetch(`${remoteURL}/purchaseTickets/${id}`).then (e => e.json())
-    // },
-
     getSale(id) {
         return fetch(`${remoteURL}/sales/${id}`).then (e => e.json())
     },
@@ -52,13 +40,13 @@ export default {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
     
-    getAllDriveTickets() {
-        return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
-    },
+    // getAllDriveTickets() {
+    //     return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
+    // },
 
-    getAllPurchaseTickets() {
-        return fetch (`${remoteURL}/purchaseTickets`).then(e => e.json()) 
-    },
+    // getAllPurchaseTickets() {
+    //     return fetch (`${remoteURL}/purchaseTickets`).then(e => e.json()) 
+    // },
 
     getAllSales() {
         return fetch (`${remoteURL}/sales`).then(e => e.json()) 

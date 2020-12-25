@@ -10,13 +10,9 @@ import './probabilityDrive.css'
 export default class SalesDetails extends Component {
 
     state = {
+        saleId: "",
         selectedLead: "",
         selectedProduct: "",
-        driveTicketId: "",
-        driverName: "",
-        driveLocation: "",
-        driveTicketDateTime: ""
-        // description: ""
     }
 
     componentDidMount() {
@@ -24,29 +20,13 @@ export default class SalesDetails extends Component {
             .then(sale => {
                 console.log(sale)
                 this.setState({
-                    saleId: sale.id, //maybe wrong
+                    saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
-                    // driverName: driveTicket.drive_name,
-                    // driveLocation: driveTicket.location_name,
-                    // driveTicketDateTime: driveTicket.ticket_date_time
-                    // description: product.description
                 })
                 console.log(this.state.saleId)
             }
             )
-
-            // DbCalls.getUserDriveTickets(this.props.match.params.userDriveTicketId)
-            // .then(userDriveTicket => {
-            //     console.log(userDriveTicket)
-            //     this.setState({
-            //         userDriveTicketId: userDriveTicket.id,
-            //         userDriverTicketName: userDriveTicket.drive_name,
-            //         userDriveTicketLocation: userDriveTicket.location_name,
-            //         userDriveTicketDateTime: userDriveTicket.ticket_date_time
-            //     })
-            //     console.log(this.state.userDriveTicketId)
-            // })
     }
 
     render() {

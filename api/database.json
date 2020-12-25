@@ -41,14 +41,6 @@
       "id": 2
     },
     {
-      "userId": 8,
-      "product_name": "Pineapple",
-      "product_price": "$25.00",
-      "product_vendor": "BikiniHouses",
-      "product_description": "Live in luxury with all the necessities carved out of this marvelous fruit.",
-      "id": 3
-    },
-    {
       "userId": 10,
       "product_name": "Rock",
       "product_price": "$4.99",
@@ -71,6 +63,22 @@
       "product_price": "$12.00",
       "product_vendor": "Sharpen LLC",
       "product_description": "A sharp set of knives to go in your kitchen."
+    },
+    {
+      "userId": 13,
+      "productName": "Lollipop",
+      "productPrice": "$0.50",
+      "productVendor": "Candy Corporation",
+      "productDescription": "Suckers in many flavors.",
+      "id": 17
+    },
+    {
+      "id": 18,
+      "userId": 8,
+      "productName": "Television",
+      "productPrice": "$100.00",
+      "productVendor": "Entertainment LLC",
+      "productDescription": "Large screen HD TV"
     }
   ],
   "leads": [
@@ -102,24 +110,6 @@
       "id": 28
     },
     {
-      "first_name": "Larry",
-      "last_name": "Lobster",
-      "email_address": "larry@mail.com",
-      "phone_number": "6846546546",
-      "lead_address": "1400 Sea St Bikini Bottom",
-      "userId": 10,
-      "id": 29
-    },
-    {
-      "first_name": "Patrick",
-      "last_name": "Star",
-      "email_address": "pat@mail.com",
-      "phone_number": "654654654",
-      "lead_address": "455 Rock St Bikini Bottom",
-      "userId": 10,
-      "id": 30
-    },
-    {
       "id": 31,
       "userId": 12,
       "first_name": "Bob",
@@ -136,16 +126,27 @@
       "email_address": "jane@mail.com",
       "phone_number": "3216549873",
       "lead_address": "584 Peak St. Seattle, WA 87888"
+    },
+    {
+      "first_name": "Jim",
+      "last_name": "Dean",
+      "email_address": "jim@mail.com",
+      "phone_number": "789521456",
+      "lead_address": "322 E Bird St Atlanta, GA 22444",
+      "userId": 13,
+      "id": 33
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email_address": "jdoe@mail.com",
+      "phone_number": "456-456-9898",
+      "lead_address": "4323 Hollow Rd Jackson, MS 22312",
+      "userId": 13,
+      "id": 35
     }
   ],
   "sales": [
-    {
-      "userId": 8,
-      "selectedLead": "Patrick Star",
-      "selectedProduct": "Fishing Net2",
-      "dateTime": "9/21/2020",
-      "id": 14
-    },
     {
       "userId": 10,
       "selectedLead": "Larry Lobster",
@@ -166,6 +167,20 @@
       "selectedProduct": "Knives",
       "dateTime": "9/23/2020",
       "id": 20
+    },
+    {
+      "userId": 8,
+      "selectedLead": "Sandy Squirell",
+      "selectedProduct": "Television",
+      "dateTime": "12/24/2020",
+      "id": 35
+    },
+    {
+      "id": 36,
+      "selectedLead": "Spongebob Squarepants",
+      "selectedProduct": "Television",
+      "userId": 8,
+      "dateTime": "12/24/2020"
     }
   ]
 }

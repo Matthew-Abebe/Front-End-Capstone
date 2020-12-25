@@ -4,10 +4,10 @@ export default class NewProductForm extends Component {
 
     state = {
         userId: "",
-        product_name: "",
-        product_price: "",
-        product_vendor: "",
-        product_description: ""
+        productName: "",
+        productPrice: "",
+        productVendor: "",
+        productDescription: ""
     }
 
     handleFieldChange = evt => {
@@ -22,10 +22,10 @@ export default class NewProductForm extends Component {
 
         const newProduct = {
             userId: parseInt(userId),
-            product_name: this.state.product_name,
-            product_price: this.state.product_price,
-            product_vendor: this.state.product_vendor,
-            product_description: this.state.product_description
+            productName: this.state.productName,
+            productPrice: this.state.productPrice,
+            productVendor: this.state.productVendor,
+            productDescription: this.state.productDescription
         }
 
         console.log(newProduct)
@@ -41,37 +41,37 @@ export default class NewProductForm extends Component {
 
                  <form className="productForm">
                     <div className="form-group">
-                        <label htmlFor="productName">Product Name</label>
+                        <label htmlFor="Product Name">Product Name</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_name"
+                            id="productName"
                             placeholder="Name"
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productPrice">Product Price</label>
+                        <label htmlFor="Product Price">Product Price</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_price"
+                            id="productPrice"
                             placeholder="Price"
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productVendor">Product Vendor</label>
+                        <label htmlFor="Product Vendor">Product Vendor</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_vendor"
+                            id="productVendor"
                             placeholder="Vendor"
                         />
                     </div>
@@ -79,13 +79,13 @@ export default class NewProductForm extends Component {
                     
 
                     <div className="form-group">
-                        <label htmlFor="productDescription">Product Description</label>
+                        <label htmlFor="Product Description">Product Description</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="product_description"
+                            id="productDescription"
                             placeholder="Description"
                         />
                     </div>
