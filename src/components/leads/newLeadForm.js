@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from 'reactstrap';
 
 export default class NewLeadForm extends Component {
 
@@ -43,7 +44,7 @@ export default class NewLeadForm extends Component {
 
                  <form className="productForm">
                     <div className="form-group">
-                        <label htmlFor="productName">First Name</label>
+                        <label htmlFor="productName"></label>
                         <input
                             type="text"
                             required
@@ -55,7 +56,7 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="productName">Last Name</label>
+                        <label htmlFor="productName"></label>
                         <input
                             type="text"
                             required
@@ -67,7 +68,7 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="emailAddress">Email Address</label>
+                        <label htmlFor="emailAddress"></label>
                         <input
                             type="text"
                             required
@@ -79,7 +80,7 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="description">Phone Number</label>
+                        <label htmlFor="description"></label>
                         <input
                             type="text"
                             required
@@ -91,7 +92,7 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="leadAddress">Lead Address</label>
+                        <label htmlFor="leadAddress"></label>
                         <input
                             type="text"
                             required
@@ -102,7 +103,9 @@ export default class NewLeadForm extends Component {
                         />
                     </div>
 
-                    <button type="button" onClick={this.constructNewLead} className="addProductBtn">Submit</button>
+                    <br></br>
+
+                    <Button type="button" color="success" onClick={this.constructNewLead} className="addProductBtn">Submit</Button>
                 </form>
              </React.Fragment>
         )

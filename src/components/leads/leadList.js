@@ -47,7 +47,7 @@ export default class LeadList extends Component {
                         <br></br>
 
                         <Link to={`/leads/new`}>
-                        <Button className="addNewLead" color="success" size="lg">
+                        <Button className="addNewLead" color="success">
                             Create a New Lead
                         </Button>
                         </Link>

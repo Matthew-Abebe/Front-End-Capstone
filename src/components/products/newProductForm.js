@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button } from 'reactstrap';
 
 export default class NewProductForm extends Component {
 
@@ -41,7 +42,7 @@ export default class NewProductForm extends Component {
 
                  <form className="productForm">
                     <div className="form-group">
-                        <label htmlFor="Product Name">Product Name</label>
+                        <label htmlFor="Product Name"></label>
                         <input
                             type="text"
                             required
@@ -53,7 +54,7 @@ export default class NewProductForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="Product Price">Product Price</label>
+                        <label htmlFor="Product Price"></label>
                         <input
                             type="text"
                             required
@@ -65,7 +66,7 @@ export default class NewProductForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="Product Vendor">Product Vendor</label>
+                        <label htmlFor="Product Vendor"></label>
                         <input
                             type="text"
                             required
@@ -79,7 +80,7 @@ export default class NewProductForm extends Component {
                     
 
                     <div className="form-group">
-                        <label htmlFor="Product Description">Product Description</label>
+                        <label htmlFor="Product Description"></label>
                         <input
                             type="text"
                             required
@@ -89,8 +90,10 @@ export default class NewProductForm extends Component {
                             placeholder="Description"
                         />
                     </div>
+
+                    <br></br>
             
-                    <button type="button" onClick={this.constructNewProduct} className="addProductBtn">Submit</button>
+                    <Button color="success" type="button" onClick={this.constructNewProduct} className="addProductBtn">Submit</Button>
                 </form>
 
              </React.Fragment>
