@@ -40,13 +40,17 @@ export default class NewProductForm extends Component {
         return (
             <React.Fragment>
 
+<div className="createProduct">
+                <h2>Create a new Product</h2>
+                </div>
+
                  <form className="productForm">
                     <div className="form-group">
                         <label htmlFor="Product Name"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="productNameForm"
                             onChange={this.handleFieldChange}
                             id="productName"
                             placeholder="Name"
@@ -58,7 +62,7 @@ export default class NewProductForm extends Component {
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="productPriceForm"
                             onChange={this.handleFieldChange}
                             id="productPrice"
                             placeholder="Price"
@@ -70,21 +74,19 @@ export default class NewProductForm extends Component {
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="productVendorForm"
                             onChange={this.handleFieldChange}
                             id="productVendor"
                             placeholder="Vendor"
                         />
                     </div>
 
-                    
-
                     <div className="form-group">
                         <label htmlFor="Product Description"></label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="productDescriptionForm"
                             onChange={this.handleFieldChange}
                             id="productDescription"
                             placeholder="Description"

@@ -18,3 +18,50 @@ h4 {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+.productNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.productPriceForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.productVendorForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.productDescriptionForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.createProduct {
+    margin-top: 20px;
+}
+
+.addProductBtn {
+    margin-left: 10px;
+}

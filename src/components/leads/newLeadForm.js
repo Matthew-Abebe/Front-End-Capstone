@@ -45,7 +45,7 @@ export default class NewLeadForm extends Component {
             <React.Fragment>
 
             <div className="createQualifiedLead">
-                <h2>Create a Qualified Lead</h2>
+                <h2>Create a new Lead</h2>
                 </div>
 
                  <form className="productForm">
