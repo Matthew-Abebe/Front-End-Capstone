@@ -9,6 +9,7 @@ export default class Login extends Component {
 
     state = {
         
+        user_name: "",
         email: "",
         password: ""
 
@@ -24,14 +25,14 @@ export default class Login extends Component {
     handleLogin = (evt) => {
 
         let allUsers = this.props.users
-        let inputEmail = this.state.email
+        let inputUserName = this.state.user_name
         let inputPassword = this.state.password
 
-        let matchUser = allUsers.find(user => user.email === inputEmail && user.password === inputPassword)
-        console.log(this.state.email)
+        let matchUser = allUsers.find(user => user.user_name === inputUserName && user.password === inputPassword)
+        console.log(this.state.user_name)
         evt.preventDefault()
 
-        if (this.state.email | this.state.password === "") {
+        if (this.state.user_name | this.state.password === "") {
             window.alert("Please sign in.")
         }
         else if (!matchUser) {
@@ -56,16 +57,6 @@ export default class Login extends Component {
                 </div>
 
                     <br></br>
-        {/* <InputGroup>
-            <InputGroupAddon addonType="prepend"></InputGroupAddon>
-            <Input placeholder="Email Address" onChange={this.handleFieldChange} type="email" id="email" className="loginEmailForm"/>
-      </InputGroup>
-
-      <InputGroup>
-            <InputGroupAddon addonType="prepend">
-            </InputGroupAddon>
-            <Input placeholder="Password" onChange={this.handleFieldChange} type="password" id="password" className="loginPasswordForm"/>
-        </InputGroup> */}
         
         <div className="pleaseLogin">
         <p>Please login to continue.</p>
@@ -75,10 +66,10 @@ export default class Login extends Component {
                     <Input
                         type="text"
                         required
-                        className="loginEmailForm"
+                        className="loginUserNameForm"
                         onChange={this.handleFieldChange}
-                        id="email"
-                        placeholder="Enter Email"
+                        id="user_name"
+                        placeholder="Enter User Name"
                     />
                 </div>
 

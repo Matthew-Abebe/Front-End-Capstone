@@ -32,7 +32,7 @@ export default class ProductList extends Component {
                         this.props.products.map(product =>
                             <div key={product.id}>
 
-                <Card body inverse className="productListCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
+                <Card body inverse className="productListCard" style={{ backgroundColor: '#0f52ba', borderColor: '#333' }}>
                     <CardTitle><h3>{product.productName}</h3></CardTitle>
 
                     <br></br>

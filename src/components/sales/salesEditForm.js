@@ -26,7 +26,7 @@ export default class SalesEditForm extends Component {
             selectedLead: this.state.selectedLead,
             selectedProduct: this.state.selectedProduct,
             userId: parseInt(userId),
-            dateTime: this.state.dateTime
+            saleTime: this.state.saleTime
         }
 
         this.props.putSale(editedSale)
@@ -41,7 +41,7 @@ export default class SalesEditForm extends Component {
                     saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
-                    dateTime: sale.dateTime
+                    saleTime: sale.saleTime
                 })
             })
     }

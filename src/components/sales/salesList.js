@@ -25,7 +25,7 @@ export default class SalesList extends Component {
                         this.props.sales.map(sale =>
                             <div key={sale.id}>
 
-                        <Card body inverse className="salesCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
+                        <Card body inverse className="salesCard" style={{ backgroundColor: '#0f52ba', borderColor: '#333' }}>
                             <CardTitle>
                                 <CardText><h2>{sale.selectedLead}</h2></CardText>
                                 <CardText><h3>{sale.selectedProduct}</h3></CardText>
