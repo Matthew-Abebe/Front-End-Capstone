@@ -6,16 +6,12 @@ export default class SalesEditForm extends Component {
     state = {
         saleId: "",
         selectedLead: "",
-        selectedProduct: "",
-        drive_name: "",
-        location_name: "",
-        dateTime: ""
-
+        selectedProduct: ""
     }
 
     handleFieldChange = evt => {
         const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value //[evt.target.id] 'id' matches the props in state.
+        stateToChange[evt.target.id] = evt.target.value
         console.log(stateToChange)
         this.setState(stateToChange)
     }
@@ -33,7 +29,6 @@ export default class SalesEditForm extends Component {
             dateTime: this.state.dateTime
         }
 
-        // console.log(editedDriveTicket)
         this.props.putSale(editedSale)
             .then(() => this.props.history.push("/sales"))
     }
@@ -46,11 +41,8 @@ export default class SalesEditForm extends Component {
                     saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
-                    // drive_name: driveTicket.drive_name,
-                    // location_name: driveTicket.location_name,
                     dateTime: sale.dateTime
                 })
-                // console.log(driveTicket)
             })
     }
 
@@ -82,19 +74,6 @@ export default class SalesEditForm extends Component {
                             value={this.state.selectedProduct}
                         />
                     </div>
-
-                    {/* <div className="form-group">
-                        <label htmlFor="ticketDateTime">Time</label>
-                        <input
-                            type="text"
-                            required
-                            className="form-control"
-                            onChange={this.handleFieldChange}
-                            id="ticket_date_time"
-                            value={this.state.ticket_date_time}
-                        />
-                    </div> */}
-
 
                     <button type="submit"
                         onClick={(evt) => this.updateExistingSale(evt)}

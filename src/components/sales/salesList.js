@@ -18,31 +18,24 @@ export default class SalesList extends Component {
     }
 
     render() {
-        // console.log(this.props.driveTickets)
         return (
 
             <React.Fragment>
-                
-
             <div>
-                <section className="driveTickets">
+                <section className="salesList">
                     <h1 className="salesHeader">Sales</h1>
-
                     {
                         this.props.sales.map(sale =>
                             <div key={sale.id}>
 
-                                    <Card body inverse className="probDriveListCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
-                                    <CardTitle>
-                                        {/* <h2>{driveTicket.drive_name}</h2> */}
-                        <CardText><h3>{sale.selectedLead}</h3></CardText>
-                        <p>{sale.dateTime}</p>
-                        {/* <CardText><h3>{sale.selectedProduct}</h3></CardText> */}
-                        
+                        <Card body inverse className="salesCard" style={{ backgroundColor: '#cd5c5c', borderColor: '#333' }}>
+                            <CardTitle>
+                                <CardText><h3>{sale.selectedLead}</h3></CardText>
+                                    <p>{sale.dateTime}</p>
 
                                         <br></br>
-                                    </CardTitle>
 
+                            </CardTitle>
                                     <Link to={`/sales/${sale.id}/details`}>
                         <Button className="purchaseDetailsBtn" color="success" size="sm">
                             Details

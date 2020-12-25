@@ -31,11 +31,6 @@ class ApplicationViews extends Component {
         purchases: []
     };
 
-    // getTimeStamp() {
-    //     var now = new Date();
-    //     return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
-    // }
-
     addUser = (user) =>
         DbCalls.postNewUser(user)
             .then(() => DbCalls.getAllUsers())
@@ -67,28 +62,6 @@ class ApplicationViews extends Component {
                 this.setState({
                     sales: sales
                 }))
-
-    // addPurchase = (purchase) => {
-        
-    //     let userId = sessionStorage.getItem("userId")
-        
-    //     const purchaseObj = {
-    //         userId: parseInt(userId),
-    //         productId: purchase.product.id,
-    //         productName: purchase.product.product_name,
-    //         productPrice: purchase.product.sale_price,
-    //         description: purchase.product.description,
-    //         dateTime: this.getTimeStamp()
-    //     }
-    //     console.log(purchaseObj)
-    //     DbCalls.postNewPurchase(purchaseObj)
-    //         .then(() => DbCalls.getUserPurchases())
-    //         .then(purchases =>
-    //             this.setState({
-    //                 purchases: purchases
-    //             }))
-    //             alert(`You purchased: ${purchaseObj.productName}. Thank you!`)
-    // }
 
     putProduct = (editedProductObject) => {
         return DbCalls.putProduct(editedProductObject)
@@ -159,10 +132,10 @@ class ApplicationViews extends Component {
             leads: await DbCalls.getUserLeads(),
             sales: await DbCalls.getUserSales(),
         })
-        console.log(this.state.users)
-        console.log(this.state.products)
-        console.log(this.state.leads)
-        console.log(this.state.sales)
+        // console.log(this.state.users)
+        // console.log(this.state.products)
+        // console.log(this.state.leads)
+        // console.log(this.state.sales)
     }
 
     componentDidMount = () => {
@@ -235,19 +208,6 @@ class ApplicationViews extends Component {
                     }
                 }
                 } />
-{/* 
-                <Route exact path="/probabilityDriveTickets" render={(props) => {
-                    if (this.isAuthenticated()) {
-                        return <ProbabilityTicketList {...props}
-                            
-                        driveTickets={this.state.driveTickets}
-                        purchaseTickets={this.state.purchaseTickets}
-                        />
-                    } else {
-                        return <Redirect to="/login" />
-                    }
-                } */}
-                {/* } /> */}
 
                 <Route exact path="/sales" render={(props) => {
                     if (this.isAuthenticated()) {
@@ -345,31 +305,15 @@ class ApplicationViews extends Component {
                         return <Opportunities {
                             ...props
                         }
-                            // purchases={this.state.purchases}
                             leads={this.state.leads}
                             products={this.state.products}
                             sales={this.state.sales}
                             addSales={this.addSales}
-                            // deletePurchase={this.deletePurchase}
-                            // putPurchase={this.putPurchase}
-                        // getSpending={this.getSpending}
-
                         />
                     } else {
                         return <Redirect to="/login" />
                     }
                     }} />
-
-                {/* <Route exact path="/purchases/:purchasesId(\d+)/edit"
-                    render={(props) => {
-                        return <PurchaseEditForm {
-                            ...props
-                        }
-                            purchases={this.state.purchases}
-                            putPurchase={this.putPurchase}
-                        />
-                    }} /> */}
-
             </React.Fragment>
         )
     }
