@@ -9,3 +9,11 @@ color: white
 .addNewLead {
     margin-left: 10px;
 }
+
+.editLeadBtn {
+    margin-right: 5px;
+}
+
+.deleteLeadBtn {
+    margin-right: 5px;
+}

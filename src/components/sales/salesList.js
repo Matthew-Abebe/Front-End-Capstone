@@ -27,7 +27,7 @@ export default class SalesList extends Component {
 
                         <Card body inverse className="salesCard" style={{ backgroundColor: '#0f52ba', borderColor: '#333' }}>
                             <CardTitle>
-                                <CardText><h2>{sale.selectedLead}</h2></CardText>
+                                <CardText><h2>{sale.selectedLead} purchased ~</h2></CardText>
                                 <CardText><h3>{sale.selectedProduct}</h3></CardText>
 
                                         <br></br>

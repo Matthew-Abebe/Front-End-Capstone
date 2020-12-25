@@ -64,17 +64,17 @@ export default class ProductDetails extends Component {
                             <p>Description: {this.state.productDescription}</p>
                         </CardText>
 
-                        <ButtonGroup>
+                     
                         <Link to={`/products/${this.state.productId}/edit`}>
-                            <button>Edit</button>
+                            <Button color="success" size="sm" className="editProductBtn">Edit</Button>
                         </Link>
                         <Link to={`/products`}>
-                        <button onClick={() =>
+                        <Button color="success" size="sm" className="deleteProductBtn" onClick={() =>
                             this.props.deleteProduct(this.state.productId)} className="deleteProductBtn">
                             Delete
-                            </button>
+                            </Button>
                             </Link>
-                            </ButtonGroup> 
+                         
                     </CardBody>
                 </Card>
             </div>

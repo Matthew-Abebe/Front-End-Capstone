@@ -5,6 +5,12 @@
       "email": "danielscott@mail.com",
       "password": "dscottpass123",
       "id": 1
+    },
+    {
+      "user_name": "ATaylor",
+      "email": "andrewtaylor@mail.com",
+      "password": "ataylorpass123",
+      "id": 2
     }
   ],
   "products": [
@@ -47,11 +53,18 @@
   ],
   "sales": [
     {
-      "id": 1,
+      "userId": 1,
       "selectedLead": "James Ryan",
       "selectedProduct": "Television",
+      "saleTime": "12/25/2020, 4:01:25 AM",
+      "id": 1
+    },
+    {
       "userId": 1,
-      "saleTime": "12/25/2020, 3:09:35 AM"
+      "selectedLead": "Gregg Newman",
+      "selectedProduct": "Loveseat",
+      "saleTime": "12/25/2020, 4:03:36 AM",
+      "id": 2
     }
   ]
 }

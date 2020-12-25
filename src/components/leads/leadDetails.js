@@ -71,13 +71,13 @@ export default class LeadDetails extends Component {
 
                         <ButtonGroup>
                         <Link to={`/leads/${this.state.leadId}/edit`}>
-                            <button>Edit</button>
+                            <Button color="success" size="sm" className="editLeadBtn">Edit</Button>
                         </Link>
                         <Link to={`/leads`}>
-                        <button onClick={() =>
+                        <Button color="success" size="sm" className="deleteLeadBtn" onClick={() =>
                             this.props.deleteLead(this.state.leadId)} className="deleteProductBtn">
                             Delete
-                            </button>
+                            </Button>
                             </Link>
                             </ButtonGroup> 
                     </CardBody>
