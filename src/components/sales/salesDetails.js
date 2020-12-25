@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Card, CardText, CardBody, CardTitle, Button, } from 'reactstrap';
 // import { Button } from 'reactstrap';
 
-import './probabilityDrive.css'
+import './sales.css'
 
 
 export default class SalesDetails extends Component {

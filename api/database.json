@@ -79,6 +79,14 @@
       "productPrice": "$100.00",
       "productVendor": "Entertainment LLC",
       "productDescription": "Large screen HD TV"
+    },
+    {
+      "userId": 8,
+      "productName": "Loveseat",
+      "productPrice": "$120.00",
+      "productVendor": "Furniture Co.",
+      "productDescription": "A well designed loveseat to go in your living room.",
+      "id": 19
     }
   ],
   "leads": [
@@ -99,15 +107,6 @@
       "lead_address": "354 Tree Way Bikini Bottom",
       "userId": 8,
       "id": 27
-    },
-    {
-      "first_name": "Patrick",
-      "last_name": "Star",
-      "email_address": "pat@mail.com",
-      "phone_number": "654654654",
-      "lead_address": "455 Rock St Bikini Bottom",
-      "userId": 8,
-      "id": 28
     },
     {
       "id": 31,
@@ -144,6 +143,15 @@
       "lead_address": "4323 Hollow Rd Jackson, MS 22312",
       "userId": 13,
       "id": 35
+    },
+    {
+      "first_name": "Dale",
+      "last_name": "Junior",
+      "email_address": "dalejr@mail.com",
+      "phone_number": "234-543-6543",
+      "lead_address": "5669 Ludwick Ave Dayton, OH 39852",
+      "userId": 8,
+      "id": 36
     }
   ],
   "sales": [
@@ -169,18 +177,18 @@
       "id": 20
     },
     {
-      "id": 35,
-      "selectedLead": "Sandy Squirell",
+      "id": 38,
+      "selectedLead": "Dale Junior",
       "selectedProduct": "Television",
       "userId": 8,
-      "dateTime": "12/24/2020"
+      "dateTime": "12/25/2020"
     },
     {
-      "id": 36,
-      "selectedLead": "Spongebob Squarepants",
-      "selectedProduct": "Television",
       "userId": 8,
-      "dateTime": "12/24/2020"
+      "selectedLead": "Dale Junior",
+      "selectedProduct": "Loveseat",
+      "dateTime": "12/25/2020",
+      "id": 39
     }
   ]
 }

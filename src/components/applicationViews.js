@@ -13,8 +13,6 @@ import LeadList from './leads/leadList'
 import NewLeadForm from './leads/newLeadForm'
 import LeadDetails from './leads/leadDetails'
 import LeadEditForm from './leads/leadEditForm'
-import PurchaseEditForm from './opportunities/purchasesEdit'
-import ProbabilityTicketList from './sales/probabilityTicketList'
 import SalesList from './sales/salesList'
 import SalesDetails from './sales/salesDetails';
 import SalesEditForm from './sales/salesEditForm';

@@ -6,7 +6,7 @@ import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 // import { ButtonGroup, } from 'reactstrap';
 
-import './purchases.css'
+import './opportunities.css'
 
 export default class Opportunities extends Component {
 
