@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls'
 import { Link } from 'react-router-dom'
 import { Card, CardText, CardBody, CardTitle, Button, } from 'reactstrap';
-// import { Button } from 'reactstrap';
 
 import './sales.css'
 
@@ -34,11 +33,9 @@ export default class SalesDetails extends Component {
     render() {
         return (
             <React.Fragment>
+                
             <div>
-
-        
                     <Card body inverse className="salesDetailsCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                    
                     <CardBody>
                         <CardTitle>
                             <p>Name: {this.state.selectedLead}</p>
@@ -57,9 +54,6 @@ export default class SalesDetails extends Component {
                     </CardBody>
                 </Card>
             </div>
-
-        
-      
         
         </React.Fragment>
         )

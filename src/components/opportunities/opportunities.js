@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { Card, CardText, CardTitle, CardBody} from 'reactstrap';
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-// import { ButtonGroup, } from 'reactstrap';
 
 import './opportunities.css'
 
@@ -24,12 +23,8 @@ export default class Opportunities extends Component {
     getDate() {
       var now = new Date();
       var moment = now.toLocaleString()
-      // var moment = now.toString().slice(0, 21)
-      // return ((now.getMonth() + 1) + "/" + (now.getDate()) + "/" + now.getFullYear());
       return(moment);
   }
-
-
 
     componentDidMount() {
         const remoteURL = "http://localhost:5002"
@@ -167,7 +162,6 @@ export default class Opportunities extends Component {
               <option
                 key={product.value}
                 value={product.value}
-                // selectedProductPrice={product.selectedProductPrice}
               >
                 {product.display}
               </option>

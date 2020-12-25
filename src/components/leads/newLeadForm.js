@@ -103,14 +103,7 @@ export default class NewLeadForm extends Component {
                     </div>
 
                     <button type="button" onClick={this.constructNewLead} className="addProductBtn">Submit</button>
-
-
-
-
                 </form>
-
-
-
              </React.Fragment>
         )
     }

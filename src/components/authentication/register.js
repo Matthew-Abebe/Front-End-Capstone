@@ -13,7 +13,7 @@ export default class Register extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value //[evt.target.id] 'id' matches the props in state.
+        stateToChange[evt.target.id] = evt.target.value
         console.log(stateToChange)
         this.setState(stateToChange)
     }
@@ -25,8 +25,6 @@ export default class Register extends Component {
             email: this.state.user_email,
             password: this.state.user_password,
         }
-
-        // console.log(newUser)
 
         this.props.addUser(newUser)
             .then(() => this.props.history.push("/"))

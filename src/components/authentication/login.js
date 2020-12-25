@@ -88,16 +88,6 @@ export default class Login extends Component {
       <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success" size="lg">Login</Button>
 
       </form>
-
-      {/* <br></br>
-
-        <div className="toRegister">
-   
-        <h3>Don't Have An Account?</h3>
-      <Button tag="a" href="/register" className="registerButton" color="danger">Register Here</Button>
-
-      </div> */}
-
             </React.Fragment>
 
         )

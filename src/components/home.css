@@ -1,14 +1,10 @@
 .jumbotron {
-    /* background: none; */
-    /* margin-top: 100px; */
-    /* margin-left: 400px; */
     max-width: 800px;
     background-color: #0f52ba;
     position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1.display-3 {
@@ -26,8 +22,6 @@ p {
 .loginBtn {
     display: inline-block;
     justify-content: center;
-    /* margin-left: 100px; */
-    /* margin-right: 50px; */
     margin-top: 20px;
     margin-bottom: 15px;
 }

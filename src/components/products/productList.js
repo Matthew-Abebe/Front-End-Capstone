@@ -19,19 +19,16 @@ export default class ProductList extends Component {
         console.log(this.props.products)
         return (
 
-
             <React.Fragment>
 
             <div>
                 <section className="products">
                     <div className="productsHeader">
                     <h1 className="productsHeader">Products Available</h1>
-                </div>
-                    
+                </div> 
                     {
                         this.props.products.map(product =>
                             <div key={product.id}>
-
                 <Card body inverse className="productListCard" style={{ backgroundColor: '#0f52ba', borderColor: '#333' }}>
                     <CardTitle><h3>{product.productName}</h3></CardTitle>
 
@@ -43,7 +40,6 @@ export default class ProductList extends Component {
                         </Card>
                             </div>
                         )}
-
                     <Link to={`/products/new`}>
                         <Button className="addNewProductButton" color="success" size="lg">Create a New Product</Button>
                         </Link>

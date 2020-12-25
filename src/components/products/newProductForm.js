@@ -91,13 +91,7 @@ export default class NewProductForm extends Component {
                     </div>
             
                     <button type="button" onClick={this.constructNewProduct} className="addProductBtn">Submit</button>
-
-
-
-
                 </form>
-
-
 
              </React.Fragment>
         )

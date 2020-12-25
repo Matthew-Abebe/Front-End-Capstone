@@ -8,8 +8,6 @@ export default class Navigation extends React.Component {
     return (
 
       <React.Fragment>
-        {/* <div> */}
-          {/* <p>List Based</p> */}
           <Nav className="navbar">
             <NavItem>
               <NavLink href="/"><strong>Home</strong></NavLink>
@@ -27,11 +25,6 @@ export default class Navigation extends React.Component {
               <NavLink href="/sales"><strong>Sales</strong></NavLink>
             </NavItem>
           </Nav>
-
-          {/* <hr /> */}
-
-        {/* </div> */}
-
       </React.Fragment>
     );
   }

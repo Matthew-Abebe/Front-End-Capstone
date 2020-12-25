@@ -27,23 +27,13 @@ export default class LeadList extends Component {
                     <div className="leadsHeader">
                     <h1 className="leadsHeader">Qualified Leads</h1>
                     </div>
-                    
                     {
                         this.props.leads.map(lead =>
                             <div key={lead.id}>
 
                                 <Card body inverse className="leadsListCard" style={{ backgroundColor: '#0f52ba', borderColor: '#333' }}>
-                                    {/* put card title detail link into a button*/}
-                                    {/* <CardTitle  tag="a" href={`/products/${product.id}/details`}> */}
                                     <CardTitle><h3>{lead.first_name} {lead.last_name}</h3></CardTitle>
-                                       {/* <CardText> <p>Email: {product.email_address}</p></CardText> */}
-                                       {/* <CardText><p>Phone: {product.phone_number}</p></CardText> */}
-                                       {/* <CardText><p>Address: {product.lead_address}</p></CardText> */}
                                         <br></br>
-
-
-                       
-                        
                         <Link to={`/leads/${lead.id}/details`}>
                         <Button className="productDetailsBtn" color="success" size="sm">
                             Details
@@ -52,10 +42,10 @@ export default class LeadList extends Component {
                                 </Card>
 
                             </div>
-
-
                         )}
-<br></br>
+
+                        <br></br>
+
                         <Link to={`/leads/new`}>
                         <Button className="addNewLead" color="success" size="lg">
                             Create a New Lead

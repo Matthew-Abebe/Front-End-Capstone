@@ -13,7 +13,7 @@ export default class ProductEditForm extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value //[evt.target.id] 'id' matches the props in state.
+        stateToChange[evt.target.id] = evt.target.value
         console.log(stateToChange)
         this.setState(stateToChange)
     }
@@ -29,8 +29,6 @@ export default class ProductEditForm extends Component {
             productVendor: this.state.productVendor,
             productDescription: this.state.productDescription
         }
-
-        // console.log(editedProduct)
         this.props.putProduct(editedProduct)
             .then(() => this.props.history.push("/products"))
             console.log(editedProduct)
