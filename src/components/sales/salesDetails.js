@@ -35,7 +35,7 @@ export default class SalesDetails extends Component {
             <div>
 
         
-                    <Card body inverse className="driveTicketDetailsCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
+                    <Card body inverse className="salesDetailsCard" style={{ backgroundColor: '#333', borderColor: '#333' }}>
                     
                     <CardBody>
                         <CardTitle>
@@ -43,11 +43,11 @@ export default class SalesDetails extends Component {
                             <p>Product: {this.state.selectedProduct}</p>
                         </CardTitle>
                         <Link to={`/sales/${this.state.saleId}/edit`}>
-                            <Button color="success" size="sm" className="editUserDriveTicketBtn">Edit</Button>
+                            <Button color="success" size="sm" className="editSaleBtn">Edit</Button>
                         </Link>
                         <Link to="/sales">
                         <Button color="success" size="sm" onClick={() =>
-                                        this.props.deleteSale(this.state.saleId)} className="deleteUserDriveTicketBtn">
+                                        this.props.deleteSale(this.state.saleId)} className="deleteSaleBtn">
                                         Delete
                                 </Button>
                                 </Link>

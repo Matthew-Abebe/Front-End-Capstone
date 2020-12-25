@@ -175,20 +175,6 @@
       "selectedProduct": "Knives",
       "dateTime": "9/23/2020",
       "id": 20
-    },
-    {
-      "id": 38,
-      "selectedLead": "Dale Junior",
-      "selectedProduct": "Television",
-      "userId": 8,
-      "dateTime": "12/25/2020"
-    },
-    {
-      "userId": 8,
-      "selectedLead": "Dale Junior",
-      "selectedProduct": "Loveseat",
-      "dateTime": "12/25/2020",
-      "id": 39
     }
   ]
 }
