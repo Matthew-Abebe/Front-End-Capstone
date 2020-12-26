@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 import './login.css'
 
@@ -10,7 +9,6 @@ export default class Login extends Component {
     state = {
         
         user_name: "",
-        email: "",
         password: ""
 
     }

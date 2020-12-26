@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls';
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 import './leads.css'
 

@@ -32,7 +32,6 @@ export default class LeadDetails extends Component {
                     phone_number: lead.phone_number,
                     lead_address: lead.lead_address,
                 })
-                console.log(this.state.leadId)
             }
             )
     }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 import './leads.css'
 
@@ -21,7 +21,7 @@ export default class NewLeadForm extends Component {
         this.setState(stateToChange)
     }
 
-    constructNewLead = evt => {
+    constructNewLead = () => {
 
         let userId = sessionStorage.getItem("userId")
 
@@ -33,8 +33,6 @@ export default class NewLeadForm extends Component {
             lead_address: this.state.lead_address,
             userId: parseInt(userId)
         }
-
-        console.log(newLead)
 
         this.props.addLeads(newLead)
             .then(() => this.props.history.push("/leads"))
