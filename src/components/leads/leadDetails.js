@@ -9,7 +9,6 @@ import { ButtonGroup } from 'reactstrap';
 
 import './leadDetails.css'
 
-
 export default class LeadDetails extends Component {
 
     state = {

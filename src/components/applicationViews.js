@@ -142,7 +142,6 @@ class ApplicationViews extends Component {
 
     isAuthenticated = () => sessionStorage.getItem("userId") !== null
 
-
     render() {
         return (
 

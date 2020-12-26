@@ -5,10 +5,8 @@ import {
     Button, Card, CardText, CardBody,
     CardTitle,
 } from 'reactstrap';
-import { ButtonGroup } from 'reactstrap';
 
 import './productDetails.css'
-
 
 export default class ProductDetails extends Component {
 
@@ -31,9 +29,8 @@ export default class ProductDetails extends Component {
                     productVendor: product.productVendor,
                     productDescription: product.productDescription
                 })
-                console.log(this.state.productId)
             }
-            )
+        )
     }
 
     render() {
@@ -50,7 +47,6 @@ export default class ProductDetails extends Component {
                             <p>Description: {this.state.productDescription}</p>
                         </CardText>
 
-                     
                         <Link to={`/products/${this.state.productId}/edit`}>
                             <Button color="success" size="sm" className="editProductBtn">Edit</Button>
                         </Link>

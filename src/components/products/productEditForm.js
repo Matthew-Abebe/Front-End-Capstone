@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls';
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 import './products.css'
 
@@ -37,7 +37,6 @@ export default class ProductEditForm extends Component {
             .then(() => this.props.history.push("/products"))
             console.log(editedProduct)
     }
-
 
     componentDidMount() {
         DbCalls.getProduct(this.props.match.params.productId)
@@ -112,10 +111,8 @@ export default class ProductEditForm extends Component {
 
                     <Button className="editProductBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingProduct(evt)}
-                        className="editProductBtn"
-                    >
-                        Save Edit
-                        </Button>
+                        className="editProductBtn">Save Edit
+                    </Button>
                 </form>
 
             </React.Fragment>

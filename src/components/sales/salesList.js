@@ -4,10 +4,7 @@ import { Card, Button, CardTitle, CardText } from 'reactstrap';
 
 import './sales.css'
 
-
-
 export default class SalesList extends Component {
-
 
     handleClick = (e) => {
         e.preventDefault()
@@ -38,8 +35,7 @@ export default class SalesList extends Component {
                             Details
                         </Button>
                         </Link>
-                        
-                                </Card>
+                        </Card>
 
                             </div>
                         )}

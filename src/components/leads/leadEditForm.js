@@ -40,7 +40,6 @@ export default class LeadEditForm extends Component {
             console.log(editedLead)
     }
 
-
     componentDidMount() {
         DbCalls.getLead(this.props.match.params.leadId)
             .then(lead => {
@@ -127,10 +126,7 @@ export default class LeadEditForm extends Component {
 
                     <Button className="editLeadBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingLead(evt)}
-                        className="editLeadBtn"
-                    >
-                        Save Edit
-                        </Button>
+                        className="editLeadBtn">Save Edit</Button>
                 </form>
             </React.Fragment>
         )

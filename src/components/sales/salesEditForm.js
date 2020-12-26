@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DbCalls from '../../modules/dbCalls';
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 import './sales.css'
 
@@ -36,7 +36,6 @@ export default class SalesEditForm extends Component {
         this.props.putSale(editedSale)
             .then(() => this.props.history.push("/sales"))
     }
-
 
     componentDidMount() {
         DbCalls.getSale(this.props.match.params.saleId)
@@ -85,9 +84,8 @@ export default class SalesEditForm extends Component {
 
                     <Button className="editSaleBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingSale(evt)}
-                    >
-                        Save Edit
-                        </Button>
+                    >Save Edit
+                </Button>
                 </form>
 
             </React.Fragment>

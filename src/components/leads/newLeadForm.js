@@ -22,9 +22,7 @@ export default class NewLeadForm extends Component {
     }
 
     constructNewLead = () => {
-
         let userId = sessionStorage.getItem("userId")
-
         const newLead = {
             first_name: this.state.first_name,
             last_name: this.state.last_name,

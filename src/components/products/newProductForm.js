@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from 'reactstrap';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Input } from 'reactstrap';
 
 export default class NewProductForm extends Component {
 
@@ -18,10 +18,8 @@ export default class NewProductForm extends Component {
         this.setState(stateToChange)
     }
 
-    constructNewProduct = evt => {
-
+    constructNewProduct = () => {
         let userId = sessionStorage.getItem("userId")
-
         const newProduct = {
             userId: parseInt(userId),
             productName: this.state.productName,

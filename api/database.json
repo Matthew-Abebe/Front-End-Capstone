@@ -23,12 +23,12 @@
       "productDescription": "Large screen HD TV"
     },
     {
+      "id": 2,
       "userId": 1,
       "productName": "Loveseat",
       "productPrice": "$240.99",
       "productVendor": "Furniture Co.",
-      "productDescription": "A well designed loveseat to go in your living room.",
-      "id": 2
+      "productDescription": "A well designed loveseat to go in your living room."
     },
     {
       "id": 3,
