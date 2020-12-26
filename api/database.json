@@ -53,11 +53,11 @@
   ],
   "sales": [
     {
-      "userId": 1,
+      "id": 1,
       "selectedLead": "James Ryan",
       "selectedProduct": "Television",
-      "saleTime": "12/25/2020, 4:01:25 AM",
-      "id": 1
+      "userId": 1,
+      "saleTime": "12/25/2020, 4:01:25 AM"
     },
     {
       "userId": 1,

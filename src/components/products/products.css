@@ -65,3 +65,47 @@ h4 {
 .addProductBtn {
     margin-left: 10px;
 }
+
+.productEditNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .productEditPriceForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .productEditVendorForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .productEditDescriptionForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+
+  .editProductBtn {
+    margin-left: 10px;
+  }

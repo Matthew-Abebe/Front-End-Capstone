@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import DbCalls from '../../modules/dbCalls'
+import DbCalls from '../../modules/dbCalls';
+import { Button } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+
+import './sales.css'
 
 export default class SalesEditForm extends Component {
 
@@ -50,13 +54,13 @@ export default class SalesEditForm extends Component {
         return (
             <React.Fragment>
 
-                <form className="driveTicketForm">
+                <form className="editSaleForm">
                     <div className="form-group">
-                        <label htmlFor="selectedLead">Selected Lead</label>
-                        <input
+                        <label htmlFor="editSaleNameForm"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="editSaleNameForm"
                             onChange={this.handleFieldChange}
                             id="selectedLead"
                             value={this.state.selectedLead}
@@ -64,23 +68,22 @@ export default class SalesEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="selectedProduct">Selected Product</label>
-                        <input
+                        <label htmlFor="editSaleProductForm"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="editSaleProductForm"
                             onChange={this.handleFieldChange}
                             id="selectedProduct"
                             value={this.state.selectedProduct}
                         />
                     </div>
 
-                    <button type="submit"
+                    <Button className="editSaleBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingSale(evt)}
-                        className="editDriveTicketBtn"
                     >
                         Save Edit
-                        </button>
+                        </Button>
                 </form>
 
             </React.Fragment>

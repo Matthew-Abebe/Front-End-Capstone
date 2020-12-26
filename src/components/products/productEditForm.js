@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import DbCalls from '../../modules/dbCalls'
+import DbCalls from '../../modules/dbCalls';
+import { Button } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+
+import './products.css'
 
 export default class ProductEditForm extends Component {
 
@@ -55,11 +59,11 @@ export default class ProductEditForm extends Component {
 
                 <form className="productEditForm">
                     <div className="form-group">
-                        <label htmlFor="Product Name">Name</label>
-                        <input
+                        <label htmlFor="Product Name"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="productEditNameForm"
                             onChange={this.handleFieldChange}
                             id="productName"
                             value={this.state.productName}
@@ -67,11 +71,11 @@ export default class ProductEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="Product Price">Price</label>
-                        <input
+                        <label htmlFor="Product Price"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="productEditPriceForm"
                             onChange={this.handleFieldChange}
                             id="productPrice"
                             value={this.state.productPrice}
@@ -79,11 +83,11 @@ export default class ProductEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="Product Vendor">Vendor</label>
-                        <input
+                        <label htmlFor="Product Vendor"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="productEditVendorForm"
                             onChange={this.handleFieldChange}
                             id="productVendor"
                             value={this.state.productVendor}
@@ -91,23 +95,23 @@ export default class ProductEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="Product Description">Description</label>
-                        <input
+                        <label htmlFor="Product Description"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="productEditDescriptionForm"
                             onChange={this.handleFieldChange}
                             id="productDescription"
                             value={this.state.productDescription}
                         />
                     </div>
 
-                    <button type="submit"
+                    <Button className="editProductBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingProduct(evt)}
                         className="editProductBtn"
                     >
                         Save Edit
-                        </button>
+                        </Button>
                 </form>
 
             </React.Fragment>
