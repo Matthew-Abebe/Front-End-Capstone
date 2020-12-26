@@ -18,7 +18,6 @@ export default class ProductEditForm extends Component {
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
-        console.log(stateToChange)
         this.setState(stateToChange)
     }
 
@@ -35,13 +34,11 @@ export default class ProductEditForm extends Component {
         }
         this.props.putProduct(editedProduct)
             .then(() => this.props.history.push("/products"))
-            console.log(editedProduct)
     }
 
     componentDidMount() {
         DbCalls.getProduct(this.props.match.params.productId)
             .then(product => {
-                console.log(product)
                 this.setState({
                     userId: product.userId,
                     productName: product.productName,

@@ -18,8 +18,6 @@ export default {
         return fetch(`${remoteURL}/sales/${id}`).then (e => e.json())
     },
 
-    ///...///
-
     getAllUsers: () => {
         return fetch(`${remoteURL}/users`).then(e => e.json())
     },
@@ -39,14 +37,6 @@ export default {
     getAllPurchases() {
         return fetch(`${remoteURL}/purchases`).then(e => e.json())
     },
-    
-    // getAllDriveTickets() {
-    //     return fetch (`${remoteURL}/probabilityDriveTickets`).then(e => e.json()) 
-    // },
-
-    // getAllPurchaseTickets() {
-    //     return fetch (`${remoteURL}/purchaseTickets`).then(e => e.json()) 
-    // },
 
     getAllSales() {
         return fetch (`${remoteURL}/sales`).then(e => e.json()) 
@@ -86,8 +76,6 @@ export default {
         let sessionId = sessionStorage.getItem("userId")
         return fetch(`${remoteURL}/sales?userId=${sessionId}`).then(e => e.json())
     },
-    
-    ///...///
 
     postNewUser(newUser) {
         return fetch(`${remoteURL}/users`, {
@@ -119,26 +107,6 @@ export default {
         }).then(e => e.json())
     },
 
-    // postNewPurchase(newPurchase) {
-    //     return fetch(`${remoteURL}/purchases`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(newPurchase)
-    //     }).then(e => e.json())
-    // },
-
-    // postNewDriveTicket(newDriveTicket) {
-    //     return fetch(`${remoteURL}/probabilityDriveTickets`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(newDriveTicket)
-    //     }).then(e => e.json())
-    // },
-
     postNewPurchaseTicket(newPurchaseTicket) {
         return fetch(`${remoteURL}/purchaseTickets`, {
             method: "POST",
@@ -149,7 +117,6 @@ export default {
         }).then(e => e.json())
     },
 
-    
     postNewSale(newSale) {
         return fetch(`${remoteURL}/sales`, {
             method: "POST",
@@ -159,8 +126,6 @@ export default {
             body: JSON.stringify(newSale)
         }).then(e => e.json())
     },
-
-    ///...///
 
     putProduct(editedProduct) {
         return fetch(`${remoteURL}/products/${editedProduct.id}`, {
@@ -214,9 +179,6 @@ export default {
             body: JSON.stringify(editedSale)
         }).then(e => e.json())
     },
-    
-
-    ///...///
 
     deleteProduct(id) {
         return fetch(`${remoteURL}/products/${id}`, {

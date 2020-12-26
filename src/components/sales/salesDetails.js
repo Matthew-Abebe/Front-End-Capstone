@@ -18,16 +18,14 @@ export default class SalesDetails extends Component {
     componentDidMount() {
         DbCalls.getSale(this.props.match.params.saleId)
             .then(sale => {
-                console.log(sale)
                 this.setState({
                     saleId: sale.id,
                     selectedLead: sale.selectedLead,
                     selectedProduct: sale.selectedProduct,
                     saleTime: sale.saleTime
                 })
-                console.log(this.state.saleId)
             }
-            )
+        )
     }
 
     render() {
@@ -47,10 +45,9 @@ export default class SalesDetails extends Component {
                         </Link>
                         <Link to="/sales">
                         <Button color="success" size="sm" onClick={() =>
-                                        this.props.deleteSale(this.state.saleId)} className="deleteSaleBtn">
-                                        Delete
-                                </Button>
-                                </Link>
+                            this.props.deleteSale(this.state.saleId)} className="deleteSaleBtn">Delete
+                            </Button>
+                            </Link>
                     </CardBody>
                 </Card>
             </div>

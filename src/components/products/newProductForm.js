@@ -28,8 +28,6 @@ export default class NewProductForm extends Component {
             productDescription: this.state.productDescription
         }
 
-        console.log(newProduct)
-
         this.props.addProducts(newProduct)
             .then(() => this.props.history.push("/products"))
     }

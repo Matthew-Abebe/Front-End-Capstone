@@ -12,7 +12,6 @@ export default class ProductList extends Component {
     
     handleClick = (e) => {
         e.preventDefault()
-        console.log("clicked link")
     }
 
     render() {

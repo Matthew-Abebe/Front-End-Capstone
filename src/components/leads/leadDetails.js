@@ -22,7 +22,6 @@ export default class LeadDetails extends Component {
     componentDidMount() {
         DbCalls.getLead(this.props.match.params.leadId)
             .then(lead => {
-                console.log(lead)
                 this.setState({
                     leadId: lead.id,
                     first_name: lead.first_name,
@@ -32,7 +31,7 @@ export default class LeadDetails extends Component {
                     lead_address: lead.lead_address,
                 })
             }
-            )
+        )
     }
 
     render() {

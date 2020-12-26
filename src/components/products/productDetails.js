@@ -21,7 +21,6 @@ export default class ProductDetails extends Component {
     componentDidMount() {
         DbCalls.getProduct(this.props.match.params.productId)
             .then(product => {
-                console.log(product)
                 this.setState({
                     productId: product.id,
                     productName: product.productName,

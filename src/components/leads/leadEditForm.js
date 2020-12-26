@@ -19,7 +19,6 @@ export default class LeadEditForm extends Component {
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
-        console.log(stateToChange)
         this.setState(stateToChange)
     }
 
@@ -37,13 +36,11 @@ export default class LeadEditForm extends Component {
         }
         this.props.putLead(editedLead)
             .then(() => this.props.history.push("/leads"))
-            console.log(editedLead)
     }
 
     componentDidMount() {
         DbCalls.getLead(this.props.match.params.leadId)
             .then(lead => {
-                console.log(lead)
                 this.setState({
                     userId: lead.userId,
                     first_name: lead.first_name,
@@ -57,15 +54,15 @@ export default class LeadEditForm extends Component {
 
     render() {
         return (
-            <React.Fragment>
+        <React.Fragment>
 
         <div className="editLead">
-                <h2>Edit your Lead</h2>
-                </div>
+            <h2>Edit your Lead</h2>
+            </div>
 
-                <form className="leadEditForm">
-                    <div className="form-group">
-                        <label htmlFor="FirstName"></label>
+        <form className="leadEditForm">
+            <div className="form-group">
+                    <label htmlFor="FirstName"></label>
                         <Input
                             type="text"
                             required
