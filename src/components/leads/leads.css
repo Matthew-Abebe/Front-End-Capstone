@@ -76,3 +76,57 @@ h4 {
     margin-bottom: 5px;
 }
 
+.leadEditFirstNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadEditLastNameForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadEditEmailAddressForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadEditPhoneNumberForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.leadEditAddressForm {
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.editLeadBtn {
+    margin-left: 10px;
+}
+

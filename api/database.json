@@ -33,13 +33,13 @@
   ],
   "leads": [
     {
+      "id": 1,
+      "userId": 1,
       "first_name": "James",
       "last_name": "Ryan",
       "email_address": "jamesryan@mail.com",
-      "phone_number": "631-552-4177",
-      "lead_address": "7794 South St Houston, TX 64428",
-      "userId": 1,
-      "id": 1
+      "phone_number": "631-552-4175",
+      "lead_address": "7794 South St Houston, TX 64428"
     },
     {
       "id": 2,

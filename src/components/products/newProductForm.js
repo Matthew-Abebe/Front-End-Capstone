@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 export default class NewProductForm extends Component {
 
@@ -47,7 +48,7 @@ export default class NewProductForm extends Component {
                  <form className="productForm">
                     <div className="form-group">
                         <label htmlFor="Product Name"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="productNameForm"
@@ -59,7 +60,7 @@ export default class NewProductForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="Product Price"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="productPriceForm"
@@ -71,7 +72,7 @@ export default class NewProductForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="Product Vendor"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="productVendorForm"
@@ -83,7 +84,7 @@ export default class NewProductForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="Product Description"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="productDescriptionForm"

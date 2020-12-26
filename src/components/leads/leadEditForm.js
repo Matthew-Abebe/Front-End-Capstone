@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import DbCalls from '../../modules/dbCalls'
+import DbCalls from '../../modules/dbCalls';
+import { Button } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+
+import './leads.css'
 
 export default class LeadEditForm extends Component {
 
@@ -58,11 +62,11 @@ export default class LeadEditForm extends Component {
 
                 <form className="leadEditForm">
                     <div className="form-group">
-                        <label htmlFor="FirstName">First Name</label>
-                        <input
+                        <label htmlFor="FirstName"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEditFirstNameForm"
                             onChange={this.handleFieldChange}
                             id="first_name"
                             value={this.state.first_name}
@@ -70,11 +74,11 @@ export default class LeadEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="LastName">Last Name</label>
-                        <input
+                        <label htmlFor="LastName"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEditLastNameForm"
                             onChange={this.handleFieldChange}
                             id="last_name"
                             value={this.state.last_name}
@@ -82,11 +86,11 @@ export default class LeadEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="EmailAddress">Email</label>
-                        <input
+                        <label htmlFor="EmailAddress"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEditEmailAddressForm"
                             onChange={this.handleFieldChange}
                             id="email_address"
                             value={this.state.email_address}
@@ -94,11 +98,11 @@ export default class LeadEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="PhoneNumber">Phone Number</label>
-                        <input
+                        <label htmlFor="PhoneNumber"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEditPhoneNumberForm"
                             onChange={this.handleFieldChange}
                             id="phone_number"
                             value={this.state.phone_number}
@@ -106,23 +110,23 @@ export default class LeadEditForm extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="LeadAddress">Address</label>
-                        <input
+                        <label htmlFor="LeadAddress"></label>
+                        <Input
                             type="text"
                             required
-                            className="form-control"
+                            className="leadEditAddressForm"
                             onChange={this.handleFieldChange}
                             id="lead_address"
                             value={this.state.lead_address}
                         />
                     </div>
 
-                    <button type="submit"
+                    <Button className="editLeadBtn" color="success" type="submit"
                         onClick={(evt) => this.updateExistingLead(evt)}
                         className="editLeadBtn"
                     >
                         Save Edit
-                        </button>
+                        </Button>
                 </form>
             </React.Fragment>
         )

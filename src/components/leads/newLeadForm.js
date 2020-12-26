@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
 import './leads.css'
 
@@ -51,7 +52,7 @@ export default class NewLeadForm extends Component {
                  <form className="productForm">
                     <div className="form-group">
                         <label htmlFor="leadFirstName"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="leadFirstNameForm"
@@ -63,7 +64,7 @@ export default class NewLeadForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="leadLastName"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="leadLastNameForm"
@@ -75,7 +76,7 @@ export default class NewLeadForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="leadEmailAddress"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="leadEmailAddressForm"
@@ -87,7 +88,7 @@ export default class NewLeadForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="leadPhoneNumber"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="leadPhoneNumberForm"
@@ -99,7 +100,7 @@ export default class NewLeadForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="leadAddress"></label>
-                        <input
+                        <Input
                             type="text"
                             required
                             className="leadAddressForm"
