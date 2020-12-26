@@ -60,6 +60,10 @@ export default class LeadEditForm extends Component {
         return (
             <React.Fragment>
 
+        <div className="editLead">
+                <h2>Edit your Lead</h2>
+                </div>
+
                 <form className="leadEditForm">
                     <div className="form-group">
                         <label htmlFor="FirstName"></label>

@@ -29,6 +29,14 @@
       "productVendor": "Furniture Co.",
       "productDescription": "A well designed loveseat to go in your living room.",
       "id": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "productName": "Coffee Table",
+      "productPrice": "$49.99",
+      "productVendor": "Furniture Co.",
+      "productDescription": "A sturdy coffee table for your living room."
     }
   ],
   "leads": [
@@ -49,6 +57,15 @@
       "email_address": "greggnewman@mail.com",
       "phone_number": "724-445-6393",
       "lead_address": "689 Palm St Anaheim, CA 93023"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "first_name": "Robert",
+      "last_name": "Smith",
+      "email_address": "robertsmith@mail.com",
+      "phone_number": "831-522-6346",
+      "lead_address": "7089 Greenwich Rd. Seattle, WA 82031"
     }
   ],
   "sales": [
@@ -65,6 +82,13 @@
       "selectedProduct": "Loveseat",
       "saleTime": "12/25/2020, 4:03:36 AM",
       "id": 2
+    },
+    {
+      "userId": 2,
+      "selectedLead": "Robert Smith",
+      "selectedProduct": "Coffee Table",
+      "saleTime": "12/26/2020, 1:48:32 AM",
+      "id": 3
     }
   ]
 }

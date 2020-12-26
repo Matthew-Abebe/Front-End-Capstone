@@ -17,18 +17,20 @@ h3 {
     width: 500px;
     display: inline-block;
     justify-content: center;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 20px;
     margin-bottom: 5px;
 }
 
 .loginPasswordForm {
-        width: 500px;
-        display: inline-block;
-        justify-content: center;
-        margin-left: 10px;
-        margin-right: 20px;
-        margin-bottom: 5px;
+    width: 500px;
+    display: inline-block;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 5px;
 }
 
 .loginSubmit {
@@ -37,10 +39,6 @@ h3 {
 
 .registerButton {
     margin-top: 5px;
-}
-
-.loginWelcome {
-    margin-left: 10px
 }
 
 .toRegister {

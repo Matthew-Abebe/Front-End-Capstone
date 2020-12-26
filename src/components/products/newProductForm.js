@@ -41,7 +41,7 @@ export default class NewProductForm extends Component {
         return (
             <React.Fragment>
 
-<div className="createProduct">
+            <div className="createProduct">
                 <h2>Create a new Product</h2>
                 </div>
 

@@ -54,6 +54,10 @@ export default class SalesEditForm extends Component {
         return (
             <React.Fragment>
 
+            <div className="editSale">
+                <h2>Edit your Sale</h2>
+                </div>
+
                 <form className="editSaleForm">
                     <div className="form-group">
                         <label htmlFor="editSaleNameForm"></label>

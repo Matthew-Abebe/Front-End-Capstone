@@ -14,6 +14,10 @@ h1.salesHeader {
     margin-right: 5px;
 }
 
+.editSale {
+    margin-top: 20px;
+}
+
 .deleteSaleBtn {
     margin-right: 5px;
 }
