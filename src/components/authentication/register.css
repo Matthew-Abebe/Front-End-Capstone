@@ -6,7 +6,6 @@ h2 {
     width: 500px;
     display: inline-block;
     justify-content: center;
-    margin-top: 20px;
     margin-left: 10px;
     margin-right: 20px;
     margin-bottom: 5px;
@@ -37,6 +36,7 @@ h2 {
 }
 
 .pleaseRegister {
+    margin-top: 20px;
     margin-left: 10px;
     
 }

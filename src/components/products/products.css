@@ -1,6 +1,6 @@
 h1.productsHeader {
     color: white;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 25px;
 }
 
@@ -64,6 +64,7 @@ h4 {
 
 .editProduct {
     margin-top: 20px;
+    margin-left: 10px;
 }
 
 .addProductBtn {

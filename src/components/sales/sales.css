@@ -1,6 +1,6 @@
 h1.salesHeader {
     color: white;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 25px;
 }
 
@@ -10,12 +10,9 @@ h1.salesHeader {
     margin-top: 10px;
 }
 
-.editSaleBtn {
-    margin-right: 5px;
-}
-
 .editSale {
     margin-top: 20px;
+    margin-left: 10px;
 }
 
 .deleteSaleBtn {
