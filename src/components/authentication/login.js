@@ -82,8 +82,8 @@ export default class Login extends Component {
                     />
                 </div>
 
-
-      <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success" size="lg">Login</Button>
+            <Button type="submit" className="loginSubmit" onClick={this.handleLogin} color="success" size="lg">Login
+            </Button>
 
       </form>
             </React.Fragment>

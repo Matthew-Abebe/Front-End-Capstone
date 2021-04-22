@@ -37,6 +37,14 @@
       "productPrice": "$49.99",
       "productVendor": "Furniture Co.",
       "productDescription": "A sturdy coffee table for your living room."
+    },
+    {
+      "userId": 1,
+      "productName": "Table",
+      "productPrice": "100",
+      "productVendor": "tablesinc",
+      "productDescription": "table for living room",
+      "id": 4
     }
   ],
   "leads": [
@@ -89,6 +97,13 @@
       "selectedProduct": "Coffee Table",
       "saleTime": "12/26/2020, 1:48:32 AM",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "selectedLead": "James Ryan",
+      "selectedProduct": "Table",
+      "saleTime": "4/22/2021, 4:12:19 PM",
+      "id": 4
     }
   ]
 }
