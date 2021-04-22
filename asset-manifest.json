@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Leadox/static/css/main.14613f72.chunk.css",
+    "main.js": "/Leadox/static/js/main.091e1d92.chunk.js",
+    "main.js.map": "/Leadox/static/js/main.091e1d92.chunk.js.map",
+    "runtime~main.js": "/Leadox/static/js/runtime~main.12724981.js",
+    "runtime~main.js.map": "/Leadox/static/js/runtime~main.12724981.js.map",
+    "static/css/2.a5f06b7f.chunk.css": "/Leadox/static/css/2.a5f06b7f.chunk.css",
+    "static/js/2.b560884b.chunk.js": "/Leadox/static/js/2.b560884b.chunk.js",
+    "static/js/2.b560884b.chunk.js.map": "/Leadox/static/js/2.b560884b.chunk.js.map",
+    "index.html": "/Leadox/index.html",
+    "precache-manifest.377501cba695a9bb8b4ba0334e0bb85b.js": "/Leadox/precache-manifest.377501cba695a9bb8b4ba0334e0bb85b.js",
+    "service-worker.js": "/Leadox/service-worker.js",
+    "static/css/2.a5f06b7f.chunk.css.map": "/Leadox/static/css/2.a5f06b7f.chunk.css.map",
+    "static/css/main.14613f72.chunk.css.map": "/Leadox/static/css/main.14613f72.chunk.css.map"
+  }
+}
